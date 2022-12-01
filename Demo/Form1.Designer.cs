@@ -33,8 +33,8 @@
             this.weatherBtn = new System.Windows.Forms.Button();
             this.dietBtn = new System.Windows.Forms.Button();
             this.weatherPanel = new System.Windows.Forms.Panel();
-            this.HomePanel = new System.Windows.Forms.Panel();
             this.backBtnWeather = new System.Windows.Forms.Button();
+            this.HomePanel = new System.Windows.Forms.Panel();
             this.weatherPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,16 @@
             this.weatherPanel.TabIndex = 4;
             this.weatherPanel.Visible = false;
             // 
+            // backBtnWeather
+            // 
+            this.backBtnWeather.Location = new System.Drawing.Point(316, 474);
+            this.backBtnWeather.Name = "backBtnWeather";
+            this.backBtnWeather.Size = new System.Drawing.Size(109, 32);
+            this.backBtnWeather.TabIndex = 4;
+            this.backBtnWeather.Text = "返回";
+            this.backBtnWeather.UseVisualStyleBackColor = true;
+            this.backBtnWeather.Click += new System.EventHandler(this.backBtnWeather_Click);
+            // 
             // HomePanel
             // 
             this.HomePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -102,16 +112,6 @@
             this.HomePanel.Name = "HomePanel";
             this.HomePanel.Size = new System.Drawing.Size(672, 525);
             this.HomePanel.TabIndex = 5;
-            // 
-            // backBtnWeather
-            // 
-            this.backBtnWeather.Location = new System.Drawing.Point(296, 480);
-            this.backBtnWeather.Name = "backBtnWeather";
-            this.backBtnWeather.Size = new System.Drawing.Size(109, 32);
-            this.backBtnWeather.TabIndex = 4;
-            this.backBtnWeather.Text = "返回";
-            this.backBtnWeather.UseVisualStyleBackColor = true;
-            this.backBtnWeather.Click += new System.EventHandler(this.backBtnWeather_Click);
             // 
             // Form1
             // 
