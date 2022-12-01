@@ -29,8 +29,43 @@ namespace Demo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            weatherInfo.Text = "NULL";
+            weatherInfo.Text = "WAITING...";
+            weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily,16);
+
+            joggingBtn.FlatAppearance.BorderSize = 0;
+            joggingBtn.Image = Image.FromFile(@"../../images/jogging.png");
+            weatherBtn.FlatAppearance.BorderSize = 0;
+            weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
+            dietBtn.FlatAppearance.BorderSize = 0;
+            dietBtn.Image = Image.FromFile(@"../../images/diet.png");
+           
+        }
+
+        private void weatherButton_Click(object sender, EventArgs e)
+        {
+            HomePanel.Visible = false;
+            weatherPanel.Visible = true;
+            weatherPanel.BringToFront();
+            var w = Task<Output>.Run(async () => await GetRequestApi());
+            weatherInfo.Text = w.Result.GetInfo();
+        }
+
+        private void joggingBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dietBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backBtnWeather_Click(object sender, EventArgs e)
+        {
+            weatherPanel.Visible = false;
+            HomePanel.Visible = true;
+            HomePanel.BringToFront();
         }
 
         private void getWeatherBtn_Click(object sender, EventArgs e)
@@ -117,7 +152,7 @@ namespace Demo
             string output = "";
             for (int i = 0; i < weather_info.Length; i++)
             {
-                output += prefix[i] + weather_info[i] + "\r\n";
+                output += prefix[i] + weather_info[i] + "\r\n\n";
             }
             return output;
         }

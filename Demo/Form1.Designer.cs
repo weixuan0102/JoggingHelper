@@ -28,150 +28,116 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.getWeatherBtn = new System.Windows.Forms.Button();
             this.weatherInfo = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.新增紀錄ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.joggingBtn = new System.Windows.Forms.Button();
+            this.weatherBtn = new System.Windows.Forms.Button();
+            this.dietBtn = new System.Windows.Forms.Button();
+            this.weatherPanel = new System.Windows.Forms.Panel();
+            this.HomePanel = new System.Windows.Forms.Panel();
+            this.backBtnWeather = new System.Windows.Forms.Button();
+            this.weatherPanel.SuspendLayout();
+            this.HomePanel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(191, 28);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(753, 477);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(745, 451);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "慢跑紀錄";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.getWeatherBtn);
-            this.tabPage2.Controls.Add(this.weatherInfo);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(745, 451);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "天氣";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // getWeatherBtn
-            // 
-            this.getWeatherBtn.Location = new System.Drawing.Point(284, 386);
-            this.getWeatherBtn.Name = "getWeatherBtn";
-            this.getWeatherBtn.Size = new System.Drawing.Size(167, 23);
-            this.getWeatherBtn.TabIndex = 1;
-            this.getWeatherBtn.Text = "取得當前天氣資料";
-            this.getWeatherBtn.UseVisualStyleBackColor = true;
-            this.getWeatherBtn.Click += new System.EventHandler(this.getWeatherBtn_Click);
             // 
             // weatherInfo
             // 
-            this.weatherInfo.AutoSize = true;
-            this.weatherInfo.Location = new System.Drawing.Point(106, 51);
+            this.weatherInfo.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.weatherInfo.Location = new System.Drawing.Point(14, 13);
             this.weatherInfo.Name = "weatherInfo";
-            this.weatherInfo.Size = new System.Drawing.Size(33, 12);
+            this.weatherInfo.Size = new System.Drawing.Size(644, 458);
             this.weatherInfo.TabIndex = 0;
             this.weatherInfo.Text = "label1";
             // 
-            // menuStrip1
+            // joggingBtn
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.新增紀錄ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1159, 25);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.joggingBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.joggingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.joggingBtn.Location = new System.Drawing.Point(133, 37);
+            this.joggingBtn.Name = "joggingBtn";
+            this.joggingBtn.Size = new System.Drawing.Size(399, 179);
+            this.joggingBtn.TabIndex = 0;
+            this.joggingBtn.UseVisualStyleBackColor = false;
+            this.joggingBtn.Click += new System.EventHandler(this.joggingBtn_Click);
             // 
-            // 新增紀錄ToolStripMenuItem
+            // weatherBtn
             // 
-            this.新增紀錄ToolStripMenuItem.Name = "新增紀錄ToolStripMenuItem";
-            this.新增紀錄ToolStripMenuItem.Size = new System.Drawing.Size(72, 21);
-            this.新增紀錄ToolStripMenuItem.Text = "新增紀錄";
+            this.weatherBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.weatherBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.weatherBtn.Location = new System.Drawing.Point(133, 252);
+            this.weatherBtn.Name = "weatherBtn";
+            this.weatherBtn.Size = new System.Drawing.Size(191, 218);
+            this.weatherBtn.TabIndex = 2;
+            this.weatherBtn.UseVisualStyleBackColor = false;
+            this.weatherBtn.Click += new System.EventHandler(this.weatherButton_Click);
             // 
-            // button1
+            // dietBtn
             // 
-            this.button1.Location = new System.Drawing.Point(48, 50);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(91, 42);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "慢跑紀錄";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dietBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dietBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dietBtn.Location = new System.Drawing.Point(341, 252);
+            this.dietBtn.Name = "dietBtn";
+            this.dietBtn.Size = new System.Drawing.Size(191, 218);
+            this.dietBtn.TabIndex = 3;
+            this.dietBtn.UseVisualStyleBackColor = false;
+            this.dietBtn.Click += new System.EventHandler(this.dietBtn_Click);
             // 
-            // button2
+            // weatherPanel
             // 
-            this.button2.Location = new System.Drawing.Point(48, 130);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 42);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "天氣";
-            this.button2.UseVisualStyleBackColor = true;
+            this.weatherPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.weatherPanel.Controls.Add(this.weatherInfo);
+            this.weatherPanel.Controls.Add(this.backBtnWeather);
+            this.weatherPanel.Location = new System.Drawing.Point(709, 29);
+            this.weatherPanel.Name = "weatherPanel";
+            this.weatherPanel.Size = new System.Drawing.Size(724, 535);
+            this.weatherPanel.TabIndex = 4;
+            this.weatherPanel.Visible = false;
             // 
-            // button3
+            // HomePanel
             // 
-            this.button3.Location = new System.Drawing.Point(48, 203);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(91, 42);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "飲食紀錄";
-            this.button3.UseVisualStyleBackColor = true;
+            this.HomePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.HomePanel.Controls.Add(this.joggingBtn);
+            this.HomePanel.Controls.Add(this.weatherBtn);
+            this.HomePanel.Controls.Add(this.dietBtn);
+            this.HomePanel.Location = new System.Drawing.Point(12, 16);
+            this.HomePanel.Name = "HomePanel";
+            this.HomePanel.Size = new System.Drawing.Size(672, 525);
+            this.HomePanel.TabIndex = 5;
+            // 
+            // backBtnWeather
+            // 
+            this.backBtnWeather.Location = new System.Drawing.Point(296, 480);
+            this.backBtnWeather.Name = "backBtnWeather";
+            this.backBtnWeather.Size = new System.Drawing.Size(109, 32);
+            this.backBtnWeather.TabIndex = 4;
+            this.backBtnWeather.Text = "返回";
+            this.backBtnWeather.UseVisualStyleBackColor = true;
+            this.backBtnWeather.Click += new System.EventHandler(this.backBtnWeather_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 566);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.menuStrip1);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(1482, 600);
+            this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.weatherPanel);
             this.Name = "Form1";
             this.Text = "健康管理";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.weatherPanel.ResumeLayout(false);
+            this.HomePanel.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button getWeatherBtn;
         private System.Windows.Forms.Label weatherInfo;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 新增紀錄ToolStripMenuItem;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button joggingBtn;
+        private System.Windows.Forms.Button weatherBtn;
+        private System.Windows.Forms.Button dietBtn;
+        private System.Windows.Forms.Panel weatherPanel;
+        private System.Windows.Forms.Panel HomePanel;
+        private System.Windows.Forms.Button backBtnWeather;
     }
 }
 
