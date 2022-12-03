@@ -35,6 +35,7 @@
             this.weatherPanel = new System.Windows.Forms.Panel();
             this.backBtnWeather = new System.Windows.Forms.Button();
             this.HomePanel = new System.Windows.Forms.Panel();
+            this.dietPanel = new System.Windows.Forms.Panel();
             this.weatherPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.SuspendLayout();
@@ -42,9 +43,9 @@
             // weatherInfo
             // 
             this.weatherInfo.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.weatherInfo.Location = new System.Drawing.Point(14, 13);
+            this.weatherInfo.Location = new System.Drawing.Point(90, 24);
             this.weatherInfo.Name = "weatherInfo";
-            this.weatherInfo.Size = new System.Drawing.Size(644, 458);
+            this.weatherInfo.Size = new System.Drawing.Size(618, 488);
             this.weatherInfo.TabIndex = 0;
             this.weatherInfo.Text = "label1";
             // 
@@ -84,8 +85,8 @@
             // weatherPanel
             // 
             this.weatherPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.weatherPanel.Controls.Add(this.weatherInfo);
             this.weatherPanel.Controls.Add(this.backBtnWeather);
+            this.weatherPanel.Controls.Add(this.weatherInfo);
             this.weatherPanel.Location = new System.Drawing.Point(709, 29);
             this.weatherPanel.Name = "weatherPanel";
             this.weatherPanel.Size = new System.Drawing.Size(724, 535);
@@ -94,12 +95,13 @@
             // 
             // backBtnWeather
             // 
-            this.backBtnWeather.Location = new System.Drawing.Point(316, 474);
+            this.backBtnWeather.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtnWeather.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtnWeather.Location = new System.Drawing.Point(3, 3);
             this.backBtnWeather.Name = "backBtnWeather";
-            this.backBtnWeather.Size = new System.Drawing.Size(109, 32);
-            this.backBtnWeather.TabIndex = 4;
-            this.backBtnWeather.Text = "返回";
-            this.backBtnWeather.UseVisualStyleBackColor = true;
+            this.backBtnWeather.Size = new System.Drawing.Size(43, 44);
+            this.backBtnWeather.TabIndex = 1;
+            this.backBtnWeather.UseVisualStyleBackColor = false;
             this.backBtnWeather.Click += new System.EventHandler(this.backBtnWeather_Click);
             // 
             // HomePanel
@@ -113,12 +115,20 @@
             this.HomePanel.Size = new System.Drawing.Size(672, 525);
             this.HomePanel.TabIndex = 5;
             // 
+            // dietPanel
+            // 
+            this.dietPanel.Location = new System.Drawing.Point(709, 29);
+            this.dietPanel.Name = "dietPanel";
+            this.dietPanel.Size = new System.Drawing.Size(721, 532);
+            this.dietPanel.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1482, 600);
+            this.Controls.Add(this.dietPanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.weatherPanel);
             this.Name = "Form1";
@@ -138,6 +148,7 @@
         private System.Windows.Forms.Panel weatherPanel;
         private System.Windows.Forms.Panel HomePanel;
         private System.Windows.Forms.Button backBtnWeather;
+        private System.Windows.Forms.Panel dietPanel;
     }
 }
 
