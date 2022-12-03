@@ -1,0 +1,6 @@
+green_veg:
+red_veg:
+purple_veg:
+white_veg:
+
+eggs:

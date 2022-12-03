@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.weatherInfo = new System.Windows.Forms.Label();
             this.joggingBtn = new System.Windows.Forms.Button();
             this.weatherBtn = new System.Windows.Forms.Button();
@@ -35,16 +36,35 @@
             this.weatherPanel = new System.Windows.Forms.Panel();
             this.backBtnWeather = new System.Windows.Forms.Button();
             this.HomePanel = new System.Windows.Forms.Panel();
+            this.dietPanel = new System.Windows.Forms.Panel();
+            this.recordPanel = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.database2DataSet = new Demo.Database2DataSet();
+            this.database2DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.database2DataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.database2DataSet1 = new Demo.Database2DataSet1();
+            this.sportRecordBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sportRecordTableAdapter = new Demo.Database2DataSet1TableAdapters.SportRecordTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.weatherPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
+            this.recordPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSetBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sportRecordBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // weatherInfo
             // 
             this.weatherInfo.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.weatherInfo.Location = new System.Drawing.Point(14, 13);
+            this.weatherInfo.Location = new System.Drawing.Point(90, 24);
             this.weatherInfo.Name = "weatherInfo";
-            this.weatherInfo.Size = new System.Drawing.Size(644, 458);
+            this.weatherInfo.Size = new System.Drawing.Size(618, 488);
             this.weatherInfo.TabIndex = 0;
             this.weatherInfo.Text = "label1";
             // 
@@ -84,8 +104,8 @@
             // weatherPanel
             // 
             this.weatherPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.weatherPanel.Controls.Add(this.weatherInfo);
             this.weatherPanel.Controls.Add(this.backBtnWeather);
+            this.weatherPanel.Controls.Add(this.weatherInfo);
             this.weatherPanel.Location = new System.Drawing.Point(709, 29);
             this.weatherPanel.Name = "weatherPanel";
             this.weatherPanel.Size = new System.Drawing.Size(724, 535);
@@ -94,12 +114,13 @@
             // 
             // backBtnWeather
             // 
-            this.backBtnWeather.Location = new System.Drawing.Point(316, 474);
+            this.backBtnWeather.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtnWeather.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtnWeather.Location = new System.Drawing.Point(3, 3);
             this.backBtnWeather.Name = "backBtnWeather";
-            this.backBtnWeather.Size = new System.Drawing.Size(109, 32);
-            this.backBtnWeather.TabIndex = 4;
-            this.backBtnWeather.Text = "返回";
-            this.backBtnWeather.UseVisualStyleBackColor = true;
+            this.backBtnWeather.Size = new System.Drawing.Size(43, 44);
+            this.backBtnWeather.TabIndex = 1;
+            this.backBtnWeather.UseVisualStyleBackColor = false;
             this.backBtnWeather.Click += new System.EventHandler(this.backBtnWeather_Click);
             // 
             // HomePanel
@@ -113,12 +134,93 @@
             this.HomePanel.Size = new System.Drawing.Size(672, 525);
             this.HomePanel.TabIndex = 5;
             // 
+            // dietPanel
+            // 
+            this.dietPanel.Location = new System.Drawing.Point(709, 29);
+            this.dietPanel.Name = "dietPanel";
+            this.dietPanel.Size = new System.Drawing.Size(721, 532);
+            this.dietPanel.TabIndex = 6;
+            // 
+            // recordPanel
+            // 
+            this.recordPanel.Controls.Add(this.dataGridView1);
+            this.recordPanel.Location = new System.Drawing.Point(709, 29);
+            this.recordPanel.Name = "recordPanel";
+            this.recordPanel.Size = new System.Drawing.Size(721, 532);
+            this.recordPanel.TabIndex = 7;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.dateDataGridViewTextBoxColumn,
+            this.distanceDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.sportRecordBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(159, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(345, 150);
+            this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // database2DataSet
+            // 
+            this.database2DataSet.DataSetName = "Database2DataSet";
+            this.database2DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // database2DataSetBindingSource
+            // 
+            this.database2DataSetBindingSource.DataSource = this.database2DataSet;
+            this.database2DataSetBindingSource.Position = 0;
+            this.database2DataSetBindingSource.CurrentChanged += new System.EventHandler(this.database2DataSetBindingSource_CurrentChanged);
+            // 
+            // database2DataSetBindingSource1
+            // 
+            this.database2DataSetBindingSource1.DataSource = this.database2DataSet;
+            this.database2DataSetBindingSource1.Position = 0;
+            // 
+            // database2DataSet1
+            // 
+            this.database2DataSet1.DataSetName = "Database2DataSet1";
+            this.database2DataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sportRecordBindingSource
+            // 
+            this.sportRecordBindingSource.DataMember = "SportRecord";
+            this.sportRecordBindingSource.DataSource = this.database2DataSet1;
+            // 
+            // sportRecordTableAdapter
+            // 
+            this.sportRecordTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            // 
+            // dateDataGridViewTextBoxColumn
+            // 
+            this.dateDataGridViewTextBoxColumn.DataPropertyName = "date";
+            this.dateDataGridViewTextBoxColumn.HeaderText = "date";
+            this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
+            // 
+            // distanceDataGridViewTextBoxColumn
+            // 
+            this.distanceDataGridViewTextBoxColumn.DataPropertyName = "distance";
+            this.distanceDataGridViewTextBoxColumn.HeaderText = "distance";
+            this.distanceDataGridViewTextBoxColumn.Name = "distanceDataGridViewTextBoxColumn";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1482, 600);
+            this.Controls.Add(this.recordPanel);
+            this.Controls.Add(this.dietPanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.weatherPanel);
             this.Name = "Form1";
@@ -126,6 +228,13 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.weatherPanel.ResumeLayout(false);
             this.HomePanel.ResumeLayout(false);
+            this.recordPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSetBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.database2DataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sportRecordBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -138,6 +247,18 @@
         private System.Windows.Forms.Panel weatherPanel;
         private System.Windows.Forms.Panel HomePanel;
         private System.Windows.Forms.Button backBtnWeather;
+        private System.Windows.Forms.Panel dietPanel;
+        private System.Windows.Forms.Panel recordPanel;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource database2DataSetBindingSource;
+        private Database2DataSet database2DataSet;
+        private System.Windows.Forms.BindingSource database2DataSetBindingSource1;
+        private Database2DataSet1 database2DataSet1;
+        private System.Windows.Forms.BindingSource sportRecordBindingSource;
+        private Database2DataSet1TableAdapters.SportRecordTableAdapter sportRecordTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn distanceDataGridViewTextBoxColumn;
     }
 }
 

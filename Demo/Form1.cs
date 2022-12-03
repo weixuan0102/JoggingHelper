@@ -29,17 +29,21 @@ namespace Demo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: 這行程式碼會將資料載入 'database2DataSet1.SportRecord' 資料表。您可以視需要進行移動或移除。
+            this.sportRecordTableAdapter.Fill(this.database2DataSet1.SportRecord);
             weatherInfo.Text = "WAITING...";
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily,16);
 
             joggingBtn.FlatAppearance.BorderSize = 0;
-            joggingBtn.Image = Image.FromFile(@"../../images/jogging.png");
+            joggingBtn.Image = Image.FromFile(@"../../images/sport.png");
             weatherBtn.FlatAppearance.BorderSize = 0;
             weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
             dietBtn.FlatAppearance.BorderSize = 0;
             dietBtn.Image = Image.FromFile(@"../../images/diet.png");
-           
+            backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
+            recordPanel.Enabled = false;
+            recordPanel.Visible = false;
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
@@ -53,7 +57,8 @@ namespace Demo
 
         private void joggingBtn_Click(object sender, EventArgs e)
         {
-
+            recordPanel.Enabled = true;
+            recordPanel.Visible = true;
         }
 
         private void dietBtn_Click(object sender, EventArgs e)
@@ -66,6 +71,16 @@ namespace Demo
             weatherPanel.Visible = false;
             HomePanel.Visible = true;
             HomePanel.BringToFront();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void database2DataSetBindingSource_CurrentChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void getWeatherBtn_Click(object sender, EventArgs e)
@@ -101,7 +116,7 @@ namespace Demo
             }
             catch (HttpRequestException e)
             {
-                MessageBox.Show($"Message :{e.Message} ", "Exception Caught!");
+                MessageBox.Show($"Message :{e.Message} ", "無法成功獲取天氣資訊");
             }
 
             URL = weather_api_url_prefix + postfix_weather + $"?Authorization={weather_api_key}&format={format}&locationName={location}";
@@ -127,7 +142,7 @@ namespace Demo
             }
             catch (HttpRequestException e)
             {
-                MessageBox.Show($"Message :{e.Message} ", "Exception Caught!");
+                MessageBox.Show($"Message :{e.Message} ", "無法成功獲取天氣資訊");
             }
             return w;
         }
