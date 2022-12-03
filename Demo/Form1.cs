@@ -34,7 +34,7 @@ namespace Demo
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily,16);
 
             joggingBtn.FlatAppearance.BorderSize = 0;
-            joggingBtn.Image = Image.FromFile(@"../../images/jogging.png");
+            joggingBtn.Image = Image.FromFile(@"../../images/sport.png");
             weatherBtn.FlatAppearance.BorderSize = 0;
             weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
             dietBtn.FlatAppearance.BorderSize = 0;

@@ -35,6 +35,7 @@
             this.weatherPanel = new System.Windows.Forms.Panel();
             this.backBtnWeather = new System.Windows.Forms.Button();
             this.HomePanel = new System.Windows.Forms.Panel();
+            this.dietPanel = new System.Windows.Forms.Panel();
             this.weatherPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.SuspendLayout();
@@ -114,12 +115,20 @@
             this.HomePanel.Size = new System.Drawing.Size(672, 525);
             this.HomePanel.TabIndex = 5;
             // 
+            // dietPanel
+            // 
+            this.dietPanel.Location = new System.Drawing.Point(709, 29);
+            this.dietPanel.Name = "dietPanel";
+            this.dietPanel.Size = new System.Drawing.Size(721, 532);
+            this.dietPanel.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1482, 600);
+            this.Controls.Add(this.dietPanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.weatherPanel);
             this.Name = "Form1";
@@ -139,6 +148,7 @@
         private System.Windows.Forms.Panel weatherPanel;
         private System.Windows.Forms.Panel HomePanel;
         private System.Windows.Forms.Button backBtnWeather;
+        private System.Windows.Forms.Panel dietPanel;
     }
 }
 
