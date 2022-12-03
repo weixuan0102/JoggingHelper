@@ -39,7 +39,7 @@ namespace Demo
             weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
             dietBtn.FlatAppearance.BorderSize = 0;
             dietBtn.Image = Image.FromFile(@"../../images/diet.png");
-           
+            backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
