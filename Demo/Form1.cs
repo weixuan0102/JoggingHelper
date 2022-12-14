@@ -29,11 +29,9 @@ namespace Demo
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: 這行程式碼會將資料載入 'database2DataSet1.SportRecord' 資料表。您可以視需要進行移動或移除。
-            this.sportRecordTableAdapter.Fill(this.database2DataSet1.SportRecord);
             weatherInfo.Text = "WAITING...";
             weatherInfo.BackColor = Color.Transparent;
-            weatherInfo.Font = new Font(weatherInfo.Font.FontFamily,16);
+            weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
 
             joggingBtn.FlatAppearance.BorderSize = 0;
             joggingBtn.Image = Image.FromFile(@"../../images/sport.png");
@@ -41,9 +39,15 @@ namespace Demo
             weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
             dietBtn.FlatAppearance.BorderSize = 0;
             dietBtn.Image = Image.FromFile(@"../../images/diet.png");
+            bmiBtn.FlatAppearance.BorderSize = 0;
+            //bmiBtn.Image = Image.FromFile(@"../../images/~~~");
+            //bmiStandard.Image = Image.FromFile(@"../../images/bmiStandard.jpg");
+            calorieBtn.FlatAppearance.BorderSize = 0;
+            //calorieBtn.Image = Image.FromFile(@"../../images/~~~");
+            backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
-            recordPanel.Enabled = false;
-            recordPanel.Visible = false;
+            backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
+
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
@@ -57,13 +61,16 @@ namespace Demo
 
         private void joggingBtn_Click(object sender, EventArgs e)
         {
-            recordPanel.Enabled = true;
-            recordPanel.Visible = true;
+            HomePanel.Visible = false;
+            joggingPanel.Visible = true;
+            joggingPanel.BringToFront();
         }
 
         private void dietBtn_Click(object sender, EventArgs e)
         {
-
+            HomePanel.Visible = false;
+            dietPanel.Visible = true;
+            dietPanel.BringToFront();
         }
 
         private void backBtnWeather_Click(object sender, EventArgs e)
@@ -73,14 +80,87 @@ namespace Demo
             HomePanel.BringToFront();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+
+        private void backBtnJogging_Click(object sender, EventArgs e)
+        {
+            joggingPanel.Visible = false;
+            HomePanel.Visible = true;
+            HomePanel.BringToFront();
+        }
+
+        private void backBtnDiet_Click(object sender, EventArgs e)
+        {
+            dietPanel.Visible = false;
+            HomePanel.Visible = true;
+            HomePanel.BringToFront();
+        }
+
+
+        private void bmiBtn_Click(object sender, EventArgs e)
+        {
+            HomePanel.Visible = false;
+            bmiPanel.Visible = true;
+            bmiPanel.BringToFront();
+        }
+
+        private void calorieBtn_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void vegBtn_Click(object sender, EventArgs e)
+        {
+            vegLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            vegLabel.BringToFront();
+        }
+
+        private void fruitBtn_Click(object sender, EventArgs e)
+        {
+            fruitLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            fruitLabel.BringToFront();
+        }
+
+        private void proteinBtn_Click(object sender, EventArgs e)
+        {
+            proteinLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            proteinLabel.BringToFront();
+        }
+
+        private void oilBtn_Click(object sender, EventArgs e)
+        {
+            oilLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            oilLabel.BringToFront();
+        }
+
+        private void grainsBtn_Click(object sender, EventArgs e)
+        {
+            grainLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            grainLabel.BringToFront();
+        }
+
+        private void dietEnterBtn_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void database2DataSetBindingSource_CurrentChanged(object sender, EventArgs e)
+        private void labelCloseBtn_Click(object sender, EventArgs e)
         {
-
+            vegLabel.Visible = false;
+            fruitLabel.Visible = false;
+            oilLabel.Visible = false;
+            grainLabel.Visible = false;
+            proteinLabel.Visible = false;
+            labelCloseBtn.Visible = false;
+            labelCloseBtn.Enabled = false;
         }
 
         private void getWeatherBtn_Click(object sender, EventArgs e)
@@ -116,7 +196,7 @@ namespace Demo
             }
             catch (HttpRequestException e)
             {
-                MessageBox.Show($"Message :{e.Message} ", "無法成功獲取天氣資訊");
+                MessageBox.Show($"Message :{e.Message} ", "Exception Caught!");
             }
 
             URL = weather_api_url_prefix + postfix_weather + $"?Authorization={weather_api_key}&format={format}&locationName={location}";
@@ -142,7 +222,7 @@ namespace Demo
             }
             catch (HttpRequestException e)
             {
-                MessageBox.Show($"Message :{e.Message} ", "無法成功獲取天氣資訊");
+                MessageBox.Show($"Message :{e.Message} ", "Exception Caught!");
             }
             return w;
         }
