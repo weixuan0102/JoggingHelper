@@ -46,9 +46,8 @@ namespace Demo
             //calorieBtn.Image = Image.FromFile(@"../../images/~~~");
             backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
-            //backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
-            //backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
-            //backBtnCalorie.Image = Image.FromFile(@"../../images/backToHome.png");
+            backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
+
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
@@ -81,12 +80,21 @@ namespace Demo
             HomePanel.BringToFront();
         }
 
+
         private void backBtnJogging_Click(object sender, EventArgs e)
         {
             joggingPanel.Visible = false;
             HomePanel.Visible = true;
             HomePanel.BringToFront();
         }
+
+        private void backBtnDiet_Click(object sender, EventArgs e)
+        {
+            dietPanel.Visible = false;
+            HomePanel.Visible = true;
+            HomePanel.BringToFront();
+        }
+
 
         private void bmiBtn_Click(object sender, EventArgs e)
         {
@@ -97,7 +105,62 @@ namespace Demo
 
         private void calorieBtn_Click(object sender, EventArgs e)
         {
+        }
 
+        private void vegBtn_Click(object sender, EventArgs e)
+        {
+            vegLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            vegLabel.BringToFront();
+        }
+
+        private void fruitBtn_Click(object sender, EventArgs e)
+        {
+            fruitLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            fruitLabel.BringToFront();
+        }
+
+        private void proteinBtn_Click(object sender, EventArgs e)
+        {
+            proteinLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            proteinLabel.BringToFront();
+        }
+
+        private void oilBtn_Click(object sender, EventArgs e)
+        {
+            oilLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            oilLabel.BringToFront();
+        }
+
+        private void grainsBtn_Click(object sender, EventArgs e)
+        {
+            grainLabel.Visible = true;
+            labelCloseBtn.Visible = true;
+            labelCloseBtn.Enabled = true;
+            grainLabel.BringToFront();
+        }
+
+        private void dietEnterBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelCloseBtn_Click(object sender, EventArgs e)
+        {
+            vegLabel.Visible = false;
+            fruitLabel.Visible = false;
+            oilLabel.Visible = false;
+            grainLabel.Visible = false;
+            proteinLabel.Visible = false;
+            labelCloseBtn.Visible = false;
+            labelCloseBtn.Enabled = false;
         }
 
         private void getWeatherBtn_Click(object sender, EventArgs e)
