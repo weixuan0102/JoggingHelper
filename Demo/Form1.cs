@@ -31,7 +31,7 @@ namespace Demo
         {
             weatherInfo.Text = "WAITING...";
             weatherInfo.BackColor = Color.Transparent;
-            weatherInfo.Font = new Font(weatherInfo.Font.FontFamily,16);
+            weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
 
             joggingBtn.FlatAppearance.BorderSize = 0;
             joggingBtn.Image = Image.FromFile(@"../../images/sport.png");
@@ -39,7 +39,16 @@ namespace Demo
             weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
             dietBtn.FlatAppearance.BorderSize = 0;
             dietBtn.Image = Image.FromFile(@"../../images/diet.png");
+            bmiBtn.FlatAppearance.BorderSize = 0;
+            //bmiBtn.Image = Image.FromFile(@"../../images/~~~");
+            //bmiStandard.Image = Image.FromFile(@"../../images/bmiStandard.jpg");
+            calorieBtn.FlatAppearance.BorderSize = 0;
+            //calorieBtn.Image = Image.FromFile(@"../../images/~~~");
+            backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
+            //backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
+            //backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
+            //backBtnCalorie.Image = Image.FromFile(@"../../images/backToHome.png");
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
@@ -53,12 +62,16 @@ namespace Demo
 
         private void joggingBtn_Click(object sender, EventArgs e)
         {
-
+            HomePanel.Visible = false;
+            joggingPanel.Visible = true;
+            joggingPanel.BringToFront();
         }
 
         private void dietBtn_Click(object sender, EventArgs e)
         {
-
+            HomePanel.Visible = false;
+            dietPanel.Visible = true;
+            dietPanel.BringToFront();
         }
 
         private void backBtnWeather_Click(object sender, EventArgs e)
@@ -66,6 +79,25 @@ namespace Demo
             weatherPanel.Visible = false;
             HomePanel.Visible = true;
             HomePanel.BringToFront();
+        }
+
+        private void backBtnJogging_Click(object sender, EventArgs e)
+        {
+            joggingPanel.Visible = false;
+            HomePanel.Visible = true;
+            HomePanel.BringToFront();
+        }
+
+        private void bmiBtn_Click(object sender, EventArgs e)
+        {
+            HomePanel.Visible = false;
+            bmiPanel.Visible = true;
+            bmiPanel.BringToFront();
+        }
+
+        private void calorieBtn_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void getWeatherBtn_Click(object sender, EventArgs e)
