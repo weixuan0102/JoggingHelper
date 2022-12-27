@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
 using System.Text.Json;
+using System.Data.SqlClient;
+using System.Threading;
+using System.Web;
 
 namespace Demo
 {
@@ -26,6 +29,7 @@ namespace Demo
         {
             InitializeComponent();
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -48,6 +52,16 @@ namespace Demo
             backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
 
+            SqlConnection db = new SqlConnection();
+            db.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
+                "AttachDbFilename=|DataDirectory|Database1.mdf;" +
+                "Integrated Security=True";
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SportRecord", db);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "SportRecord");
+            dataGridView1.DataSource = ds.Tables[0];
+            dataGridView1.Sort(dataGridView1.Columns["date"], ListSortDirection.Descending);
+            db.Close();
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
@@ -163,6 +177,117 @@ namespace Demo
             labelCloseBtn.Enabled = false;
         }
 
+        void Edit(string sqlstr)
+        {
+            SqlConnection cn = new SqlConnection();
+            cn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
+                "AttachDbFilename=|DataDirectory|Database1.mdf;" +
+                "Integrated Security=True";
+            cn.Open();
+            SqlCommand cmd = new SqlCommand(sqlstr,cn);
+            cmd.ExecuteNonQuery();
+            
+            SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SportRecord", cn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "SportRecord");
+            dataGridView1.DataSource = ds.Tables[0];
+            dataGridView1.Sort(dataGridView1.Columns["date"], ListSortDirection.Descending);
+            cn.Close();
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string dateTime = dateTimePicker1.Value.ToString("yyyy-MM-dd"), distance = textBox2.Text;
+
+                SqlConnection cn = new SqlConnection();
+                cn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
+                    "AttachDbFilename=|DataDirectory|Database1.mdf;" +
+                    "Integrated Security=True";
+                Edit("INSERT INTO SportRecord(date,distance)VALUES('" +
+                    dateTime.Replace("'", "''") + "'," +
+                    distance +
+                     ")");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            //判断按键是不是要输入的类型。
+            if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8 && (int)e.KeyChar != 46)
+                e.Handled = true;
+
+            //小数点的处理。
+            if ((int)e.KeyChar == 46)                           //小数点
+            {
+                if (textBox1.Text.Length <= 0)
+                    e.Handled = true;   //小数点不能在第一位
+                else
+                {
+                    float f;
+                    float oldf;
+                    bool b1 = false, b2 = false;
+                    b1 = float.TryParse(textBox1.Text, out oldf);
+                    b2 = float.TryParse(textBox1.Text + e.KeyChar.ToString(), out f);
+                    if (b2 == false)
+                    {
+                        if (b1 == true)
+                            e.Handled = true;
+                        else
+                            e.Handled = false;
+                    }
+                }
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox2.Text == "") textBox2.Text = 0.ToString();
+            int number = int.Parse(textBox2.Text);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string date;
+                date = dataGridView1.CurrentRow.Cells[0].Value.ToString().Replace('/','-');
+                Edit("DELETE FROM SportRecord WHERE date='" + date.Split(' ')[0].Replace("'", "''") + "'");
+
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string dateTime = dateTimePicker1.Value.ToString("yyyy-MM-dd"), distance = textBox2.Text;
+
+                SqlConnection cn = new SqlConnection();
+                cn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
+                    "AttachDbFilename=|DataDirectory|Database1.mdf;" +
+                    "Integrated Security=True";
+
+                Edit("UPDATE SportRecord SET distance=" + distance + " WHERE date='"
+                    + dateTime.Replace("'", "''") + "'");
+  
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
         private void getWeatherBtn_Click(object sender, EventArgs e)
         {
             var w = Task<Output>.Run(async () => await GetRequestApi());
@@ -177,6 +302,7 @@ namespace Demo
             {
                 using (HttpClient httpClient = new HttpClient())
                 {
+                    httpClient.Timeout = TimeSpan.FromMilliseconds(10000);
                     HttpResponseMessage httpResponse = await httpClient.GetAsync(URL);
                     httpResponse.EnsureSuccessStatusCode();
                     var requestBody = await httpResponse.Content.ReadAsStringAsync();
@@ -194,6 +320,10 @@ namespace Demo
                     w.SetInfo(4, status);
                 }
             }
+            catch (TaskCanceledException ex)
+            {
+                MessageBox.Show($"Message :{ex.Message} ", "Timeout!");
+            }
             catch (HttpRequestException e)
             {
                 MessageBox.Show($"Message :{e.Message} ", "Exception Caught!");
@@ -204,6 +334,7 @@ namespace Demo
             {
                 using (HttpClient httpClient = new HttpClient())
                 {
+                    httpClient.Timeout = TimeSpan.FromMilliseconds(10000);
                     HttpResponseMessage httpResponse = await httpClient.GetAsync(URL);
                     httpResponse.EnsureSuccessStatusCode();
                     var requestBody = await httpResponse.Content.ReadAsStringAsync();
@@ -219,6 +350,10 @@ namespace Demo
                     w.SetInfo(7, PoP + " %\r\n" + startTime + "~" + endTime);
 
                 }
+            }
+            catch (TaskCanceledException ex)
+            {
+                MessageBox.Show($"Message :{ex.Message} ", "Timeout!");
             }
             catch (HttpRequestException e)
             {

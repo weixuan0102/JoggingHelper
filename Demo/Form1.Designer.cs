@@ -51,31 +51,6 @@
             this.bmiWeightLabel = new System.Windows.Forms.Label();
             this.bmiHeightLabel = new System.Windows.Forms.Label();
             this.joggingPanel = new System.Windows.Forms.Panel();
-            this.joggingInfo = new System.Windows.Forms.TabControl();
-            this.jogWeekRecordPage = new System.Windows.Forms.TabPage();
-            this.jogRecordTotal = new System.Windows.Forms.Label();
-            this.jogRecordDay7 = new System.Windows.Forms.Label();
-            this.jogRecordDay6 = new System.Windows.Forms.Label();
-            this.jogRecordDay5 = new System.Windows.Forms.Label();
-            this.jogRecordDay4 = new System.Windows.Forms.Label();
-            this.jogRecordDay3 = new System.Windows.Forms.Label();
-            this.jogRecordDay2 = new System.Windows.Forms.Label();
-            this.jogRecordDay1 = new System.Windows.Forms.Label();
-            this.jogModifyPage = new System.Windows.Forms.TabPage();
-            this.label7 = new System.Windows.Forms.Label();
-            this.jogDistance = new System.Windows.Forms.TextBox();
-            this.jogTime = new System.Windows.Forms.TextBox();
-            this.jogDay = new System.Windows.Forms.ComboBox();
-            this.jogDeleteBtn = new System.Windows.Forms.Button();
-            this.jogAddBtn = new System.Windows.Forms.Button();
-            this.jogSearchBtn = new System.Windows.Forms.Button();
-            this.jogDistanceUnit = new System.Windows.Forms.Label();
-            this.jogTimeUnit = new System.Windows.Forms.Label();
-            this.jogDistanceLabel = new System.Windows.Forms.Label();
-            this.jogTimeLabel = new System.Windows.Forms.Label();
-            this.jogHintLabel = new System.Windows.Forms.Label();
-            this.jogDayLabel = new System.Windows.Forms.Label();
-            this.jogRecordPage = new System.Windows.Forms.TabPage();
             this.backBtnJogging = new System.Windows.Forms.Button();
             this.dietPanel = new System.Windows.Forms.Panel();
             this.labelCloseBtn = new System.Windows.Forms.Button();
@@ -102,15 +77,50 @@
             this.oilBtn = new System.Windows.Forms.Button();
             this.proteinBtn = new System.Windows.Forms.Button();
             this.vegBtn = new System.Windows.Forms.Button();
+            this.jogRecordPage = new System.Windows.Forms.TabPage();
+            this.jogModifyPage = new System.Windows.Forms.TabPage();
+            this.jogDayLabel = new System.Windows.Forms.Label();
+            this.jogHintLabel = new System.Windows.Forms.Label();
+            this.jogTimeLabel = new System.Windows.Forms.Label();
+            this.jogDistanceLabel = new System.Windows.Forms.Label();
+            this.jogTimeUnit = new System.Windows.Forms.Label();
+            this.jogDistanceUnit = new System.Windows.Forms.Label();
+            this.jogSearchBtn = new System.Windows.Forms.Button();
+            this.jogAddBtn = new System.Windows.Forms.Button();
+            this.jogDeleteBtn = new System.Windows.Forms.Button();
+            this.jogDay = new System.Windows.Forms.ComboBox();
+            this.jogTime = new System.Windows.Forms.TextBox();
+            this.jogDistance = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.jogWeekRecordPage = new System.Windows.Forms.TabPage();
+            this.addRecord = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.joggingInfo = new System.Windows.Forms.TabControl();
+            this.jogRecordTotal = new System.Windows.Forms.Label();
+            this.jogRecordDay2 = new System.Windows.Forms.Label();
+            this.jogRecordDay3 = new System.Windows.Forms.Label();
+            this.jogRecordDay4 = new System.Windows.Forms.Label();
+            this.jogRecordDay5 = new System.Windows.Forms.Label();
+            this.jogRecordDay6 = new System.Windows.Forms.Label();
+            this.jogRecordDay7 = new System.Windows.Forms.Label();
+            this.jogRecordDay1 = new System.Windows.Forms.Label();
             this.weatherPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.bmiPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bmiStandard)).BeginInit();
             this.joggingPanel.SuspendLayout();
-            this.joggingInfo.SuspendLayout();
-            this.jogWeekRecordPage.SuspendLayout();
-            this.jogModifyPage.SuspendLayout();
             this.dietPanel.SuspendLayout();
+            this.jogModifyPage.SuspendLayout();
+            this.jogWeekRecordPage.SuspendLayout();
+            this.addRecord.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.joggingInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // weatherInfo
@@ -239,7 +249,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(141, 165);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(62, 22);
             this.textBox1.TabIndex = 11;
@@ -257,7 +267,7 @@
             // bmiCalculateBtn
             // 
             this.bmiCalculateBtn.Location = new System.Drawing.Point(273, 120);
-            this.bmiCalculateBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bmiCalculateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.bmiCalculateBtn.Name = "bmiCalculateBtn";
             this.bmiCalculateBtn.Size = new System.Drawing.Size(74, 28);
             this.bmiCalculateBtn.TabIndex = 9;
@@ -267,7 +277,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(379, 482);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(86, 42);
             this.button1.TabIndex = 8;
@@ -288,7 +298,7 @@
             // bmiStandard
             // 
             this.bmiStandard.Location = new System.Drawing.Point(59, 197);
-            this.bmiStandard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bmiStandard.Margin = new System.Windows.Forms.Padding(2);
             this.bmiStandard.Name = "bmiStandard";
             this.bmiStandard.Size = new System.Drawing.Size(271, 327);
             this.bmiStandard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -298,7 +308,7 @@
             // bmiWeight
             // 
             this.bmiWeight.Location = new System.Drawing.Point(141, 132);
-            this.bmiWeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bmiWeight.Margin = new System.Windows.Forms.Padding(2);
             this.bmiWeight.Name = "bmiWeight";
             this.bmiWeight.Size = new System.Drawing.Size(62, 22);
             this.bmiWeight.TabIndex = 5;
@@ -306,7 +316,7 @@
             // bmiHeight
             // 
             this.bmiHeight.Location = new System.Drawing.Point(141, 97);
-            this.bmiHeight.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bmiHeight.Margin = new System.Windows.Forms.Padding(2);
             this.bmiHeight.Name = "bmiHeight";
             this.bmiHeight.Size = new System.Drawing.Size(62, 22);
             this.bmiHeight.TabIndex = 4;
@@ -356,281 +366,11 @@
             this.joggingPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.joggingPanel.Controls.Add(this.joggingInfo);
             this.joggingPanel.Controls.Add(this.backBtnJogging);
-            this.joggingPanel.Location = new System.Drawing.Point(709, 29);
+            this.joggingPanel.Location = new System.Drawing.Point(706, 531);
             this.joggingPanel.Name = "joggingPanel";
             this.joggingPanel.Size = new System.Drawing.Size(724, 535);
             this.joggingPanel.TabIndex = 7;
             this.joggingPanel.Visible = false;
-            // 
-            // joggingInfo
-            // 
-            this.joggingInfo.Controls.Add(this.jogWeekRecordPage);
-            this.joggingInfo.Controls.Add(this.jogModifyPage);
-            this.joggingInfo.Controls.Add(this.jogRecordPage);
-            this.joggingInfo.Location = new System.Drawing.Point(70, 38);
-            this.joggingInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.joggingInfo.Name = "joggingInfo";
-            this.joggingInfo.SelectedIndex = 0;
-            this.joggingInfo.Size = new System.Drawing.Size(614, 484);
-            this.joggingInfo.TabIndex = 2;
-            // 
-            // jogWeekRecordPage
-            // 
-            this.jogWeekRecordPage.Controls.Add(this.jogRecordTotal);
-            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay7);
-            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay6);
-            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay5);
-            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay4);
-            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay3);
-            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay2);
-            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay1);
-            this.jogWeekRecordPage.Location = new System.Drawing.Point(4, 22);
-            this.jogWeekRecordPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogWeekRecordPage.Name = "jogWeekRecordPage";
-            this.jogWeekRecordPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogWeekRecordPage.Size = new System.Drawing.Size(606, 458);
-            this.jogWeekRecordPage.TabIndex = 0;
-            this.jogWeekRecordPage.Text = "本周紀錄";
-            this.jogWeekRecordPage.UseVisualStyleBackColor = true;
-            // 
-            // jogRecordTotal
-            // 
-            this.jogRecordTotal.Location = new System.Drawing.Point(304, 347);
-            this.jogRecordTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogRecordTotal.Name = "jogRecordTotal";
-            this.jogRecordTotal.Size = new System.Drawing.Size(290, 44);
-            this.jogRecordTotal.TabIndex = 8;
-            this.jogRecordTotal.Text = "Total      尚無紀錄";
-            // 
-            // jogRecordDay7
-            // 
-            this.jogRecordDay7.Location = new System.Drawing.Point(304, 237);
-            this.jogRecordDay7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogRecordDay7.Name = "jogRecordDay7";
-            this.jogRecordDay7.Size = new System.Drawing.Size(290, 44);
-            this.jogRecordDay7.TabIndex = 7;
-            this.jogRecordDay7.Text = "Day7      尚無紀錄";
-            // 
-            // jogRecordDay6
-            // 
-            this.jogRecordDay6.Location = new System.Drawing.Point(304, 126);
-            this.jogRecordDay6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogRecordDay6.Name = "jogRecordDay6";
-            this.jogRecordDay6.Size = new System.Drawing.Size(290, 44);
-            this.jogRecordDay6.TabIndex = 6;
-            this.jogRecordDay6.Text = "Day6      尚無紀錄";
-            // 
-            // jogRecordDay5
-            // 
-            this.jogRecordDay5.Location = new System.Drawing.Point(304, 16);
-            this.jogRecordDay5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogRecordDay5.Name = "jogRecordDay5";
-            this.jogRecordDay5.Size = new System.Drawing.Size(290, 44);
-            this.jogRecordDay5.TabIndex = 5;
-            this.jogRecordDay5.Text = "Day5      尚無紀錄";
-            // 
-            // jogRecordDay4
-            // 
-            this.jogRecordDay4.Location = new System.Drawing.Point(10, 347);
-            this.jogRecordDay4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogRecordDay4.Name = "jogRecordDay4";
-            this.jogRecordDay4.Size = new System.Drawing.Size(290, 44);
-            this.jogRecordDay4.TabIndex = 4;
-            this.jogRecordDay4.Text = "Day4      尚無紀錄";
-            // 
-            // jogRecordDay3
-            // 
-            this.jogRecordDay3.Location = new System.Drawing.Point(10, 237);
-            this.jogRecordDay3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogRecordDay3.Name = "jogRecordDay3";
-            this.jogRecordDay3.Size = new System.Drawing.Size(290, 44);
-            this.jogRecordDay3.TabIndex = 3;
-            this.jogRecordDay3.Text = "Day3      尚無紀錄";
-            // 
-            // jogRecordDay2
-            // 
-            this.jogRecordDay2.Location = new System.Drawing.Point(10, 126);
-            this.jogRecordDay2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogRecordDay2.Name = "jogRecordDay2";
-            this.jogRecordDay2.Size = new System.Drawing.Size(290, 44);
-            this.jogRecordDay2.TabIndex = 2;
-            this.jogRecordDay2.Text = "Day2      尚無紀錄";
-            // 
-            // jogRecordDay1
-            // 
-            this.jogRecordDay1.Location = new System.Drawing.Point(10, 16);
-            this.jogRecordDay1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogRecordDay1.Name = "jogRecordDay1";
-            this.jogRecordDay1.Size = new System.Drawing.Size(290, 44);
-            this.jogRecordDay1.TabIndex = 1;
-            this.jogRecordDay1.Text = "Day1      尚無紀錄";
-            // 
-            // jogModifyPage
-            // 
-            this.jogModifyPage.Controls.Add(this.label7);
-            this.jogModifyPage.Controls.Add(this.jogDistance);
-            this.jogModifyPage.Controls.Add(this.jogTime);
-            this.jogModifyPage.Controls.Add(this.jogDay);
-            this.jogModifyPage.Controls.Add(this.jogDeleteBtn);
-            this.jogModifyPage.Controls.Add(this.jogAddBtn);
-            this.jogModifyPage.Controls.Add(this.jogSearchBtn);
-            this.jogModifyPage.Controls.Add(this.jogDistanceUnit);
-            this.jogModifyPage.Controls.Add(this.jogTimeUnit);
-            this.jogModifyPage.Controls.Add(this.jogDistanceLabel);
-            this.jogModifyPage.Controls.Add(this.jogTimeLabel);
-            this.jogModifyPage.Controls.Add(this.jogHintLabel);
-            this.jogModifyPage.Controls.Add(this.jogDayLabel);
-            this.jogModifyPage.Location = new System.Drawing.Point(4, 22);
-            this.jogModifyPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogModifyPage.Name = "jogModifyPage";
-            this.jogModifyPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogModifyPage.Size = new System.Drawing.Size(606, 458);
-            this.jogModifyPage.TabIndex = 1;
-            this.jogModifyPage.Text = "修改資料";
-            this.jogModifyPage.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(178, 180);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 12);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "顯示搜尋結果~~~";
-            // 
-            // jogDistance
-            // 
-            this.jogDistance.Location = new System.Drawing.Point(127, 423);
-            this.jogDistance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogDistance.Name = "jogDistance";
-            this.jogDistance.Size = new System.Drawing.Size(74, 22);
-            this.jogDistance.TabIndex = 11;
-            // 
-            // jogTime
-            // 
-            this.jogTime.Location = new System.Drawing.Point(127, 378);
-            this.jogTime.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogTime.Name = "jogTime";
-            this.jogTime.Size = new System.Drawing.Size(74, 22);
-            this.jogTime.TabIndex = 10;
-            // 
-            // jogDay
-            // 
-            this.jogDay.FormattingEnabled = true;
-            this.jogDay.Items.AddRange(new object[] {
-            "Day1",
-            "Day2",
-            "Day3",
-            "Day4",
-            "Day5",
-            "Day6",
-            "Day7"});
-            this.jogDay.Location = new System.Drawing.Point(127, 28);
-            this.jogDay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogDay.Name = "jogDay";
-            this.jogDay.Size = new System.Drawing.Size(74, 20);
-            this.jogDay.TabIndex = 9;
-            // 
-            // jogDeleteBtn
-            // 
-            this.jogDeleteBtn.Location = new System.Drawing.Point(355, 419);
-            this.jogDeleteBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogDeleteBtn.Name = "jogDeleteBtn";
-            this.jogDeleteBtn.Size = new System.Drawing.Size(49, 22);
-            this.jogDeleteBtn.TabIndex = 8;
-            this.jogDeleteBtn.Text = "刪除";
-            this.jogDeleteBtn.UseVisualStyleBackColor = true;
-            // 
-            // jogAddBtn
-            // 
-            this.jogAddBtn.Location = new System.Drawing.Point(289, 419);
-            this.jogAddBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogAddBtn.Name = "jogAddBtn";
-            this.jogAddBtn.Size = new System.Drawing.Size(49, 22);
-            this.jogAddBtn.TabIndex = 7;
-            this.jogAddBtn.Text = "新增";
-            this.jogAddBtn.UseVisualStyleBackColor = true;
-            // 
-            // jogSearchBtn
-            // 
-            this.jogSearchBtn.Location = new System.Drawing.Point(289, 25);
-            this.jogSearchBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogSearchBtn.Name = "jogSearchBtn";
-            this.jogSearchBtn.Size = new System.Drawing.Size(49, 22);
-            this.jogSearchBtn.TabIndex = 6;
-            this.jogSearchBtn.Text = "查詢";
-            this.jogSearchBtn.UseVisualStyleBackColor = true;
-            // 
-            // jogDistanceUnit
-            // 
-            this.jogDistanceUnit.AutoSize = true;
-            this.jogDistanceUnit.Location = new System.Drawing.Point(217, 424);
-            this.jogDistanceUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogDistanceUnit.Name = "jogDistanceUnit";
-            this.jogDistanceUnit.Size = new System.Drawing.Size(20, 12);
-            this.jogDistanceUnit.TabIndex = 5;
-            this.jogDistanceUnit.Text = "km";
-            // 
-            // jogTimeUnit
-            // 
-            this.jogTimeUnit.AutoSize = true;
-            this.jogTimeUnit.Location = new System.Drawing.Point(214, 380);
-            this.jogTimeUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogTimeUnit.Name = "jogTimeUnit";
-            this.jogTimeUnit.Size = new System.Drawing.Size(23, 12);
-            this.jogTimeUnit.TabIndex = 4;
-            this.jogTimeUnit.Text = "min";
-            // 
-            // jogDistanceLabel
-            // 
-            this.jogDistanceLabel.AutoSize = true;
-            this.jogDistanceLabel.Location = new System.Drawing.Point(72, 424);
-            this.jogDistanceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogDistanceLabel.Name = "jogDistanceLabel";
-            this.jogDistanceLabel.Size = new System.Drawing.Size(35, 12);
-            this.jogDistanceLabel.TabIndex = 3;
-            this.jogDistanceLabel.Text = "里程 :";
-            // 
-            // jogTimeLabel
-            // 
-            this.jogTimeLabel.AutoSize = true;
-            this.jogTimeLabel.Location = new System.Drawing.Point(72, 380);
-            this.jogTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogTimeLabel.Name = "jogTimeLabel";
-            this.jogTimeLabel.Size = new System.Drawing.Size(35, 12);
-            this.jogTimeLabel.TabIndex = 2;
-            this.jogTimeLabel.Text = "時長 :";
-            // 
-            // jogHintLabel
-            // 
-            this.jogHintLabel.AutoSize = true;
-            this.jogHintLabel.Location = new System.Drawing.Point(38, 346);
-            this.jogHintLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogHintLabel.Name = "jogHintLabel";
-            this.jogHintLabel.Size = new System.Drawing.Size(119, 12);
-            this.jogHintLabel.TabIndex = 1;
-            this.jogHintLabel.Text = "請輸入欲修改的資料 :";
-            // 
-            // jogDayLabel
-            // 
-            this.jogDayLabel.AutoSize = true;
-            this.jogDayLabel.Location = new System.Drawing.Point(38, 30);
-            this.jogDayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.jogDayLabel.Name = "jogDayLabel";
-            this.jogDayLabel.Size = new System.Drawing.Size(71, 12);
-            this.jogDayLabel.TabIndex = 0;
-            this.jogDayLabel.Text = "請選擇日期 :";
-            // 
-            // jogRecordPage
-            // 
-            this.jogRecordPage.Location = new System.Drawing.Point(4, 22);
-            this.jogRecordPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.jogRecordPage.Name = "jogRecordPage";
-            this.jogRecordPage.Size = new System.Drawing.Size(606, 458);
-            this.jogRecordPage.TabIndex = 2;
-            this.jogRecordPage.Text = "查詢紀錄";
-            this.jogRecordPage.UseVisualStyleBackColor = true;
             // 
             // backBtnJogging
             // 
@@ -670,7 +410,7 @@
             this.dietPanel.Controls.Add(this.proteinBtn);
             this.dietPanel.Controls.Add(this.vegBtn);
             this.dietPanel.Location = new System.Drawing.Point(760, 16);
-            this.dietPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dietPanel.Margin = new System.Windows.Forms.Padding(2);
             this.dietPanel.Name = "dietPanel";
             this.dietPanel.Size = new System.Drawing.Size(573, 548);
             this.dietPanel.TabIndex = 6;
@@ -682,7 +422,7 @@
             this.labelCloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelCloseBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.labelCloseBtn.Location = new System.Drawing.Point(467, 420);
-            this.labelCloseBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.labelCloseBtn.Margin = new System.Windows.Forms.Padding(2);
             this.labelCloseBtn.Name = "labelCloseBtn";
             this.labelCloseBtn.Size = new System.Drawing.Size(73, 37);
             this.labelCloseBtn.TabIndex = 23;
@@ -696,7 +436,7 @@
             this.backBtnDiet.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.backBtnDiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtnDiet.Location = new System.Drawing.Point(5, 3);
-            this.backBtnDiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backBtnDiet.Margin = new System.Windows.Forms.Padding(2);
             this.backBtnDiet.Name = "backBtnDiet";
             this.backBtnDiet.Size = new System.Drawing.Size(48, 51);
             this.backBtnDiet.TabIndex = 22;
@@ -758,7 +498,7 @@
             this.dietEnterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dietEnterBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.dietEnterBtn.Location = new System.Drawing.Point(116, 420);
-            this.dietEnterBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dietEnterBtn.Margin = new System.Windows.Forms.Padding(2);
             this.dietEnterBtn.Name = "dietEnterBtn";
             this.dietEnterBtn.Size = new System.Drawing.Size(58, 37);
             this.dietEnterBtn.TabIndex = 16;
@@ -824,7 +564,7 @@
             // grainTxt
             // 
             this.grainTxt.Location = new System.Drawing.Point(116, 367);
-            this.grainTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grainTxt.Margin = new System.Windows.Forms.Padding(2);
             this.grainTxt.Name = "grainTxt";
             this.grainTxt.Size = new System.Drawing.Size(38, 22);
             this.grainTxt.TabIndex = 10;
@@ -832,7 +572,7 @@
             // oilTxt
             // 
             this.oilTxt.Location = new System.Drawing.Point(116, 295);
-            this.oilTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.oilTxt.Margin = new System.Windows.Forms.Padding(2);
             this.oilTxt.Name = "oilTxt";
             this.oilTxt.Size = new System.Drawing.Size(38, 22);
             this.oilTxt.TabIndex = 9;
@@ -840,7 +580,7 @@
             // proteinTxt
             // 
             this.proteinTxt.Location = new System.Drawing.Point(116, 225);
-            this.proteinTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.proteinTxt.Margin = new System.Windows.Forms.Padding(2);
             this.proteinTxt.Name = "proteinTxt";
             this.proteinTxt.Size = new System.Drawing.Size(38, 22);
             this.proteinTxt.TabIndex = 8;
@@ -848,7 +588,7 @@
             // fruitTxt
             // 
             this.fruitTxt.Location = new System.Drawing.Point(116, 162);
-            this.fruitTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fruitTxt.Margin = new System.Windows.Forms.Padding(2);
             this.fruitTxt.Name = "fruitTxt";
             this.fruitTxt.Size = new System.Drawing.Size(38, 22);
             this.fruitTxt.TabIndex = 7;
@@ -856,7 +596,7 @@
             // vegTxt
             // 
             this.vegTxt.Location = new System.Drawing.Point(116, 100);
-            this.vegTxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.vegTxt.Margin = new System.Windows.Forms.Padding(2);
             this.vegTxt.Name = "vegTxt";
             this.vegTxt.Size = new System.Drawing.Size(38, 22);
             this.vegTxt.TabIndex = 6;
@@ -866,7 +606,7 @@
             this.fruitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fruitBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.fruitBtn.Location = new System.Drawing.Point(33, 149);
-            this.fruitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.fruitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.fruitBtn.Name = "fruitBtn";
             this.fruitBtn.Size = new System.Drawing.Size(79, 33);
             this.fruitBtn.TabIndex = 5;
@@ -889,7 +629,7 @@
             this.grainsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grainsBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.grainsBtn.Location = new System.Drawing.Point(24, 356);
-            this.grainsBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.grainsBtn.Margin = new System.Windows.Forms.Padding(2);
             this.grainsBtn.Name = "grainsBtn";
             this.grainsBtn.Size = new System.Drawing.Size(88, 35);
             this.grainsBtn.TabIndex = 3;
@@ -902,7 +642,7 @@
             this.oilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.oilBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.oilBtn.Location = new System.Drawing.Point(33, 284);
-            this.oilBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.oilBtn.Margin = new System.Windows.Forms.Padding(2);
             this.oilBtn.Name = "oilBtn";
             this.oilBtn.Size = new System.Drawing.Size(79, 33);
             this.oilBtn.TabIndex = 2;
@@ -915,7 +655,7 @@
             this.proteinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.proteinBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.proteinBtn.Location = new System.Drawing.Point(33, 214);
-            this.proteinBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.proteinBtn.Margin = new System.Windows.Forms.Padding(2);
             this.proteinBtn.Name = "proteinBtn";
             this.proteinBtn.Size = new System.Drawing.Size(79, 33);
             this.proteinBtn.TabIndex = 1;
@@ -929,7 +669,7 @@
             this.vegBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vegBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.vegBtn.Location = new System.Drawing.Point(33, 89);
-            this.vegBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.vegBtn.Margin = new System.Windows.Forms.Padding(2);
             this.vegBtn.Name = "vegBtn";
             this.vegBtn.Size = new System.Drawing.Size(79, 33);
             this.vegBtn.TabIndex = 0;
@@ -937,17 +677,367 @@
             this.vegBtn.UseVisualStyleBackColor = false;
             this.vegBtn.Click += new System.EventHandler(this.vegBtn_Click);
             // 
+            // jogRecordPage
+            // 
+            this.jogRecordPage.Location = new System.Drawing.Point(4, 22);
+            this.jogRecordPage.Margin = new System.Windows.Forms.Padding(2);
+            this.jogRecordPage.Name = "jogRecordPage";
+            this.jogRecordPage.Size = new System.Drawing.Size(606, 458);
+            this.jogRecordPage.TabIndex = 2;
+            this.jogRecordPage.Text = "查詢紀錄";
+            this.jogRecordPage.UseVisualStyleBackColor = true;
+            // 
+            // jogModifyPage
+            // 
+            this.jogModifyPage.Controls.Add(this.label7);
+            this.jogModifyPage.Controls.Add(this.jogDistance);
+            this.jogModifyPage.Controls.Add(this.jogTime);
+            this.jogModifyPage.Controls.Add(this.jogDay);
+            this.jogModifyPage.Controls.Add(this.jogDeleteBtn);
+            this.jogModifyPage.Controls.Add(this.jogAddBtn);
+            this.jogModifyPage.Controls.Add(this.jogSearchBtn);
+            this.jogModifyPage.Controls.Add(this.jogDistanceUnit);
+            this.jogModifyPage.Controls.Add(this.jogTimeUnit);
+            this.jogModifyPage.Controls.Add(this.jogDistanceLabel);
+            this.jogModifyPage.Controls.Add(this.jogTimeLabel);
+            this.jogModifyPage.Controls.Add(this.jogHintLabel);
+            this.jogModifyPage.Controls.Add(this.jogDayLabel);
+            this.jogModifyPage.Location = new System.Drawing.Point(4, 22);
+            this.jogModifyPage.Margin = new System.Windows.Forms.Padding(2);
+            this.jogModifyPage.Name = "jogModifyPage";
+            this.jogModifyPage.Padding = new System.Windows.Forms.Padding(2);
+            this.jogModifyPage.Size = new System.Drawing.Size(606, 458);
+            this.jogModifyPage.TabIndex = 1;
+            this.jogModifyPage.Text = "修改資料";
+            this.jogModifyPage.UseVisualStyleBackColor = true;
+            // 
+            // jogDayLabel
+            // 
+            this.jogDayLabel.AutoSize = true;
+            this.jogDayLabel.Location = new System.Drawing.Point(38, 30);
+            this.jogDayLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogDayLabel.Name = "jogDayLabel";
+            this.jogDayLabel.Size = new System.Drawing.Size(71, 12);
+            this.jogDayLabel.TabIndex = 0;
+            this.jogDayLabel.Text = "請選擇日期 :";
+            // 
+            // jogHintLabel
+            // 
+            this.jogHintLabel.AutoSize = true;
+            this.jogHintLabel.Location = new System.Drawing.Point(38, 346);
+            this.jogHintLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogHintLabel.Name = "jogHintLabel";
+            this.jogHintLabel.Size = new System.Drawing.Size(119, 12);
+            this.jogHintLabel.TabIndex = 1;
+            this.jogHintLabel.Text = "請輸入欲修改的資料 :";
+            // 
+            // jogTimeLabel
+            // 
+            this.jogTimeLabel.AutoSize = true;
+            this.jogTimeLabel.Location = new System.Drawing.Point(72, 380);
+            this.jogTimeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogTimeLabel.Name = "jogTimeLabel";
+            this.jogTimeLabel.Size = new System.Drawing.Size(35, 12);
+            this.jogTimeLabel.TabIndex = 2;
+            this.jogTimeLabel.Text = "時長 :";
+            // 
+            // jogDistanceLabel
+            // 
+            this.jogDistanceLabel.AutoSize = true;
+            this.jogDistanceLabel.Location = new System.Drawing.Point(72, 424);
+            this.jogDistanceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogDistanceLabel.Name = "jogDistanceLabel";
+            this.jogDistanceLabel.Size = new System.Drawing.Size(35, 12);
+            this.jogDistanceLabel.TabIndex = 3;
+            this.jogDistanceLabel.Text = "里程 :";
+            // 
+            // jogTimeUnit
+            // 
+            this.jogTimeUnit.AutoSize = true;
+            this.jogTimeUnit.Location = new System.Drawing.Point(214, 380);
+            this.jogTimeUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogTimeUnit.Name = "jogTimeUnit";
+            this.jogTimeUnit.Size = new System.Drawing.Size(23, 12);
+            this.jogTimeUnit.TabIndex = 4;
+            this.jogTimeUnit.Text = "min";
+            // 
+            // jogDistanceUnit
+            // 
+            this.jogDistanceUnit.AutoSize = true;
+            this.jogDistanceUnit.Location = new System.Drawing.Point(217, 424);
+            this.jogDistanceUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogDistanceUnit.Name = "jogDistanceUnit";
+            this.jogDistanceUnit.Size = new System.Drawing.Size(20, 12);
+            this.jogDistanceUnit.TabIndex = 5;
+            this.jogDistanceUnit.Text = "km";
+            // 
+            // jogSearchBtn
+            // 
+            this.jogSearchBtn.Location = new System.Drawing.Point(289, 25);
+            this.jogSearchBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.jogSearchBtn.Name = "jogSearchBtn";
+            this.jogSearchBtn.Size = new System.Drawing.Size(49, 22);
+            this.jogSearchBtn.TabIndex = 6;
+            this.jogSearchBtn.Text = "查詢";
+            this.jogSearchBtn.UseVisualStyleBackColor = true;
+            // 
+            // jogAddBtn
+            // 
+            this.jogAddBtn.Location = new System.Drawing.Point(289, 419);
+            this.jogAddBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.jogAddBtn.Name = "jogAddBtn";
+            this.jogAddBtn.Size = new System.Drawing.Size(49, 22);
+            this.jogAddBtn.TabIndex = 7;
+            this.jogAddBtn.Text = "新增";
+            this.jogAddBtn.UseVisualStyleBackColor = true;
+            // 
+            // jogDeleteBtn
+            // 
+            this.jogDeleteBtn.Location = new System.Drawing.Point(355, 419);
+            this.jogDeleteBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.jogDeleteBtn.Name = "jogDeleteBtn";
+            this.jogDeleteBtn.Size = new System.Drawing.Size(49, 22);
+            this.jogDeleteBtn.TabIndex = 8;
+            this.jogDeleteBtn.Text = "刪除";
+            this.jogDeleteBtn.UseVisualStyleBackColor = true;
+            // 
+            // jogDay
+            // 
+            this.jogDay.FormattingEnabled = true;
+            this.jogDay.Items.AddRange(new object[] {
+            "Day1",
+            "Day2",
+            "Day3",
+            "Day4",
+            "Day5",
+            "Day6",
+            "Day7"});
+            this.jogDay.Location = new System.Drawing.Point(127, 28);
+            this.jogDay.Margin = new System.Windows.Forms.Padding(2);
+            this.jogDay.Name = "jogDay";
+            this.jogDay.Size = new System.Drawing.Size(74, 20);
+            this.jogDay.TabIndex = 9;
+            // 
+            // jogTime
+            // 
+            this.jogTime.Location = new System.Drawing.Point(127, 378);
+            this.jogTime.Margin = new System.Windows.Forms.Padding(2);
+            this.jogTime.Name = "jogTime";
+            this.jogTime.Size = new System.Drawing.Size(74, 22);
+            this.jogTime.TabIndex = 10;
+            // 
+            // jogDistance
+            // 
+            this.jogDistance.Location = new System.Drawing.Point(127, 423);
+            this.jogDistance.Margin = new System.Windows.Forms.Padding(2);
+            this.jogDistance.Name = "jogDistance";
+            this.jogDistance.Size = new System.Drawing.Size(74, 22);
+            this.jogDistance.TabIndex = 11;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(178, 180);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 12);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "顯示搜尋結果~~~";
+            // 
+            // jogWeekRecordPage
+            // 
+            this.jogWeekRecordPage.Controls.Add(this.jogRecordTotal);
+            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay7);
+            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay6);
+            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay5);
+            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay4);
+            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay3);
+            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay2);
+            this.jogWeekRecordPage.Controls.Add(this.jogRecordDay1);
+            this.jogWeekRecordPage.Location = new System.Drawing.Point(4, 22);
+            this.jogWeekRecordPage.Margin = new System.Windows.Forms.Padding(2);
+            this.jogWeekRecordPage.Name = "jogWeekRecordPage";
+            this.jogWeekRecordPage.Padding = new System.Windows.Forms.Padding(2);
+            this.jogWeekRecordPage.Size = new System.Drawing.Size(606, 458);
+            this.jogWeekRecordPage.TabIndex = 0;
+            this.jogWeekRecordPage.Text = "本周紀錄";
+            this.jogWeekRecordPage.UseVisualStyleBackColor = true;
+            // 
+            // addRecord
+            // 
+            this.addRecord.Controls.Add(this.label8);
+            this.addRecord.Controls.Add(this.textBox2);
+            this.addRecord.Controls.Add(this.dateTimePicker1);
+            this.addRecord.Controls.Add(this.button4);
+            this.addRecord.Controls.Add(this.button3);
+            this.addRecord.Controls.Add(this.button2);
+            this.addRecord.Controls.Add(this.dataGridView1);
+            this.addRecord.Location = new System.Drawing.Point(4, 22);
+            this.addRecord.Name = "addRecord";
+            this.addRecord.Size = new System.Drawing.Size(606, 458);
+            this.addRecord.TabIndex = 3;
+            this.addRecord.Text = "新增紀錄";
+            this.addRecord.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(55, 42);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(485, 197);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(99, 353);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "新增";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(250, 353);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "刪除";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(409, 353);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "修改";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(99, 289);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(328, 289);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 5;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(445, 296);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 12);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "公尺";
+            // 
+            // joggingInfo
+            // 
+            this.joggingInfo.Controls.Add(this.addRecord);
+            this.joggingInfo.Controls.Add(this.jogWeekRecordPage);
+            this.joggingInfo.Controls.Add(this.jogModifyPage);
+            this.joggingInfo.Controls.Add(this.jogRecordPage);
+            this.joggingInfo.Location = new System.Drawing.Point(70, 38);
+            this.joggingInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.joggingInfo.Name = "joggingInfo";
+            this.joggingInfo.SelectedIndex = 0;
+            this.joggingInfo.Size = new System.Drawing.Size(614, 484);
+            this.joggingInfo.TabIndex = 2;
+            // 
+            // jogRecordTotal
+            // 
+            this.jogRecordTotal.Location = new System.Drawing.Point(304, 347);
+            this.jogRecordTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogRecordTotal.Name = "jogRecordTotal";
+            this.jogRecordTotal.Size = new System.Drawing.Size(290, 44);
+            this.jogRecordTotal.TabIndex = 8;
+            this.jogRecordTotal.Text = "Total      尚無紀錄";
+            // 
+            // jogRecordDay2
+            // 
+            this.jogRecordDay2.Location = new System.Drawing.Point(10, 126);
+            this.jogRecordDay2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogRecordDay2.Name = "jogRecordDay2";
+            this.jogRecordDay2.Size = new System.Drawing.Size(290, 44);
+            this.jogRecordDay2.TabIndex = 2;
+            this.jogRecordDay2.Text = "Day2      尚無紀錄";
+            // 
+            // jogRecordDay3
+            // 
+            this.jogRecordDay3.Location = new System.Drawing.Point(10, 237);
+            this.jogRecordDay3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogRecordDay3.Name = "jogRecordDay3";
+            this.jogRecordDay3.Size = new System.Drawing.Size(290, 44);
+            this.jogRecordDay3.TabIndex = 3;
+            this.jogRecordDay3.Text = "Day3      尚無紀錄";
+            // 
+            // jogRecordDay4
+            // 
+            this.jogRecordDay4.Location = new System.Drawing.Point(10, 347);
+            this.jogRecordDay4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogRecordDay4.Name = "jogRecordDay4";
+            this.jogRecordDay4.Size = new System.Drawing.Size(290, 44);
+            this.jogRecordDay4.TabIndex = 4;
+            this.jogRecordDay4.Text = "Day4      尚無紀錄";
+            // 
+            // jogRecordDay5
+            // 
+            this.jogRecordDay5.Location = new System.Drawing.Point(304, 16);
+            this.jogRecordDay5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogRecordDay5.Name = "jogRecordDay5";
+            this.jogRecordDay5.Size = new System.Drawing.Size(290, 44);
+            this.jogRecordDay5.TabIndex = 5;
+            this.jogRecordDay5.Text = "Day5      尚無紀錄";
+            // 
+            // jogRecordDay6
+            // 
+            this.jogRecordDay6.Location = new System.Drawing.Point(304, 126);
+            this.jogRecordDay6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogRecordDay6.Name = "jogRecordDay6";
+            this.jogRecordDay6.Size = new System.Drawing.Size(290, 44);
+            this.jogRecordDay6.TabIndex = 6;
+            this.jogRecordDay6.Text = "Day6      尚無紀錄";
+            // 
+            // jogRecordDay7
+            // 
+            this.jogRecordDay7.Location = new System.Drawing.Point(304, 237);
+            this.jogRecordDay7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogRecordDay7.Name = "jogRecordDay7";
+            this.jogRecordDay7.Size = new System.Drawing.Size(290, 44);
+            this.jogRecordDay7.TabIndex = 7;
+            this.jogRecordDay7.Text = "Day7      尚無紀錄";
+            // 
+            // jogRecordDay1
+            // 
+            this.jogRecordDay1.Location = new System.Drawing.Point(10, 16);
+            this.jogRecordDay1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.jogRecordDay1.Name = "jogRecordDay1";
+            this.jogRecordDay1.Size = new System.Drawing.Size(290, 44);
+            this.jogRecordDay1.TabIndex = 1;
+            this.jogRecordDay1.Text = "Day1      尚無紀錄";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1499, 700);
+            this.ClientSize = new System.Drawing.Size(1499, 1061);
             this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.dietPanel);
+            this.Controls.Add(this.joggingPanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.bmiPanel);
-            this.Controls.Add(this.joggingPanel);
             this.Name = "Form1";
             this.Text = "健康管理";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -957,12 +1047,15 @@
             this.bmiPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bmiStandard)).EndInit();
             this.joggingPanel.ResumeLayout(false);
-            this.joggingInfo.ResumeLayout(false);
-            this.jogWeekRecordPage.ResumeLayout(false);
-            this.jogModifyPage.ResumeLayout(false);
-            this.jogModifyPage.PerformLayout();
             this.dietPanel.ResumeLayout(false);
             this.dietPanel.PerformLayout();
+            this.jogModifyPage.ResumeLayout(false);
+            this.jogModifyPage.PerformLayout();
+            this.jogWeekRecordPage.ResumeLayout(false);
+            this.addRecord.ResumeLayout(false);
+            this.addRecord.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.joggingInfo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -981,32 +1074,7 @@
         private System.Windows.Forms.Button backBtnJogging;
         private System.Windows.Forms.Button calorieBtn;
         private System.Windows.Forms.Button bmiBtn;
-        private System.Windows.Forms.TabControl joggingInfo;
-        private System.Windows.Forms.TabPage jogWeekRecordPage;
-        private System.Windows.Forms.TabPage jogModifyPage;
-        private System.Windows.Forms.Label jogRecordDay7;
-        private System.Windows.Forms.Label jogRecordDay6;
-        private System.Windows.Forms.Label jogRecordDay5;
-        private System.Windows.Forms.Label jogRecordDay4;
-        private System.Windows.Forms.Label jogRecordDay3;
-        private System.Windows.Forms.Label jogRecordDay2;
-        private System.Windows.Forms.Label jogRecordDay1;
-        private System.Windows.Forms.Label jogRecordTotal;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox jogDistance;
-        private System.Windows.Forms.TextBox jogTime;
-        private System.Windows.Forms.ComboBox jogDay;
-        private System.Windows.Forms.Button jogDeleteBtn;
-        private System.Windows.Forms.Button jogAddBtn;
-        private System.Windows.Forms.Button jogSearchBtn;
-        private System.Windows.Forms.Label jogDistanceUnit;
-        private System.Windows.Forms.Label jogTimeUnit;
-        private System.Windows.Forms.Label jogDistanceLabel;
-        private System.Windows.Forms.Label jogTimeLabel;
-        private System.Windows.Forms.Label jogHintLabel;
-        private System.Windows.Forms.Label jogDayLabel;
         private System.Windows.Forms.Panel bmiPanel;
-        private System.Windows.Forms.TabPage jogRecordPage;
         private System.Windows.Forms.TextBox bmiWeight;
         private System.Windows.Forms.TextBox bmiHeight;
         private System.Windows.Forms.Label bmiWeightUnit;
@@ -1044,7 +1112,39 @@
         private System.Windows.Forms.TextBox vegTxt;
         private System.Windows.Forms.Button backBtnDiet;
         private System.Windows.Forms.Button labelCloseBtn;
-
+        private System.Windows.Forms.TabControl joggingInfo;
+        private System.Windows.Forms.TabPage addRecord;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabPage jogWeekRecordPage;
+        private System.Windows.Forms.Label jogRecordTotal;
+        private System.Windows.Forms.Label jogRecordDay7;
+        private System.Windows.Forms.Label jogRecordDay6;
+        private System.Windows.Forms.Label jogRecordDay5;
+        private System.Windows.Forms.Label jogRecordDay4;
+        private System.Windows.Forms.Label jogRecordDay3;
+        private System.Windows.Forms.Label jogRecordDay2;
+        private System.Windows.Forms.Label jogRecordDay1;
+        private System.Windows.Forms.TabPage jogModifyPage;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox jogDistance;
+        private System.Windows.Forms.TextBox jogTime;
+        private System.Windows.Forms.ComboBox jogDay;
+        private System.Windows.Forms.Button jogDeleteBtn;
+        private System.Windows.Forms.Button jogAddBtn;
+        private System.Windows.Forms.Button jogSearchBtn;
+        private System.Windows.Forms.Label jogDistanceUnit;
+        private System.Windows.Forms.Label jogTimeUnit;
+        private System.Windows.Forms.Label jogDistanceLabel;
+        private System.Windows.Forms.Label jogTimeLabel;
+        private System.Windows.Forms.Label jogHintLabel;
+        private System.Windows.Forms.Label jogDayLabel;
+        private System.Windows.Forms.TabPage jogRecordPage;
     }
 }
 
