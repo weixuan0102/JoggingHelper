@@ -763,6 +763,7 @@
             this.grainTxt.Name = "grainTxt";
             this.grainTxt.Size = new System.Drawing.Size(61, 30);
             this.grainTxt.TabIndex = 10;
+            this.grainTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // oilTxt
             // 
@@ -770,6 +771,7 @@
             this.oilTxt.Name = "oilTxt";
             this.oilTxt.Size = new System.Drawing.Size(61, 30);
             this.oilTxt.TabIndex = 9;
+            this.oilTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // proteinTxt
             // 
@@ -777,6 +779,7 @@
             this.proteinTxt.Name = "proteinTxt";
             this.proteinTxt.Size = new System.Drawing.Size(61, 30);
             this.proteinTxt.TabIndex = 8;
+            this.proteinTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // fruitTxt
             // 
@@ -784,6 +787,7 @@
             this.fruitTxt.Name = "fruitTxt";
             this.fruitTxt.Size = new System.Drawing.Size(61, 30);
             this.fruitTxt.TabIndex = 7;
+            this.fruitTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // vegTxt
             // 
@@ -791,6 +795,7 @@
             this.vegTxt.Name = "vegTxt";
             this.vegTxt.Size = new System.Drawing.Size(61, 30);
             this.vegTxt.TabIndex = 6;
+            this.vegTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // fruitBtn
             // 

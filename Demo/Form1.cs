@@ -36,6 +36,11 @@ namespace Demo
             textBox2.ImeMode = ImeMode.Disable;
             bmiHeight.ImeMode = ImeMode.Disable;
             bmiWeight.ImeMode = ImeMode.Disable;
+            vegTxt.ImeMode = ImeMode.Disable;
+            fruitTxt.ImeMode = ImeMode.Disable;
+            oilTxt.ImeMode = ImeMode.Disable;
+            proteinTxt.ImeMode = ImeMode.Disable;
+            grainTxt.ImeMode = ImeMode.Disable;
             weatherInfo.Text = "WAITING...";
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
@@ -199,7 +204,7 @@ namespace Demo
                 if (int.Parse(vegTxt.Text) > 3) warningMessage += "蔬菜攝取過量\n";
                 else if (int.Parse(vegTxt.Text) < 1) warningMessage += "缺少脂溶性纖維及維生素\n";
                 else record++;
-
+                
                 if (int.Parse(fruitTxt.Text) > 3) warningMessage += "水果攝取過量\n";
                 else if (int.Parse(fruitTxt.Text) < 1) warningMessage += "缺少水溶性纖維及礦物質\n";
                 else record++;
