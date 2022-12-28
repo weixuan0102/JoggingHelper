@@ -37,6 +37,7 @@ namespace Demo
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
 
+            nutrientLableTxt();
             joggingBtn.FlatAppearance.BorderSize = 0;
             joggingBtn.Image = Image.FromFile(@"../../images/sport.png");
             weatherBtn.FlatAppearance.BorderSize = 0;
@@ -163,10 +164,68 @@ namespace Demo
             labelCloseBtn.Enabled = true;
             grainLabel.BringToFront();
         }
+        private void nutrientLableTxt()
+        {
+            foreach (string line in System.IO.File.ReadLines(@"../../veg.txt")) vegLabel.Text += line + "\r\n";
+            foreach (string line in System.IO.File.ReadLines(@"../../fruit.txt")) fruitLabel.Text += line + "\r\n";
+            foreach (string line in System.IO.File.ReadLines(@"../../oil.txt")) oilLabel.Text += line + "\r\n";
+            foreach (string line in System.IO.File.ReadLines(@"../../protein.txt")) proteinLabel.Text += line + "\r\n";
+            foreach (string line in System.IO.File.ReadLines(@"../../grain.txt")) grainLabel.Text += line + "\r\n";
+        }
 
         private void dietEnterBtn_Click(object sender, EventArgs e)
         {
+            int record = 0; //紀錄是否達營養值
+            string warningMessage = null;
+            if(vegTxt.Text == "" || fruitTxt.Text == "" || oilTxt.Text == "" || proteinTxt.Text == "" || grainTxt.Text == "")
+            {
+                warningMessage += "請正確輸入攝取量";
+                DialogResult result = MessageBox.Show(warningMessage, "當餐狀況", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (result == DialogResult.OK) warningMessage = null;
+            }
+            else
+            {
+                if (int.Parse(vegTxt.Text) > 3) warningMessage += "蔬菜攝取過量\n";
+                else if (int.Parse(vegTxt.Text) < 1) warningMessage += "缺少脂溶性纖維及維生素\n";
+                else record++;
 
+                if (int.Parse(fruitTxt.Text) > 3) warningMessage += "水果攝取過量\n";
+                else if (int.Parse(fruitTxt.Text) < 1) warningMessage += "缺少水溶性纖維及礦物質\n";
+                else record++;
+
+                if (Convert.ToDouble(oilTxt.Text) > 0.6) warningMessage += "油脂攝取過量\n";
+                else if (Convert.ToDouble(oilTxt.Text) < 0.3) warningMessage += "缺少脂肪酸\n";
+                else record++;
+
+                if (int.Parse(proteinTxt.Text) > 3) warningMessage += "蛋白質攝取過量\n";
+                else if (int.Parse(proteinTxt.Text) < 1) warningMessage += "缺少蛋白質\n";
+                else record++;
+
+                if (int.Parse(grainTxt.Text) > 3) warningMessage += "穀物攝取過量\n";
+                else if (int.Parse(grainTxt.Text) < 1 || grainTxt.Text == "") warningMessage += "缺少碳水化合物\n";
+                else record++;
+
+                DialogResult result;
+                if (record == 5)
+                {
+                    warningMessage += "營養皆均衡~~";
+                    result = MessageBox.Show(warningMessage, "當餐狀況", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    result = MessageBox.Show(warningMessage, "當餐狀況", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                if(result == DialogResult.OK)
+                {
+                    record = 0;
+                    warningMessage = null;
+                    vegTxt.Text = "";
+                    fruitTxt.Text = "";
+                    oilTxt.Text = "";
+                    proteinTxt.Text = "";
+                    grainTxt.Text = "";
+                }
+            }
         }
 
         private void labelCloseBtn_Click(object sender, EventArgs e)
