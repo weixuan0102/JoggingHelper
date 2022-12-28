@@ -62,6 +62,9 @@ namespace Demo
             dataGridView1.DataSource = ds.Tables[0];
             dataGridView1.Sort(dataGridView1.Columns["date"], ListSortDirection.Descending);
             db.Close();
+
+            dateTimePicker1.MaxDate = DateTime.Now;
+            dateTimePicker2.MaxDate = dateTimePicker3.Value.AddDays(-1);
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
@@ -184,9 +187,9 @@ namespace Demo
                 "AttachDbFilename=|DataDirectory|Database1.mdf;" +
                 "Integrated Security=True";
             cn.Open();
-            SqlCommand cmd = new SqlCommand(sqlstr,cn);
+            SqlCommand cmd = new SqlCommand(sqlstr, cn);
             cmd.ExecuteNonQuery();
-            
+
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM SportRecord", cn);
             DataSet ds = new DataSet();
             da.Fill(ds, "SportRecord");
@@ -210,7 +213,7 @@ namespace Demo
                     distance +
                      ")");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -256,10 +259,10 @@ namespace Demo
             try
             {
                 string date;
-                date = dataGridView1.CurrentRow.Cells[0].Value.ToString().Replace('/','-');
+                date = dataGridView1.CurrentRow.Cells[0].Value.ToString().Replace('/', '-');
                 Edit("DELETE FROM SportRecord WHERE date='" + date.Split(' ')[0].Replace("'", "''") + "'");
 
-                
+
             }
             catch (Exception ex)
             {
@@ -280,11 +283,86 @@ namespace Demo
 
                 Edit("UPDATE SportRecord SET distance=" + distance + " WHERE date='"
                     + dateTime.Replace("'", "''") + "'");
-  
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
+            }
+        }
+
+
+        private void weekRecord_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;" +
+                    "AttachDbFilename=|DataDirectory|Database1.mdf;" +
+                    "Integrated Security=True"))
+                {
+                    if (cn.State == ConnectionState.Closed) cn.Open();
+                    using (DataSet ds = new DataSet())
+                    {
+                        using(SqlCommand cmd = new SqlCommand("SELECT * FROM SportRecord WHERE date BETWEEN @fromdate AND @todate", cn))
+                        {
+                            // adding values
+                            DayOfWeek currentDay = DateTime.Now.DayOfWeek;
+                            int daysTillCurrentDay = currentDay - DayOfWeek.Sunday;
+                            cmd.Parameters.AddWithValue("@fromdate", DateTime.Now.AddDays(-daysTillCurrentDay));
+                            cmd.Parameters.AddWithValue("@todate",DateTime.Now);
+                            // fill data to database
+                            SqlDataAdapter da = new SqlDataAdapter(cmd);
+                            da.Fill(ds, "SportRecord");
+                            // adding datasource
+                            dataGridView2.DataSource = ds.Tables[0];
+                            dataGridView2.Sort(dataGridView2.Columns["date"], ListSortDirection.Descending);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void dateTimePicker3_ValueChanged(object sender, EventArgs e)
+        {
+            dateTimePicker2.MaxDate = dateTimePicker3.Value.AddDays(-1);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;" +
+                    "AttachDbFilename=|DataDirectory|Database1.mdf;" +
+                    "Integrated Security=True"))
+                {
+                    if (cn.State == ConnectionState.Closed) cn.Open();
+                    using (DataSet ds = new DataSet())
+                    {
+                        using (SqlCommand cmd = new SqlCommand("SELECT * FROM SportRecord WHERE date BETWEEN @fromdate AND @todate", cn))
+                        {
+                            // adding values
+                            DayOfWeek currentDay = DateTime.Now.DayOfWeek;
+                            int daysTillCurrentDay = currentDay - DayOfWeek.Sunday;
+                            cmd.Parameters.AddWithValue("@fromdate", dateTimePicker2.Value);
+                            cmd.Parameters.AddWithValue("@todate", dateTimePicker3.Value);
+                            // fill data to database
+                            SqlDataAdapter da = new SqlDataAdapter(cmd);
+                            da.Fill(ds, "SportRecord");
+                            // adding datasource
+                            dataGridView3.DataSource = ds.Tables[0];
+                            dataGridView3.Sort(dataGridView3.Columns["date"], ListSortDirection.Descending);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
