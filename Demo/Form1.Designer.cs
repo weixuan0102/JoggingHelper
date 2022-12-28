@@ -158,7 +158,7 @@
             this.weatherPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.weatherPanel.Controls.Add(this.backBtnWeather);
             this.weatherPanel.Controls.Add(this.weatherInfo);
-            this.weatherPanel.Location = new System.Drawing.Point(712, 16);
+            this.weatherPanel.Location = new System.Drawing.Point(726, 26);
             this.weatherPanel.Name = "weatherPanel";
             this.weatherPanel.Size = new System.Drawing.Size(724, 535);
             this.weatherPanel.TabIndex = 4;
@@ -589,7 +589,7 @@
             this.dietPanel.Controls.Add(this.oilBtn);
             this.dietPanel.Controls.Add(this.proteinBtn);
             this.dietPanel.Controls.Add(this.vegBtn);
-            this.dietPanel.Location = new System.Drawing.Point(760, 16);
+            this.dietPanel.Location = new System.Drawing.Point(763, 13);
             this.dietPanel.Margin = new System.Windows.Forms.Padding(2);
             this.dietPanel.Name = "dietPanel";
             this.dietPanel.Size = new System.Drawing.Size(573, 548);
@@ -601,12 +601,12 @@
             this.labelCloseBtn.Enabled = false;
             this.labelCloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelCloseBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelCloseBtn.Location = new System.Drawing.Point(467, 420);
+            this.labelCloseBtn.Location = new System.Drawing.Point(432, 420);
             this.labelCloseBtn.Margin = new System.Windows.Forms.Padding(2);
             this.labelCloseBtn.Name = "labelCloseBtn";
             this.labelCloseBtn.Size = new System.Drawing.Size(73, 37);
             this.labelCloseBtn.TabIndex = 23;
-            this.labelCloseBtn.Text = "確認";
+            this.labelCloseBtn.Text = "關閉";
             this.labelCloseBtn.UseVisualStyleBackColor = true;
             this.labelCloseBtn.Visible = false;
             this.labelCloseBtn.Click += new System.EventHandler(this.labelCloseBtn_Click);
@@ -626,50 +626,50 @@
             // fruitLabel
             // 
             this.fruitLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fruitLabel.Location = new System.Drawing.Point(210, 79);
+            this.fruitLabel.Location = new System.Drawing.Point(226, 100);
             this.fruitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fruitLabel.Name = "fruitLabel";
-            this.fruitLabel.Size = new System.Drawing.Size(335, 312);
+            this.fruitLabel.Size = new System.Drawing.Size(302, 312);
             this.fruitLabel.TabIndex = 21;
             this.fruitLabel.Visible = false;
             // 
             // oilLabel
             // 
             this.oilLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.oilLabel.Location = new System.Drawing.Point(207, 86);
+            this.oilLabel.Location = new System.Drawing.Point(226, 100);
             this.oilLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.oilLabel.Name = "oilLabel";
-            this.oilLabel.Size = new System.Drawing.Size(335, 312);
+            this.oilLabel.Size = new System.Drawing.Size(302, 312);
             this.oilLabel.TabIndex = 20;
             this.oilLabel.Visible = false;
             // 
             // grainLabel
             // 
             this.grainLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.grainLabel.Location = new System.Drawing.Point(210, 92);
+            this.grainLabel.Location = new System.Drawing.Point(226, 100);
             this.grainLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.grainLabel.Name = "grainLabel";
-            this.grainLabel.Size = new System.Drawing.Size(335, 312);
+            this.grainLabel.Size = new System.Drawing.Size(297, 312);
             this.grainLabel.TabIndex = 19;
             this.grainLabel.Visible = false;
             // 
             // vegLabel
             // 
             this.vegLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.vegLabel.Location = new System.Drawing.Point(205, 86);
+            this.vegLabel.Location = new System.Drawing.Point(226, 100);
             this.vegLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.vegLabel.Name = "vegLabel";
-            this.vegLabel.Size = new System.Drawing.Size(335, 312);
+            this.vegLabel.Size = new System.Drawing.Size(302, 312);
             this.vegLabel.TabIndex = 17;
             this.vegLabel.Visible = false;
             // 
             // proteinLabel
             // 
             this.proteinLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.proteinLabel.Location = new System.Drawing.Point(210, 86);
+            this.proteinLabel.Location = new System.Drawing.Point(226, 100);
             this.proteinLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.proteinLabel.Name = "proteinLabel";
-            this.proteinLabel.Size = new System.Drawing.Size(335, 312);
+            this.proteinLabel.Size = new System.Drawing.Size(297, 312);
             this.proteinLabel.TabIndex = 18;
             this.proteinLabel.Visible = false;
             // 
@@ -863,8 +863,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1499, 1061);
-            this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.dietPanel);
+            this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.joggingPanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.bmiPanel);
