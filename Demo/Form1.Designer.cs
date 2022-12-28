@@ -61,6 +61,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.jogWeekRecordPage = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
             this.weekRecord = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.jogRecordPage = new System.Windows.Forms.TabPage();
@@ -95,7 +96,6 @@
             this.oilBtn = new System.Windows.Forms.Button();
             this.proteinBtn = new System.Windows.Forms.Button();
             this.vegBtn = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.weatherPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.bmiPanel.SuspendLayout();
@@ -354,7 +354,7 @@
             this.joggingPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.joggingPanel.Controls.Add(this.joggingInfo);
             this.joggingPanel.Controls.Add(this.backBtnJogging);
-            this.joggingPanel.Location = new System.Drawing.Point(706, 531);
+            this.joggingPanel.Location = new System.Drawing.Point(712, 26);
             this.joggingPanel.Name = "joggingPanel";
             this.joggingPanel.Size = new System.Drawing.Size(724, 535);
             this.joggingPanel.TabIndex = 7;
@@ -464,6 +464,16 @@
             this.jogWeekRecordPage.TabIndex = 0;
             this.jogWeekRecordPage.Text = "本周紀錄";
             this.jogWeekRecordPage.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.Location = new System.Drawing.Point(150, 298);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(298, 24);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "顯示周一到今日的運動紀錄";
             // 
             // weekRecord
             // 
@@ -846,16 +856,6 @@
             this.vegBtn.Text = "蔬菜";
             this.vegBtn.UseVisualStyleBackColor = false;
             this.vegBtn.Click += new System.EventHandler(this.vegBtn_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(150, 298);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(298, 24);
-            this.label9.TabIndex = 2;
-            this.label9.Text = "顯示周一到今日的運動紀錄";
             // 
             // Form1
             // 
