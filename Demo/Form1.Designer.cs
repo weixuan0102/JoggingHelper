@@ -38,7 +38,8 @@
             this.calorieBtn = new System.Windows.Forms.Button();
             this.bmiBtn = new System.Windows.Forms.Button();
             this.bmiPanel = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bmiResult = new System.Windows.Forms.Label();
+            this.backBtnBmi = new System.Windows.Forms.Button();
             this.bmiResultLabel = new System.Windows.Forms.Label();
             this.bmiCalculateBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -114,9 +115,10 @@
             // weatherInfo
             // 
             this.weatherInfo.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.weatherInfo.Location = new System.Drawing.Point(90, 24);
+            this.weatherInfo.Location = new System.Drawing.Point(150, 38);
+            this.weatherInfo.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.weatherInfo.Name = "weatherInfo";
-            this.weatherInfo.Size = new System.Drawing.Size(618, 488);
+            this.weatherInfo.Size = new System.Drawing.Size(1030, 773);
             this.weatherInfo.TabIndex = 0;
             this.weatherInfo.Text = "label1";
             // 
@@ -124,9 +126,10 @@
             // 
             this.joggingBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.joggingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.joggingBtn.Location = new System.Drawing.Point(133, -33);
+            this.joggingBtn.Location = new System.Drawing.Point(222, -52);
+            this.joggingBtn.Margin = new System.Windows.Forms.Padding(5);
             this.joggingBtn.Name = "joggingBtn";
-            this.joggingBtn.Size = new System.Drawing.Size(399, 179);
+            this.joggingBtn.Size = new System.Drawing.Size(665, 283);
             this.joggingBtn.TabIndex = 0;
             this.joggingBtn.UseVisualStyleBackColor = false;
             this.joggingBtn.Click += new System.EventHandler(this.joggingBtn_Click);
@@ -135,9 +138,10 @@
             // 
             this.weatherBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.weatherBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.weatherBtn.Location = new System.Drawing.Point(133, 160);
+            this.weatherBtn.Location = new System.Drawing.Point(222, 253);
+            this.weatherBtn.Margin = new System.Windows.Forms.Padding(5);
             this.weatherBtn.Name = "weatherBtn";
-            this.weatherBtn.Size = new System.Drawing.Size(191, 218);
+            this.weatherBtn.Size = new System.Drawing.Size(318, 345);
             this.weatherBtn.TabIndex = 2;
             this.weatherBtn.UseVisualStyleBackColor = false;
             this.weatherBtn.Click += new System.EventHandler(this.weatherButton_Click);
@@ -146,9 +150,10 @@
             // 
             this.dietBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dietBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dietBtn.Location = new System.Drawing.Point(341, 160);
+            this.dietBtn.Location = new System.Drawing.Point(568, 253);
+            this.dietBtn.Margin = new System.Windows.Forms.Padding(5);
             this.dietBtn.Name = "dietBtn";
-            this.dietBtn.Size = new System.Drawing.Size(191, 218);
+            this.dietBtn.Size = new System.Drawing.Size(318, 345);
             this.dietBtn.TabIndex = 3;
             this.dietBtn.UseVisualStyleBackColor = false;
             this.dietBtn.Click += new System.EventHandler(this.dietBtn_Click);
@@ -158,9 +163,10 @@
             this.weatherPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.weatherPanel.Controls.Add(this.backBtnWeather);
             this.weatherPanel.Controls.Add(this.weatherInfo);
-            this.weatherPanel.Location = new System.Drawing.Point(726, 26);
+            this.weatherPanel.Location = new System.Drawing.Point(1245, 29);
+            this.weatherPanel.Margin = new System.Windows.Forms.Padding(5);
             this.weatherPanel.Name = "weatherPanel";
-            this.weatherPanel.Size = new System.Drawing.Size(724, 535);
+            this.weatherPanel.Size = new System.Drawing.Size(1207, 847);
             this.weatherPanel.TabIndex = 4;
             this.weatherPanel.Visible = false;
             // 
@@ -168,9 +174,10 @@
             // 
             this.backBtnWeather.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.backBtnWeather.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtnWeather.Location = new System.Drawing.Point(3, 3);
+            this.backBtnWeather.Location = new System.Drawing.Point(5, 5);
+            this.backBtnWeather.Margin = new System.Windows.Forms.Padding(5);
             this.backBtnWeather.Name = "backBtnWeather";
-            this.backBtnWeather.Size = new System.Drawing.Size(43, 44);
+            this.backBtnWeather.Size = new System.Drawing.Size(72, 70);
             this.backBtnWeather.TabIndex = 1;
             this.backBtnWeather.UseVisualStyleBackColor = false;
             this.backBtnWeather.Click += new System.EventHandler(this.backBtnWeather_Click);
@@ -183,9 +190,10 @@
             this.HomePanel.Controls.Add(this.joggingBtn);
             this.HomePanel.Controls.Add(this.weatherBtn);
             this.HomePanel.Controls.Add(this.dietBtn);
-            this.HomePanel.Location = new System.Drawing.Point(12, 16);
+            this.HomePanel.Location = new System.Drawing.Point(20, 25);
+            this.HomePanel.Margin = new System.Windows.Forms.Padding(5);
             this.HomePanel.Name = "HomePanel";
-            this.HomePanel.Size = new System.Drawing.Size(672, 637);
+            this.HomePanel.Size = new System.Drawing.Size(1120, 1009);
             this.HomePanel.TabIndex = 5;
             // 
             // calorieBtn
@@ -193,9 +201,10 @@
             this.calorieBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.calorieBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.calorieBtn.Font = new System.Drawing.Font("新細明體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.calorieBtn.Location = new System.Drawing.Point(341, 400);
+            this.calorieBtn.Location = new System.Drawing.Point(568, 633);
+            this.calorieBtn.Margin = new System.Windows.Forms.Padding(5);
             this.calorieBtn.Name = "calorieBtn";
-            this.calorieBtn.Size = new System.Drawing.Size(191, 218);
+            this.calorieBtn.Size = new System.Drawing.Size(318, 345);
             this.calorieBtn.TabIndex = 5;
             this.calorieBtn.Text = "Calorie";
             this.calorieBtn.UseVisualStyleBackColor = false;
@@ -206,9 +215,10 @@
             this.bmiBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bmiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bmiBtn.Font = new System.Drawing.Font("新細明體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bmiBtn.Location = new System.Drawing.Point(133, 400);
+            this.bmiBtn.Location = new System.Drawing.Point(222, 633);
+            this.bmiBtn.Margin = new System.Windows.Forms.Padding(5);
             this.bmiBtn.Name = "bmiBtn";
-            this.bmiBtn.Size = new System.Drawing.Size(191, 218);
+            this.bmiBtn.Size = new System.Drawing.Size(318, 345);
             this.bmiBtn.TabIndex = 4;
             this.bmiBtn.Text = "BMI";
             this.bmiBtn.UseVisualStyleBackColor = false;
@@ -216,7 +226,8 @@
             // 
             // bmiPanel
             // 
-            this.bmiPanel.Controls.Add(this.textBox1);
+            this.bmiPanel.Controls.Add(this.bmiResult);
+            this.bmiPanel.Controls.Add(this.backBtnBmi);
             this.bmiPanel.Controls.Add(this.bmiResultLabel);
             this.bmiPanel.Controls.Add(this.bmiCalculateBtn);
             this.bmiPanel.Controls.Add(this.button1);
@@ -228,46 +239,56 @@
             this.bmiPanel.Controls.Add(this.bmiHeightUnit);
             this.bmiPanel.Controls.Add(this.bmiWeightLabel);
             this.bmiPanel.Controls.Add(this.bmiHeightLabel);
-            this.bmiPanel.Location = new System.Drawing.Point(709, 29);
+            this.bmiPanel.Location = new System.Drawing.Point(1196, 56);
+            this.bmiPanel.Margin = new System.Windows.Forms.Padding(5);
             this.bmiPanel.Name = "bmiPanel";
-            this.bmiPanel.Size = new System.Drawing.Size(724, 535);
+            this.bmiPanel.Size = new System.Drawing.Size(1207, 847);
             this.bmiPanel.TabIndex = 3;
             this.bmiPanel.Visible = false;
             // 
-            // textBox1
+            // bmiResult
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 165);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 22);
-            this.textBox1.TabIndex = 11;
+            this.bmiResult.AutoSize = true;
+            this.bmiResult.Location = new System.Drawing.Point(231, 268);
+            this.bmiResult.Name = "bmiResult";
+            this.bmiResult.Size = new System.Drawing.Size(0, 19);
+            this.bmiResult.TabIndex = 24;
+            // 
+            // backBtnBmi
+            // 
+            this.backBtnBmi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtnBmi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtnBmi.Location = new System.Drawing.Point(3, 3);
+            this.backBtnBmi.Name = "backBtnBmi";
+            this.backBtnBmi.Size = new System.Drawing.Size(80, 81);
+            this.backBtnBmi.TabIndex = 23;
+            this.backBtnBmi.UseVisualStyleBackColor = false;
+            this.backBtnBmi.Click += new System.EventHandler(this.backBtnBmi_Click);
             // 
             // bmiResultLabel
             // 
             this.bmiResultLabel.AutoSize = true;
-            this.bmiResultLabel.Location = new System.Drawing.Point(60, 169);
-            this.bmiResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bmiResultLabel.Location = new System.Drawing.Point(100, 268);
             this.bmiResultLabel.Name = "bmiResultLabel";
-            this.bmiResultLabel.Size = new System.Drawing.Size(69, 12);
+            this.bmiResultLabel.Size = new System.Drawing.Size(110, 19);
             this.bmiResultLabel.TabIndex = 10;
             this.bmiResultLabel.Text = "你的BMI為 :";
             // 
             // bmiCalculateBtn
             // 
-            this.bmiCalculateBtn.Location = new System.Drawing.Point(273, 120);
-            this.bmiCalculateBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.bmiCalculateBtn.Location = new System.Drawing.Point(455, 190);
             this.bmiCalculateBtn.Name = "bmiCalculateBtn";
-            this.bmiCalculateBtn.Size = new System.Drawing.Size(74, 28);
+            this.bmiCalculateBtn.Size = new System.Drawing.Size(123, 44);
             this.bmiCalculateBtn.TabIndex = 9;
             this.bmiCalculateBtn.Text = "開始計算";
             this.bmiCalculateBtn.UseVisualStyleBackColor = true;
+            this.bmiCalculateBtn.Click += new System.EventHandler(this.bmiCalculateBtn_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(379, 482);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(632, 763);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 42);
+            this.button1.Size = new System.Drawing.Size(143, 67);
             this.button1.TabIndex = 8;
             this.button1.Text = "查看紀錄";
             this.button1.UseVisualStyleBackColor = true;
@@ -276,76 +297,70 @@
             // 
             this.bmiTitle.AutoSize = true;
             this.bmiTitle.Font = new System.Drawing.Font("新細明體", 14.21053F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bmiTitle.Location = new System.Drawing.Point(57, 43);
-            this.bmiTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bmiTitle.Location = new System.Drawing.Point(95, 68);
             this.bmiTitle.Name = "bmiTitle";
-            this.bmiTitle.Size = new System.Drawing.Size(290, 19);
+            this.bmiTitle.Size = new System.Drawing.Size(472, 31);
             this.bmiTitle.TabIndex = 7;
             this.bmiTitle.Text = "看看自己的BMI是否在理想範圍吧";
             // 
             // bmiStandard
             // 
-            this.bmiStandard.Location = new System.Drawing.Point(59, 197);
-            this.bmiStandard.Margin = new System.Windows.Forms.Padding(2);
+            this.bmiStandard.Location = new System.Drawing.Point(98, 312);
             this.bmiStandard.Name = "bmiStandard";
-            this.bmiStandard.Size = new System.Drawing.Size(271, 327);
+            this.bmiStandard.Size = new System.Drawing.Size(452, 518);
             this.bmiStandard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bmiStandard.TabIndex = 6;
             this.bmiStandard.TabStop = false;
             // 
             // bmiWeight
             // 
-            this.bmiWeight.Location = new System.Drawing.Point(141, 132);
-            this.bmiWeight.Margin = new System.Windows.Forms.Padding(2);
+            this.bmiWeight.Location = new System.Drawing.Point(235, 209);
             this.bmiWeight.Name = "bmiWeight";
-            this.bmiWeight.Size = new System.Drawing.Size(62, 22);
+            this.bmiWeight.Size = new System.Drawing.Size(101, 30);
             this.bmiWeight.TabIndex = 5;
+            this.bmiWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bmiWeight_KeyPress);
             // 
             // bmiHeight
             // 
-            this.bmiHeight.Location = new System.Drawing.Point(141, 97);
-            this.bmiHeight.Margin = new System.Windows.Forms.Padding(2);
+            this.bmiHeight.Location = new System.Drawing.Point(235, 154);
             this.bmiHeight.Name = "bmiHeight";
-            this.bmiHeight.Size = new System.Drawing.Size(62, 22);
+            this.bmiHeight.Size = new System.Drawing.Size(101, 30);
             this.bmiHeight.TabIndex = 4;
+            this.bmiHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bmiHeight_KeyPress);
             // 
             // bmiWeightUnit
             // 
             this.bmiWeightUnit.AutoSize = true;
-            this.bmiWeightUnit.Location = new System.Drawing.Point(209, 136);
-            this.bmiWeightUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bmiWeightUnit.Location = new System.Drawing.Point(348, 215);
             this.bmiWeightUnit.Name = "bmiWeightUnit";
-            this.bmiWeightUnit.Size = new System.Drawing.Size(17, 12);
+            this.bmiWeightUnit.Size = new System.Drawing.Size(27, 19);
             this.bmiWeightUnit.TabIndex = 3;
             this.bmiWeightUnit.Text = "kg";
             // 
             // bmiHeightUnit
             // 
             this.bmiHeightUnit.AutoSize = true;
-            this.bmiHeightUnit.Location = new System.Drawing.Point(207, 101);
-            this.bmiHeightUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bmiHeightUnit.Location = new System.Drawing.Point(345, 160);
             this.bmiHeightUnit.Name = "bmiHeightUnit";
-            this.bmiHeightUnit.Size = new System.Drawing.Size(19, 12);
+            this.bmiHeightUnit.Size = new System.Drawing.Size(31, 19);
             this.bmiHeightUnit.TabIndex = 2;
             this.bmiHeightUnit.Text = "cm";
             // 
             // bmiWeightLabel
             // 
             this.bmiWeightLabel.AutoSize = true;
-            this.bmiWeightLabel.Location = new System.Drawing.Point(59, 135);
-            this.bmiWeightLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bmiWeightLabel.Location = new System.Drawing.Point(98, 214);
             this.bmiWeightLabel.Name = "bmiWeightLabel";
-            this.bmiWeightLabel.Size = new System.Drawing.Size(35, 12);
+            this.bmiWeightLabel.Size = new System.Drawing.Size(57, 19);
             this.bmiWeightLabel.TabIndex = 1;
             this.bmiWeightLabel.Text = "體重 :";
             // 
             // bmiHeightLabel
             // 
             this.bmiHeightLabel.AutoSize = true;
-            this.bmiHeightLabel.Location = new System.Drawing.Point(59, 100);
-            this.bmiHeightLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.bmiHeightLabel.Location = new System.Drawing.Point(98, 158);
             this.bmiHeightLabel.Name = "bmiHeightLabel";
-            this.bmiHeightLabel.Size = new System.Drawing.Size(35, 12);
+            this.bmiHeightLabel.Size = new System.Drawing.Size(57, 19);
             this.bmiHeightLabel.TabIndex = 0;
             this.bmiHeightLabel.Text = "身高 :";
             // 
@@ -354,9 +369,10 @@
             this.joggingPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.joggingPanel.Controls.Add(this.joggingInfo);
             this.joggingPanel.Controls.Add(this.backBtnJogging);
-            this.joggingPanel.Location = new System.Drawing.Point(712, 26);
+            this.joggingPanel.Location = new System.Drawing.Point(937, 4);
+            this.joggingPanel.Margin = new System.Windows.Forms.Padding(5);
             this.joggingPanel.Name = "joggingPanel";
-            this.joggingPanel.Size = new System.Drawing.Size(724, 535);
+            this.joggingPanel.Size = new System.Drawing.Size(1207, 847);
             this.joggingPanel.TabIndex = 7;
             this.joggingPanel.Visible = false;
             // 
@@ -365,11 +381,10 @@
             this.joggingInfo.Controls.Add(this.addRecord);
             this.joggingInfo.Controls.Add(this.jogWeekRecordPage);
             this.joggingInfo.Controls.Add(this.jogRecordPage);
-            this.joggingInfo.Location = new System.Drawing.Point(70, 38);
-            this.joggingInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.joggingInfo.Location = new System.Drawing.Point(117, 60);
             this.joggingInfo.Name = "joggingInfo";
             this.joggingInfo.SelectedIndex = 0;
-            this.joggingInfo.Size = new System.Drawing.Size(614, 484);
+            this.joggingInfo.Size = new System.Drawing.Size(1023, 766);
             this.joggingInfo.TabIndex = 2;
             // 
             // addRecord
@@ -381,9 +396,10 @@
             this.addRecord.Controls.Add(this.button3);
             this.addRecord.Controls.Add(this.button2);
             this.addRecord.Controls.Add(this.dataGridView1);
-            this.addRecord.Location = new System.Drawing.Point(4, 22);
+            this.addRecord.Location = new System.Drawing.Point(4, 29);
+            this.addRecord.Margin = new System.Windows.Forms.Padding(5);
             this.addRecord.Name = "addRecord";
-            this.addRecord.Size = new System.Drawing.Size(606, 458);
+            this.addRecord.Size = new System.Drawing.Size(1015, 733);
             this.addRecord.TabIndex = 3;
             this.addRecord.Text = "編輯紀錄";
             this.addRecord.UseVisualStyleBackColor = true;
@@ -391,32 +407,36 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(445, 296);
+            this.label8.Location = new System.Drawing.Point(742, 469);
+            this.label8.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(29, 12);
+            this.label8.Size = new System.Drawing.Size(47, 19);
             this.label8.TabIndex = 6;
             this.label8.Text = "公尺";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(328, 289);
+            this.textBox2.Location = new System.Drawing.Point(547, 458);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(5);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.Size = new System.Drawing.Size(164, 30);
             this.textBox2.TabIndex = 5;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(99, 289);
+            this.dateTimePicker1.Location = new System.Drawing.Point(165, 458);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(331, 30);
             this.dateTimePicker1.TabIndex = 4;
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(409, 353);
+            this.button4.Location = new System.Drawing.Point(682, 559);
+            this.button4.Margin = new System.Windows.Forms.Padding(5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.Size = new System.Drawing.Size(125, 36);
             this.button4.TabIndex = 3;
             this.button4.Text = "修改";
             this.button4.UseVisualStyleBackColor = true;
@@ -424,9 +444,10 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(250, 353);
+            this.button3.Location = new System.Drawing.Point(417, 559);
+            this.button3.Margin = new System.Windows.Forms.Padding(5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.Size = new System.Drawing.Size(125, 36);
             this.button3.TabIndex = 2;
             this.button3.Text = "刪除";
             this.button3.UseVisualStyleBackColor = true;
@@ -434,9 +455,10 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(99, 353);
+            this.button2.Location = new System.Drawing.Point(165, 559);
+            this.button2.Margin = new System.Windows.Forms.Padding(5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(125, 36);
             this.button2.TabIndex = 1;
             this.button2.Text = "新增";
             this.button2.UseVisualStyleBackColor = true;
@@ -445,10 +467,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(92, 67);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(485, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(808, 312);
             this.dataGridView1.TabIndex = 0;
             // 
             // jogWeekRecordPage
@@ -456,11 +479,10 @@
             this.jogWeekRecordPage.Controls.Add(this.label9);
             this.jogWeekRecordPage.Controls.Add(this.weekRecord);
             this.jogWeekRecordPage.Controls.Add(this.dataGridView2);
-            this.jogWeekRecordPage.Location = new System.Drawing.Point(4, 22);
-            this.jogWeekRecordPage.Margin = new System.Windows.Forms.Padding(2);
+            this.jogWeekRecordPage.Location = new System.Drawing.Point(4, 29);
             this.jogWeekRecordPage.Name = "jogWeekRecordPage";
-            this.jogWeekRecordPage.Padding = new System.Windows.Forms.Padding(2);
-            this.jogWeekRecordPage.Size = new System.Drawing.Size(606, 458);
+            this.jogWeekRecordPage.Padding = new System.Windows.Forms.Padding(3);
+            this.jogWeekRecordPage.Size = new System.Drawing.Size(1015, 733);
             this.jogWeekRecordPage.TabIndex = 0;
             this.jogWeekRecordPage.Text = "本周紀錄";
             this.jogWeekRecordPage.UseVisualStyleBackColor = true;
@@ -469,17 +491,19 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(150, 298);
+            this.label9.Location = new System.Drawing.Point(250, 472);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(298, 24);
+            this.label9.Size = new System.Drawing.Size(473, 38);
             this.label9.TabIndex = 2;
             this.label9.Text = "顯示周一到今日的運動紀錄";
             // 
             // weekRecord
             // 
-            this.weekRecord.Location = new System.Drawing.Point(263, 356);
+            this.weekRecord.Location = new System.Drawing.Point(438, 564);
+            this.weekRecord.Margin = new System.Windows.Forms.Padding(5);
             this.weekRecord.Name = "weekRecord";
-            this.weekRecord.Size = new System.Drawing.Size(75, 23);
+            this.weekRecord.Size = new System.Drawing.Size(125, 36);
             this.weekRecord.TabIndex = 1;
             this.weekRecord.Text = "重新載入";
             this.weekRecord.UseVisualStyleBackColor = true;
@@ -488,10 +512,11 @@
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(83, 60);
+            this.dataGridView2.Location = new System.Drawing.Point(138, 95);
+            this.dataGridView2.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(442, 199);
+            this.dataGridView2.Size = new System.Drawing.Size(737, 315);
             this.dataGridView2.TabIndex = 0;
             // 
             // jogRecordPage
@@ -501,10 +526,9 @@
             this.jogRecordPage.Controls.Add(this.dateTimePicker3);
             this.jogRecordPage.Controls.Add(this.dateTimePicker2);
             this.jogRecordPage.Controls.Add(this.dataGridView3);
-            this.jogRecordPage.Location = new System.Drawing.Point(4, 22);
-            this.jogRecordPage.Margin = new System.Windows.Forms.Padding(2);
+            this.jogRecordPage.Location = new System.Drawing.Point(4, 29);
             this.jogRecordPage.Name = "jogRecordPage";
-            this.jogRecordPage.Size = new System.Drawing.Size(606, 458);
+            this.jogRecordPage.Size = new System.Drawing.Size(1015, 733);
             this.jogRecordPage.TabIndex = 2;
             this.jogRecordPage.Text = "查詢紀錄";
             this.jogRecordPage.UseVisualStyleBackColor = true;
@@ -512,17 +536,19 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(288, 330);
+            this.label7.Location = new System.Drawing.Point(480, 523);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(11, 12);
+            this.label7.Size = new System.Drawing.Size(19, 19);
             this.label7.TabIndex = 4;
             this.label7.Text = "~";
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(251, 386);
+            this.button5.Location = new System.Drawing.Point(418, 611);
+            this.button5.Margin = new System.Windows.Forms.Padding(5);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.Size = new System.Drawing.Size(125, 36);
             this.button5.TabIndex = 3;
             this.button5.Text = "查詢";
             this.button5.UseVisualStyleBackColor = true;
@@ -530,35 +556,39 @@
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(325, 323);
+            this.dateTimePicker3.Location = new System.Drawing.Point(542, 511);
+            this.dateTimePicker3.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker3.Size = new System.Drawing.Size(331, 30);
             this.dateTimePicker3.TabIndex = 2;
             this.dateTimePicker3.ValueChanged += new System.EventHandler(this.dateTimePicker3_ValueChanged);
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(70, 323);
+            this.dateTimePicker2.Location = new System.Drawing.Point(117, 511);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(5);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(331, 30);
             this.dateTimePicker2.TabIndex = 1;
             // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(96, 59);
+            this.dataGridView3.Location = new System.Drawing.Point(160, 93);
+            this.dataGridView3.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(401, 214);
+            this.dataGridView3.Size = new System.Drawing.Size(668, 339);
             this.dataGridView3.TabIndex = 0;
             // 
             // backBtnJogging
             // 
             this.backBtnJogging.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.backBtnJogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtnJogging.Location = new System.Drawing.Point(3, 3);
+            this.backBtnJogging.Location = new System.Drawing.Point(5, 5);
+            this.backBtnJogging.Margin = new System.Windows.Forms.Padding(5);
             this.backBtnJogging.Name = "backBtnJogging";
-            this.backBtnJogging.Size = new System.Drawing.Size(43, 44);
+            this.backBtnJogging.Size = new System.Drawing.Size(72, 70);
             this.backBtnJogging.TabIndex = 1;
             this.backBtnJogging.UseVisualStyleBackColor = false;
             this.backBtnJogging.Click += new System.EventHandler(this.backBtnJogging_Click);
@@ -589,10 +619,9 @@
             this.dietPanel.Controls.Add(this.oilBtn);
             this.dietPanel.Controls.Add(this.proteinBtn);
             this.dietPanel.Controls.Add(this.vegBtn);
-            this.dietPanel.Location = new System.Drawing.Point(763, 13);
-            this.dietPanel.Margin = new System.Windows.Forms.Padding(2);
+            this.dietPanel.Location = new System.Drawing.Point(1272, 21);
             this.dietPanel.Name = "dietPanel";
-            this.dietPanel.Size = new System.Drawing.Size(573, 548);
+            this.dietPanel.Size = new System.Drawing.Size(955, 868);
             this.dietPanel.TabIndex = 6;
             this.dietPanel.Visible = false;
             // 
@@ -601,10 +630,9 @@
             this.labelCloseBtn.Enabled = false;
             this.labelCloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelCloseBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelCloseBtn.Location = new System.Drawing.Point(432, 420);
-            this.labelCloseBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.labelCloseBtn.Location = new System.Drawing.Point(720, 665);
             this.labelCloseBtn.Name = "labelCloseBtn";
-            this.labelCloseBtn.Size = new System.Drawing.Size(73, 37);
+            this.labelCloseBtn.Size = new System.Drawing.Size(122, 59);
             this.labelCloseBtn.TabIndex = 23;
             this.labelCloseBtn.Text = "關閉";
             this.labelCloseBtn.UseVisualStyleBackColor = true;
@@ -615,10 +643,9 @@
             // 
             this.backBtnDiet.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.backBtnDiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backBtnDiet.Location = new System.Drawing.Point(5, 3);
-            this.backBtnDiet.Margin = new System.Windows.Forms.Padding(2);
+            this.backBtnDiet.Location = new System.Drawing.Point(8, 5);
             this.backBtnDiet.Name = "backBtnDiet";
-            this.backBtnDiet.Size = new System.Drawing.Size(48, 51);
+            this.backBtnDiet.Size = new System.Drawing.Size(80, 81);
             this.backBtnDiet.TabIndex = 22;
             this.backBtnDiet.UseVisualStyleBackColor = false;
             this.backBtnDiet.Click += new System.EventHandler(this.backBtnDiet_Click);
@@ -626,50 +653,45 @@
             // fruitLabel
             // 
             this.fruitLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fruitLabel.Location = new System.Drawing.Point(226, 100);
-            this.fruitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.fruitLabel.Location = new System.Drawing.Point(377, 158);
             this.fruitLabel.Name = "fruitLabel";
-            this.fruitLabel.Size = new System.Drawing.Size(302, 312);
+            this.fruitLabel.Size = new System.Drawing.Size(503, 494);
             this.fruitLabel.TabIndex = 21;
             this.fruitLabel.Visible = false;
             // 
             // oilLabel
             // 
             this.oilLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.oilLabel.Location = new System.Drawing.Point(226, 100);
-            this.oilLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.oilLabel.Location = new System.Drawing.Point(377, 158);
             this.oilLabel.Name = "oilLabel";
-            this.oilLabel.Size = new System.Drawing.Size(302, 312);
+            this.oilLabel.Size = new System.Drawing.Size(503, 494);
             this.oilLabel.TabIndex = 20;
             this.oilLabel.Visible = false;
             // 
             // grainLabel
             // 
             this.grainLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.grainLabel.Location = new System.Drawing.Point(226, 100);
-            this.grainLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.grainLabel.Location = new System.Drawing.Point(377, 158);
             this.grainLabel.Name = "grainLabel";
-            this.grainLabel.Size = new System.Drawing.Size(297, 312);
+            this.grainLabel.Size = new System.Drawing.Size(495, 494);
             this.grainLabel.TabIndex = 19;
             this.grainLabel.Visible = false;
             // 
             // vegLabel
             // 
             this.vegLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.vegLabel.Location = new System.Drawing.Point(226, 100);
-            this.vegLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.vegLabel.Location = new System.Drawing.Point(377, 158);
             this.vegLabel.Name = "vegLabel";
-            this.vegLabel.Size = new System.Drawing.Size(302, 312);
+            this.vegLabel.Size = new System.Drawing.Size(503, 494);
             this.vegLabel.TabIndex = 17;
             this.vegLabel.Visible = false;
             // 
             // proteinLabel
             // 
             this.proteinLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.proteinLabel.Location = new System.Drawing.Point(226, 100);
-            this.proteinLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.proteinLabel.Location = new System.Drawing.Point(377, 158);
             this.proteinLabel.Name = "proteinLabel";
-            this.proteinLabel.Size = new System.Drawing.Size(297, 312);
+            this.proteinLabel.Size = new System.Drawing.Size(495, 494);
             this.proteinLabel.TabIndex = 18;
             this.proteinLabel.Visible = false;
             // 
@@ -677,10 +699,9 @@
             // 
             this.dietEnterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dietEnterBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dietEnterBtn.Location = new System.Drawing.Point(116, 420);
-            this.dietEnterBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.dietEnterBtn.Location = new System.Drawing.Point(193, 665);
             this.dietEnterBtn.Name = "dietEnterBtn";
-            this.dietEnterBtn.Size = new System.Drawing.Size(58, 37);
+            this.dietEnterBtn.Size = new System.Drawing.Size(97, 59);
             this.dietEnterBtn.TabIndex = 16;
             this.dietEnterBtn.Text = "輸入";
             this.dietEnterBtn.UseVisualStyleBackColor = true;
@@ -690,10 +711,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(158, 367);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(263, 581);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(29, 24);
+            this.label6.Size = new System.Drawing.Size(48, 39);
             this.label6.TabIndex = 15;
             this.label6.Text = "份";
             // 
@@ -701,10 +721,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(158, 295);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(263, 467);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 24);
+            this.label5.Size = new System.Drawing.Size(79, 39);
             this.label5.TabIndex = 14;
             this.label5.Text = "湯匙";
             // 
@@ -712,10 +731,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(161, 225);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(268, 356);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 24);
+            this.label4.Size = new System.Drawing.Size(48, 39);
             this.label4.TabIndex = 13;
             this.label4.Text = "份";
             // 
@@ -723,10 +741,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(161, 162);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(268, 257);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 24);
+            this.label3.Size = new System.Drawing.Size(48, 39);
             this.label3.TabIndex = 12;
             this.label3.Text = "份";
             // 
@@ -734,61 +751,54 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(161, 100);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(268, 158);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 24);
+            this.label2.Size = new System.Drawing.Size(48, 39);
             this.label2.TabIndex = 11;
             this.label2.Text = "份";
             // 
             // grainTxt
             // 
-            this.grainTxt.Location = new System.Drawing.Point(116, 367);
-            this.grainTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.grainTxt.Location = new System.Drawing.Point(193, 581);
             this.grainTxt.Name = "grainTxt";
-            this.grainTxt.Size = new System.Drawing.Size(38, 22);
+            this.grainTxt.Size = new System.Drawing.Size(61, 30);
             this.grainTxt.TabIndex = 10;
             // 
             // oilTxt
             // 
-            this.oilTxt.Location = new System.Drawing.Point(116, 295);
-            this.oilTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.oilTxt.Location = new System.Drawing.Point(193, 467);
             this.oilTxt.Name = "oilTxt";
-            this.oilTxt.Size = new System.Drawing.Size(38, 22);
+            this.oilTxt.Size = new System.Drawing.Size(61, 30);
             this.oilTxt.TabIndex = 9;
             // 
             // proteinTxt
             // 
-            this.proteinTxt.Location = new System.Drawing.Point(116, 225);
-            this.proteinTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.proteinTxt.Location = new System.Drawing.Point(193, 356);
             this.proteinTxt.Name = "proteinTxt";
-            this.proteinTxt.Size = new System.Drawing.Size(38, 22);
+            this.proteinTxt.Size = new System.Drawing.Size(61, 30);
             this.proteinTxt.TabIndex = 8;
             // 
             // fruitTxt
             // 
-            this.fruitTxt.Location = new System.Drawing.Point(116, 162);
-            this.fruitTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.fruitTxt.Location = new System.Drawing.Point(193, 257);
             this.fruitTxt.Name = "fruitTxt";
-            this.fruitTxt.Size = new System.Drawing.Size(38, 22);
+            this.fruitTxt.Size = new System.Drawing.Size(61, 30);
             this.fruitTxt.TabIndex = 7;
             // 
             // vegTxt
             // 
-            this.vegTxt.Location = new System.Drawing.Point(116, 100);
-            this.vegTxt.Margin = new System.Windows.Forms.Padding(2);
+            this.vegTxt.Location = new System.Drawing.Point(193, 158);
             this.vegTxt.Name = "vegTxt";
-            this.vegTxt.Size = new System.Drawing.Size(38, 22);
+            this.vegTxt.Size = new System.Drawing.Size(61, 30);
             this.vegTxt.TabIndex = 6;
             // 
             // fruitBtn
             // 
             this.fruitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fruitBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fruitBtn.Location = new System.Drawing.Point(33, 149);
-            this.fruitBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.fruitBtn.Location = new System.Drawing.Point(55, 236);
             this.fruitBtn.Name = "fruitBtn";
-            this.fruitBtn.Size = new System.Drawing.Size(79, 33);
+            this.fruitBtn.Size = new System.Drawing.Size(132, 52);
             this.fruitBtn.TabIndex = 5;
             this.fruitBtn.Text = "水果";
             this.fruitBtn.UseVisualStyleBackColor = true;
@@ -797,10 +807,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(112, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(187, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(356, 55);
+            this.label1.Size = new System.Drawing.Size(593, 87);
             this.label1.TabIndex = 4;
             this.label1.Text = "請輸入當餐攝取的種類";
             // 
@@ -808,10 +817,9 @@
             // 
             this.grainsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grainsBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.grainsBtn.Location = new System.Drawing.Point(24, 356);
-            this.grainsBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.grainsBtn.Location = new System.Drawing.Point(40, 564);
             this.grainsBtn.Name = "grainsBtn";
-            this.grainsBtn.Size = new System.Drawing.Size(88, 35);
+            this.grainsBtn.Size = new System.Drawing.Size(147, 55);
             this.grainsBtn.TabIndex = 3;
             this.grainsBtn.Text = "全榖雜糧";
             this.grainsBtn.UseVisualStyleBackColor = true;
@@ -821,10 +829,9 @@
             // 
             this.oilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.oilBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.oilBtn.Location = new System.Drawing.Point(33, 284);
-            this.oilBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.oilBtn.Location = new System.Drawing.Point(55, 450);
             this.oilBtn.Name = "oilBtn";
-            this.oilBtn.Size = new System.Drawing.Size(79, 33);
+            this.oilBtn.Size = new System.Drawing.Size(132, 52);
             this.oilBtn.TabIndex = 2;
             this.oilBtn.Text = "油脂";
             this.oilBtn.UseVisualStyleBackColor = true;
@@ -834,10 +841,9 @@
             // 
             this.proteinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.proteinBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.proteinBtn.Location = new System.Drawing.Point(33, 214);
-            this.proteinBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.proteinBtn.Location = new System.Drawing.Point(55, 339);
             this.proteinBtn.Name = "proteinBtn";
-            this.proteinBtn.Size = new System.Drawing.Size(79, 33);
+            this.proteinBtn.Size = new System.Drawing.Size(132, 52);
             this.proteinBtn.TabIndex = 1;
             this.proteinBtn.Text = "蛋白質";
             this.proteinBtn.UseVisualStyleBackColor = true;
@@ -848,10 +854,9 @@
             this.vegBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.vegBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vegBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.vegBtn.Location = new System.Drawing.Point(33, 89);
-            this.vegBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.vegBtn.Location = new System.Drawing.Point(55, 141);
             this.vegBtn.Name = "vegBtn";
-            this.vegBtn.Size = new System.Drawing.Size(79, 33);
+            this.vegBtn.Size = new System.Drawing.Size(132, 52);
             this.vegBtn.TabIndex = 0;
             this.vegBtn.Text = "蔬菜";
             this.vegBtn.UseVisualStyleBackColor = false;
@@ -859,15 +864,16 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1499, 1061);
+            this.ClientSize = new System.Drawing.Size(1924, 1048);
             this.Controls.Add(this.dietPanel);
             this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.joggingPanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.bmiPanel);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Text = "健康管理";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -918,7 +924,6 @@
         private System.Windows.Forms.Label bmiTitle;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bmiCalculateBtn;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label bmiResultLabel;
 
         private System.Windows.Forms.Label label1;
@@ -964,6 +969,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button backBtnBmi;
+        private System.Windows.Forms.Label bmiResult;
     }
 }
 

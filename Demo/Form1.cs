@@ -33,6 +33,9 @@ namespace Demo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            textBox2.ImeMode = ImeMode.Disable;
+            bmiHeight.ImeMode = ImeMode.Disable;
+            bmiWeight.ImeMode = ImeMode.Disable;
             weatherInfo.Text = "WAITING...";
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
@@ -46,12 +49,13 @@ namespace Demo
             dietBtn.Image = Image.FromFile(@"../../images/diet.png");
             bmiBtn.FlatAppearance.BorderSize = 0;
             //bmiBtn.Image = Image.FromFile(@"../../images/~~~");
-            //bmiStandard.Image = Image.FromFile(@"../../images/bmiStandard.jpg");
+            bmiStandard.Image = Image.FromFile(@"../../images/bmiStandard.jpg");
             calorieBtn.FlatAppearance.BorderSize = 0;
             //calorieBtn.Image = Image.FromFile(@"../../images/~~~");
             backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
+            backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
 
             SqlConnection db = new SqlConnection();
             db.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
@@ -109,6 +113,13 @@ namespace Demo
         private void backBtnDiet_Click(object sender, EventArgs e)
         {
             dietPanel.Visible = false;
+            HomePanel.Visible = true;
+            HomePanel.BringToFront();
+        }
+
+        private void backBtnBmi_Click(object sender, EventArgs e)
+        {
+            bmiPanel.Visible = false;
             HomePanel.Visible = true;
             HomePanel.BringToFront();
         }
@@ -281,30 +292,8 @@ namespace Demo
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             //判断按键是不是要输入的类型。
-            if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8 && (int)e.KeyChar != 46)
-                e.Handled = true;
-
-            //小数点的处理。
-            if ((int)e.KeyChar == 46)                           //小数点
-            {
-                if (textBox1.Text.Length <= 0)
-                    e.Handled = true;   //小数点不能在第一位
-                else
-                {
-                    float f;
-                    float oldf;
-                    bool b1 = false, b2 = false;
-                    b1 = float.TryParse(textBox1.Text, out oldf);
-                    b2 = float.TryParse(textBox1.Text + e.KeyChar.ToString(), out f);
-                    if (b2 == false)
-                    {
-                        if (b1 == true)
-                            e.Handled = true;
-                        else
-                            e.Handled = false;
-                    }
-                }
-            }
+            if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8)
+                e.Handled = true;           
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -423,6 +412,114 @@ namespace Demo
             {
                 MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void bmiHeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int checkLength = bmiHeight.Text.IndexOf('.');
+            int maxLength;
+            if (checkLength == -1) maxLength = 3;
+            else maxLength = checkLength + 3;
+
+            if (bmiHeight.Text.Length >= maxLength)
+            {
+                if (checkLength == -1)
+                {
+                    if ((int)e.KeyChar != 46 && (int)e.KeyChar != 8) e.Handled = true;
+                }
+                else
+                {
+                    if ((int)e.KeyChar != 8) e.Handled = true;
+                }
+            }
+
+            if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8 && (int)e.KeyChar != 46)
+                e.Handled = true;
+            if ((int)e.KeyChar == 46)
+            {
+                if (bmiHeight.Text.Length <= 0)
+                    e.Handled = true;
+                else
+                {
+                    float f;
+                    float oldf;
+                    bool b1 = false, b2 = false;
+                    b1 = float.TryParse(bmiHeight.Text, out oldf);
+                    b2 = float.TryParse(bmiHeight.Text + e.KeyChar.ToString(), out f);
+                    if (b2 == false)
+                    {
+                        if (b1 == true)
+                            e.Handled = true;
+                        else
+                            e.Handled = false;
+                    }
+                }
+            }
+        }
+
+        private void bmiWeight_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int checkLength = bmiWeight.Text.IndexOf('.');
+            int maxLength;
+            if(checkLength == -1) maxLength = 3;                          
+            else maxLength = checkLength + 3;
+
+            if(bmiWeight.Text.Length >= maxLength)
+            {
+                if(checkLength == -1)
+                {
+                    if ((int)e.KeyChar != 46 && (int)e.KeyChar != 8) e.Handled = true;
+                }
+                else
+                {
+                    if ((int)e.KeyChar != 8) e.Handled = true;
+                }
+            }
+           
+            if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8 && (int)e.KeyChar != 46)
+                e.Handled = true;
+            if ((int)e.KeyChar == 46)
+            {
+                if (bmiWeight.Text.Length <= 0)
+                    e.Handled = true;
+                else
+                {
+                    float f;
+                    float oldf;
+                    bool b1 = false, b2 = false;
+                    b1 = float.TryParse(bmiWeight.Text, out oldf);
+                    b2 = float.TryParse(bmiWeight.Text + e.KeyChar.ToString(), out f);
+                    if (b2 == false)
+                    {
+                        if (b1 == true)
+                            e.Handled = true;
+                        else
+                            e.Handled = false;
+                    }
+                }
+            }
+        }
+
+        private void bmiCalculateBtn_Click(object sender, EventArgs e)
+        {
+            float weight;
+            float height;
+            if (bmiWeight.Text == "" || bmiHeight.Text == "")
+            {
+                MessageBox.Show("請輸入完整資料", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                weight = float.Parse(bmiWeight.Text);
+                height = float.Parse(bmiHeight.Text);
+                if (height < 30 || height > 275) MessageBox.Show("請確認身高", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else if (weight < 0.2 || weight > 415) MessageBox.Show("請確認體重", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else
+                {
+                    height /= 100;
+                    bmiResult.Text = Math.Round(weight / height / height, 2) + "";
+                }
+            }          
         }
 
         private void getWeatherBtn_Click(object sender, EventArgs e)
