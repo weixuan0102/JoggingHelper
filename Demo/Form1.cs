@@ -63,6 +63,7 @@ namespace Demo
             dataGridView1.Sort(dataGridView1.Columns["date"], ListSortDirection.Descending);
             db.Close();
 
+            dateTimePicker1.MaxDate = DateTime.Now;
             dateTimePicker2.MaxDate = dateTimePicker3.Value.AddDays(-1);
         }
 

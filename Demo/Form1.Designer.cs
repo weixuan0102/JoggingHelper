@@ -95,6 +95,7 @@
             this.oilBtn = new System.Windows.Forms.Button();
             this.proteinBtn = new System.Windows.Forms.Button();
             this.vegBtn = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.weatherPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.bmiPanel.SuspendLayout();
@@ -452,6 +453,7 @@
             // 
             // jogWeekRecordPage
             // 
+            this.jogWeekRecordPage.Controls.Add(this.label9);
             this.jogWeekRecordPage.Controls.Add(this.weekRecord);
             this.jogWeekRecordPage.Controls.Add(this.dataGridView2);
             this.jogWeekRecordPage.Location = new System.Drawing.Point(4, 22);
@@ -845,6 +847,16 @@
             this.vegBtn.UseVisualStyleBackColor = false;
             this.vegBtn.Click += new System.EventHandler(this.vegBtn_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.Location = new System.Drawing.Point(150, 298);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(298, 24);
+            this.label9.TabIndex = 2;
+            this.label9.Text = "顯示周一到今日的運動紀錄";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -870,6 +882,7 @@
             this.addRecord.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.jogWeekRecordPage.ResumeLayout(false);
+            this.jogWeekRecordPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.jogRecordPage.ResumeLayout(false);
             this.jogRecordPage.PerformLayout();
@@ -950,6 +963,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.Label label9;
     }
 }
 
