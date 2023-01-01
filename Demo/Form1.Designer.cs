@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.weatherInfo = new System.Windows.Forms.Label();
             this.joggingBtn = new System.Windows.Forms.Button();
             this.weatherBtn = new System.Windows.Forms.Button();
@@ -35,16 +36,17 @@
             this.weatherPanel = new System.Windows.Forms.Panel();
             this.backBtnWeather = new System.Windows.Forms.Button();
             this.HomePanel = new System.Windows.Forms.Panel();
-            this.calorieBtn = new System.Windows.Forms.Button();
+            this.helpBtn = new System.Windows.Forms.Button();
             this.bmiBtn = new System.Windows.Forms.Button();
             this.bmiPanel = new System.Windows.Forms.Panel();
+            this.idealWeight = new System.Windows.Forms.Label();
+            this.bmiStandard = new System.Windows.Forms.Label();
+            this.idealWeightLabel = new System.Windows.Forms.Label();
             this.bmiResult = new System.Windows.Forms.Label();
             this.backBtnBmi = new System.Windows.Forms.Button();
             this.bmiResultLabel = new System.Windows.Forms.Label();
             this.bmiCalculateBtn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.bmiTitle = new System.Windows.Forms.Label();
-            this.bmiStandard = new System.Windows.Forms.PictureBox();
             this.bmiWeight = new System.Windows.Forms.TextBox();
             this.bmiHeight = new System.Windows.Forms.TextBox();
             this.bmiWeightUnit = new System.Windows.Forms.Label();
@@ -72,6 +74,20 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.backBtnJogging = new System.Windows.Forms.Button();
+            this.helpPanel = new System.Windows.Forms.Panel();
+            this.introduction6 = new System.Windows.Forms.Label();
+            this.introduction5 = new System.Windows.Forms.Label();
+            this.introduction4 = new System.Windows.Forms.Label();
+            this.introduction3 = new System.Windows.Forms.Label();
+            this.introduction2 = new System.Windows.Forms.Label();
+            this.help6 = new System.Windows.Forms.Label();
+            this.help5 = new System.Windows.Forms.Label();
+            this.help4 = new System.Windows.Forms.Label();
+            this.help3 = new System.Windows.Forms.Label();
+            this.help2 = new System.Windows.Forms.Label();
+            this.help1 = new System.Windows.Forms.Label();
+            this.introduction1 = new System.Windows.Forms.Label();
+            this.backBtnHelp = new System.Windows.Forms.Button();
             this.dietPanel = new System.Windows.Forms.Panel();
             this.labelCloseBtn = new System.Windows.Forms.Button();
             this.backBtnDiet = new System.Windows.Forms.Button();
@@ -100,7 +116,6 @@
             this.weatherPanel.SuspendLayout();
             this.HomePanel.SuspendLayout();
             this.bmiPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bmiStandard)).BeginInit();
             this.joggingPanel.SuspendLayout();
             this.joggingInfo.SuspendLayout();
             this.addRecord.SuspendLayout();
@@ -109,6 +124,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.jogRecordPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.helpPanel.SuspendLayout();
             this.dietPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -163,7 +179,7 @@
             this.weatherPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.weatherPanel.Controls.Add(this.backBtnWeather);
             this.weatherPanel.Controls.Add(this.weatherInfo);
-            this.weatherPanel.Location = new System.Drawing.Point(1245, 29);
+            this.weatherPanel.Location = new System.Drawing.Point(0, 0);
             this.weatherPanel.Margin = new System.Windows.Forms.Padding(5);
             this.weatherPanel.Name = "weatherPanel";
             this.weatherPanel.Size = new System.Drawing.Size(1207, 847);
@@ -185,30 +201,30 @@
             // HomePanel
             // 
             this.HomePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.HomePanel.Controls.Add(this.calorieBtn);
+            this.HomePanel.Controls.Add(this.helpBtn);
             this.HomePanel.Controls.Add(this.bmiBtn);
             this.HomePanel.Controls.Add(this.joggingBtn);
             this.HomePanel.Controls.Add(this.weatherBtn);
             this.HomePanel.Controls.Add(this.dietBtn);
-            this.HomePanel.Location = new System.Drawing.Point(20, 25);
+            this.HomePanel.Location = new System.Drawing.Point(0, 0);
             this.HomePanel.Margin = new System.Windows.Forms.Padding(5);
             this.HomePanel.Name = "HomePanel";
             this.HomePanel.Size = new System.Drawing.Size(1120, 1009);
             this.HomePanel.TabIndex = 5;
             // 
-            // calorieBtn
+            // helpBtn
             // 
-            this.calorieBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.calorieBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.calorieBtn.Font = new System.Drawing.Font("新細明體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.calorieBtn.Location = new System.Drawing.Point(568, 633);
-            this.calorieBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.calorieBtn.Name = "calorieBtn";
-            this.calorieBtn.Size = new System.Drawing.Size(318, 345);
-            this.calorieBtn.TabIndex = 5;
-            this.calorieBtn.Text = "Calorie";
-            this.calorieBtn.UseVisualStyleBackColor = false;
-            this.calorieBtn.Click += new System.EventHandler(this.calorieBtn_Click);
+            this.helpBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.helpBtn.Font = new System.Drawing.Font("新細明體", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.helpBtn.Location = new System.Drawing.Point(568, 633);
+            this.helpBtn.Margin = new System.Windows.Forms.Padding(5);
+            this.helpBtn.Name = "helpBtn";
+            this.helpBtn.Size = new System.Drawing.Size(318, 345);
+            this.helpBtn.TabIndex = 5;
+            this.helpBtn.Text = "Help";
+            this.helpBtn.UseVisualStyleBackColor = false;
+            this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
             // 
             // bmiBtn
             // 
@@ -226,25 +242,53 @@
             // 
             // bmiPanel
             // 
+            this.bmiPanel.Controls.Add(this.idealWeight);
+            this.bmiPanel.Controls.Add(this.bmiStandard);
+            this.bmiPanel.Controls.Add(this.idealWeightLabel);
             this.bmiPanel.Controls.Add(this.bmiResult);
             this.bmiPanel.Controls.Add(this.backBtnBmi);
             this.bmiPanel.Controls.Add(this.bmiResultLabel);
             this.bmiPanel.Controls.Add(this.bmiCalculateBtn);
-            this.bmiPanel.Controls.Add(this.button1);
             this.bmiPanel.Controls.Add(this.bmiTitle);
-            this.bmiPanel.Controls.Add(this.bmiStandard);
             this.bmiPanel.Controls.Add(this.bmiWeight);
             this.bmiPanel.Controls.Add(this.bmiHeight);
             this.bmiPanel.Controls.Add(this.bmiWeightUnit);
             this.bmiPanel.Controls.Add(this.bmiHeightUnit);
             this.bmiPanel.Controls.Add(this.bmiWeightLabel);
             this.bmiPanel.Controls.Add(this.bmiHeightLabel);
-            this.bmiPanel.Location = new System.Drawing.Point(1196, 56);
+            this.bmiPanel.Location = new System.Drawing.Point(0, 0);
             this.bmiPanel.Margin = new System.Windows.Forms.Padding(5);
             this.bmiPanel.Name = "bmiPanel";
             this.bmiPanel.Size = new System.Drawing.Size(1207, 847);
             this.bmiPanel.TabIndex = 3;
             this.bmiPanel.Visible = false;
+            // 
+            // idealWeight
+            // 
+            this.idealWeight.AutoSize = true;
+            this.idealWeight.Location = new System.Drawing.Point(219, 321);
+            this.idealWeight.Name = "idealWeight";
+            this.idealWeight.Size = new System.Drawing.Size(0, 19);
+            this.idealWeight.TabIndex = 27;
+            // 
+            // bmiStandard
+            // 
+            this.bmiStandard.AutoSize = true;
+            this.bmiStandard.Font = new System.Drawing.Font("新細明體", 10.89474F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiStandard.Location = new System.Drawing.Point(97, 438);
+            this.bmiStandard.Name = "bmiStandard";
+            this.bmiStandard.Size = new System.Drawing.Size(338, 312);
+            this.bmiStandard.TabIndex = 26;
+            this.bmiStandard.Text = resources.GetString("bmiStandard.Text");
+            // 
+            // idealWeightLabel
+            // 
+            this.idealWeightLabel.AutoSize = true;
+            this.idealWeightLabel.Location = new System.Drawing.Point(100, 322);
+            this.idealWeightLabel.Name = "idealWeightLabel";
+            this.idealWeightLabel.Size = new System.Drawing.Size(114, 19);
+            this.idealWeightLabel.TabIndex = 25;
+            this.idealWeightLabel.Text = "理想體重為 :";
             // 
             // bmiResult
             // 
@@ -270,28 +314,19 @@
             this.bmiResultLabel.AutoSize = true;
             this.bmiResultLabel.Location = new System.Drawing.Point(100, 268);
             this.bmiResultLabel.Name = "bmiResultLabel";
-            this.bmiResultLabel.Size = new System.Drawing.Size(110, 19);
+            this.bmiResultLabel.Size = new System.Drawing.Size(120, 19);
             this.bmiResultLabel.TabIndex = 10;
-            this.bmiResultLabel.Text = "你的BMI為 :";
+            this.bmiResultLabel.Text = "你的 BMI 為 :";
             // 
             // bmiCalculateBtn
             // 
             this.bmiCalculateBtn.Location = new System.Drawing.Point(455, 190);
             this.bmiCalculateBtn.Name = "bmiCalculateBtn";
             this.bmiCalculateBtn.Size = new System.Drawing.Size(123, 44);
-            this.bmiCalculateBtn.TabIndex = 9;
+            this.bmiCalculateBtn.TabIndex = 8;
             this.bmiCalculateBtn.Text = "開始計算";
             this.bmiCalculateBtn.UseVisualStyleBackColor = true;
             this.bmiCalculateBtn.Click += new System.EventHandler(this.bmiCalculateBtn_Click);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(632, 763);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(143, 67);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "查看紀錄";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // bmiTitle
             // 
@@ -302,15 +337,6 @@
             this.bmiTitle.Size = new System.Drawing.Size(472, 31);
             this.bmiTitle.TabIndex = 7;
             this.bmiTitle.Text = "看看自己的BMI是否在理想範圍吧";
-            // 
-            // bmiStandard
-            // 
-            this.bmiStandard.Location = new System.Drawing.Point(98, 312);
-            this.bmiStandard.Name = "bmiStandard";
-            this.bmiStandard.Size = new System.Drawing.Size(452, 518);
-            this.bmiStandard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bmiStandard.TabIndex = 6;
-            this.bmiStandard.TabStop = false;
             // 
             // bmiWeight
             // 
@@ -369,7 +395,7 @@
             this.joggingPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.joggingPanel.Controls.Add(this.joggingInfo);
             this.joggingPanel.Controls.Add(this.backBtnJogging);
-            this.joggingPanel.Location = new System.Drawing.Point(937, 4);
+            this.joggingPanel.Location = new System.Drawing.Point(0, 0);
             this.joggingPanel.Margin = new System.Windows.Forms.Padding(5);
             this.joggingPanel.Name = "joggingPanel";
             this.joggingPanel.Size = new System.Drawing.Size(1207, 847);
@@ -470,6 +496,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(92, 67);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(808, 312);
             this.dataGridView1.TabIndex = 0;
@@ -496,7 +523,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(473, 38);
             this.label9.TabIndex = 2;
-            this.label9.Text = "顯示周一到今日的運動紀錄";
+            this.label9.Text = "顯示周日到今日的運動紀錄";
             // 
             // weekRecord
             // 
@@ -515,6 +542,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(138, 95);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(737, 315);
             this.dataGridView2.TabIndex = 0;
@@ -577,6 +605,7 @@
             this.dataGridView3.Location = new System.Drawing.Point(160, 93);
             this.dataGridView3.Margin = new System.Windows.Forms.Padding(5);
             this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.Size = new System.Drawing.Size(668, 339);
             this.dataGridView3.TabIndex = 0;
@@ -592,6 +621,167 @@
             this.backBtnJogging.TabIndex = 1;
             this.backBtnJogging.UseVisualStyleBackColor = false;
             this.backBtnJogging.Click += new System.EventHandler(this.backBtnJogging_Click);
+            // 
+            // helpPanel
+            // 
+            this.helpPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.helpPanel.Controls.Add(this.introduction6);
+            this.helpPanel.Controls.Add(this.introduction5);
+            this.helpPanel.Controls.Add(this.introduction4);
+            this.helpPanel.Controls.Add(this.introduction3);
+            this.helpPanel.Controls.Add(this.introduction2);
+            this.helpPanel.Controls.Add(this.help6);
+            this.helpPanel.Controls.Add(this.help5);
+            this.helpPanel.Controls.Add(this.help4);
+            this.helpPanel.Controls.Add(this.help3);
+            this.helpPanel.Controls.Add(this.help2);
+            this.helpPanel.Controls.Add(this.help1);
+            this.helpPanel.Controls.Add(this.introduction1);
+            this.helpPanel.Controls.Add(this.backBtnHelp);
+            this.helpPanel.Location = new System.Drawing.Point(0, 0);
+            this.helpPanel.Margin = new System.Windows.Forms.Padding(5);
+            this.helpPanel.Name = "helpPanel";
+            this.helpPanel.Size = new System.Drawing.Size(1207, 847);
+            this.helpPanel.TabIndex = 8;
+            this.helpPanel.Visible = false;
+            // 
+            // introduction6
+            // 
+            this.introduction6.AutoSize = true;
+            this.introduction6.Location = new System.Drawing.Point(432, 241);
+            this.introduction6.Name = "introduction6";
+            this.introduction6.Size = new System.Drawing.Size(106, 19);
+            this.introduction6.TabIndex = 13;
+            this.introduction6.Text = "introduction6";
+            this.introduction6.Visible = false;
+            // 
+            // introduction5
+            // 
+            this.introduction5.AutoSize = true;
+            this.introduction5.Location = new System.Drawing.Point(432, 213);
+            this.introduction5.Name = "introduction5";
+            this.introduction5.Size = new System.Drawing.Size(106, 19);
+            this.introduction5.TabIndex = 12;
+            this.introduction5.Text = "introduction5";
+            this.introduction5.Visible = false;
+            // 
+            // introduction4
+            // 
+            this.introduction4.AutoSize = true;
+            this.introduction4.Location = new System.Drawing.Point(432, 184);
+            this.introduction4.Name = "introduction4";
+            this.introduction4.Size = new System.Drawing.Size(106, 19);
+            this.introduction4.TabIndex = 11;
+            this.introduction4.Text = "introduction4";
+            this.introduction4.Visible = false;
+            // 
+            // introduction3
+            // 
+            this.introduction3.AutoSize = true;
+            this.introduction3.Location = new System.Drawing.Point(308, 241);
+            this.introduction3.Name = "introduction3";
+            this.introduction3.Size = new System.Drawing.Size(106, 19);
+            this.introduction3.TabIndex = 10;
+            this.introduction3.Text = "introduction3";
+            this.introduction3.Visible = false;
+            // 
+            // introduction2
+            // 
+            this.introduction2.AutoSize = true;
+            this.introduction2.Location = new System.Drawing.Point(308, 213);
+            this.introduction2.Name = "introduction2";
+            this.introduction2.Size = new System.Drawing.Size(106, 19);
+            this.introduction2.TabIndex = 9;
+            this.introduction2.Text = "introduction2";
+            this.introduction2.Visible = false;
+            // 
+            // help6
+            // 
+            this.help6.AutoSize = true;
+            this.help6.ForeColor = System.Drawing.Color.Gray;
+            this.help6.Location = new System.Drawing.Point(92, 729);
+            this.help6.Name = "help6";
+            this.help6.Size = new System.Drawing.Size(85, 19);
+            this.help6.TabIndex = 8;
+            this.help6.Text = "客服資訊";
+            this.help6.Click += new System.EventHandler(this.help_Click);
+            // 
+            // help5
+            // 
+            this.help5.AutoSize = true;
+            this.help5.ForeColor = System.Drawing.Color.Gray;
+            this.help5.Location = new System.Drawing.Point(92, 621);
+            this.help5.Name = "help5";
+            this.help5.Size = new System.Drawing.Size(85, 19);
+            this.help5.TabIndex = 7;
+            this.help5.Text = "檢視成果";
+            this.help5.Click += new System.EventHandler(this.help_Click);
+            // 
+            // help4
+            // 
+            this.help4.AutoSize = true;
+            this.help4.ForeColor = System.Drawing.Color.Gray;
+            this.help4.Location = new System.Drawing.Point(92, 513);
+            this.help4.Name = "help4";
+            this.help4.Size = new System.Drawing.Size(85, 19);
+            this.help4.TabIndex = 6;
+            this.help4.Text = "飲食紀錄";
+            this.help4.Click += new System.EventHandler(this.help_Click);
+            // 
+            // help3
+            // 
+            this.help3.AutoSize = true;
+            this.help3.ForeColor = System.Drawing.Color.Gray;
+            this.help3.Location = new System.Drawing.Point(92, 405);
+            this.help3.Name = "help3";
+            this.help3.Size = new System.Drawing.Size(85, 19);
+            this.help3.TabIndex = 5;
+            this.help3.Text = "當天天氣";
+            this.help3.Click += new System.EventHandler(this.help_Click);
+            // 
+            // help2
+            // 
+            this.help2.AutoSize = true;
+            this.help2.ForeColor = System.Drawing.Color.Gray;
+            this.help2.Location = new System.Drawing.Point(92, 297);
+            this.help2.Name = "help2";
+            this.help2.Size = new System.Drawing.Size(85, 19);
+            this.help2.TabIndex = 4;
+            this.help2.Text = "運動紀錄";
+            this.help2.Click += new System.EventHandler(this.help_Click);
+            // 
+            // help1
+            // 
+            this.help1.AutoSize = true;
+            this.help1.Font = new System.Drawing.Font("新細明體", 14.21053F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.help1.ForeColor = System.Drawing.Color.Black;
+            this.help1.Location = new System.Drawing.Point(92, 189);
+            this.help1.Name = "help1";
+            this.help1.Size = new System.Drawing.Size(162, 31);
+            this.help1.TabIndex = 3;
+            this.help1.Text = "> 設計理念";
+            this.help1.Click += new System.EventHandler(this.help_Click);
+            // 
+            // introduction1
+            // 
+            this.introduction1.AutoSize = true;
+            this.introduction1.Location = new System.Drawing.Point(308, 184);
+            this.introduction1.Name = "introduction1";
+            this.introduction1.Size = new System.Drawing.Size(106, 19);
+            this.introduction1.TabIndex = 2;
+            this.introduction1.Text = "introduction1";
+            // 
+            // backBtnHelp
+            // 
+            this.backBtnHelp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backBtnHelp.Location = new System.Drawing.Point(5, 5);
+            this.backBtnHelp.Margin = new System.Windows.Forms.Padding(5);
+            this.backBtnHelp.Name = "backBtnHelp";
+            this.backBtnHelp.Size = new System.Drawing.Size(72, 70);
+            this.backBtnHelp.TabIndex = 1;
+            this.backBtnHelp.UseVisualStyleBackColor = false;
+            this.backBtnHelp.Click += new System.EventHandler(this.backBtnHelp_Click);
             // 
             // dietPanel
             // 
@@ -619,7 +809,7 @@
             this.dietPanel.Controls.Add(this.oilBtn);
             this.dietPanel.Controls.Add(this.proteinBtn);
             this.dietPanel.Controls.Add(this.vegBtn);
-            this.dietPanel.Location = new System.Drawing.Point(1272, 21);
+            this.dietPanel.Location = new System.Drawing.Point(0, 0);
             this.dietPanel.Name = "dietPanel";
             this.dietPanel.Size = new System.Drawing.Size(955, 868);
             this.dietPanel.TabIndex = 6;
@@ -763,6 +953,7 @@
             this.grainTxt.Name = "grainTxt";
             this.grainTxt.Size = new System.Drawing.Size(61, 30);
             this.grainTxt.TabIndex = 10;
+            this.grainTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // oilTxt
             // 
@@ -770,6 +961,7 @@
             this.oilTxt.Name = "oilTxt";
             this.oilTxt.Size = new System.Drawing.Size(61, 30);
             this.oilTxt.TabIndex = 9;
+            this.oilTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // proteinTxt
             // 
@@ -777,6 +969,7 @@
             this.proteinTxt.Name = "proteinTxt";
             this.proteinTxt.Size = new System.Drawing.Size(61, 30);
             this.proteinTxt.TabIndex = 8;
+            this.proteinTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // fruitTxt
             // 
@@ -784,6 +977,7 @@
             this.fruitTxt.Name = "fruitTxt";
             this.fruitTxt.Size = new System.Drawing.Size(61, 30);
             this.fruitTxt.TabIndex = 7;
+            this.fruitTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // vegTxt
             // 
@@ -791,6 +985,7 @@
             this.vegTxt.Name = "vegTxt";
             this.vegTxt.Size = new System.Drawing.Size(61, 30);
             this.vegTxt.TabIndex = 6;
+            this.vegTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // fruitBtn
             // 
@@ -868,11 +1063,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1924, 1048);
-            this.Controls.Add(this.dietPanel);
-            this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.joggingPanel);
-            this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.helpPanel);
+            this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.bmiPanel);
+            this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.dietPanel);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Form1";
             this.Text = "健康管理";
@@ -881,7 +1077,6 @@
             this.HomePanel.ResumeLayout(false);
             this.bmiPanel.ResumeLayout(false);
             this.bmiPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bmiStandard)).EndInit();
             this.joggingPanel.ResumeLayout(false);
             this.joggingInfo.ResumeLayout(false);
             this.addRecord.ResumeLayout(false);
@@ -893,6 +1088,8 @@
             this.jogRecordPage.ResumeLayout(false);
             this.jogRecordPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.helpPanel.ResumeLayout(false);
+            this.helpPanel.PerformLayout();
             this.dietPanel.ResumeLayout(false);
             this.dietPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -911,7 +1108,7 @@
 
         private System.Windows.Forms.Panel joggingPanel;
         private System.Windows.Forms.Button backBtnJogging;
-        private System.Windows.Forms.Button calorieBtn;
+        private System.Windows.Forms.Button helpBtn;
         private System.Windows.Forms.Button bmiBtn;
         private System.Windows.Forms.Panel bmiPanel;
         private System.Windows.Forms.TextBox bmiWeight;
@@ -920,9 +1117,7 @@
         private System.Windows.Forms.Label bmiHeightUnit;
         private System.Windows.Forms.Label bmiWeightLabel;
         private System.Windows.Forms.Label bmiHeightLabel;
-        private System.Windows.Forms.PictureBox bmiStandard;
         private System.Windows.Forms.Label bmiTitle;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button bmiCalculateBtn;
         private System.Windows.Forms.Label bmiResultLabel;
 
@@ -971,6 +1166,23 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button backBtnBmi;
         private System.Windows.Forms.Label bmiResult;
+        private System.Windows.Forms.Label idealWeightLabel;
+        private System.Windows.Forms.Label bmiStandard;
+        private System.Windows.Forms.Label idealWeight;
+        private System.Windows.Forms.Panel helpPanel;
+        private System.Windows.Forms.Button backBtnHelp;
+        private System.Windows.Forms.Label introduction1;
+        private System.Windows.Forms.Label help6;
+        private System.Windows.Forms.Label help5;
+        private System.Windows.Forms.Label help4;
+        private System.Windows.Forms.Label help3;
+        private System.Windows.Forms.Label help2;
+        private System.Windows.Forms.Label help1;
+        private System.Windows.Forms.Label introduction6;
+        private System.Windows.Forms.Label introduction5;
+        private System.Windows.Forms.Label introduction4;
+        private System.Windows.Forms.Label introduction3;
+        private System.Windows.Forms.Label introduction2;
     }
 }
 

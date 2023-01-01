@@ -36,6 +36,11 @@ namespace Demo
             textBox2.ImeMode = ImeMode.Disable;
             bmiHeight.ImeMode = ImeMode.Disable;
             bmiWeight.ImeMode = ImeMode.Disable;
+            vegTxt.ImeMode = ImeMode.Disable;
+            fruitTxt.ImeMode = ImeMode.Disable;
+            oilTxt.ImeMode = ImeMode.Disable;
+            proteinTxt.ImeMode = ImeMode.Disable;
+            grainTxt.ImeMode = ImeMode.Disable;
             weatherInfo.Text = "WAITING...";
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
@@ -48,14 +53,14 @@ namespace Demo
             dietBtn.FlatAppearance.BorderSize = 0;
             dietBtn.Image = Image.FromFile(@"../../images/diet.png");
             bmiBtn.FlatAppearance.BorderSize = 0;
-            //bmiBtn.Image = Image.FromFile(@"../../images/~~~");
-            bmiStandard.Image = Image.FromFile(@"../../images/bmiStandard.jpg");
-            calorieBtn.FlatAppearance.BorderSize = 0;
-            //calorieBtn.Image = Image.FromFile(@"../../images/~~~");
+            //bmiBtn.Image = Image.FromFile(@"../../images/~~~");           
+            helpBtn.FlatAppearance.BorderSize = 0;
+            //helpBtn.Image = Image.FromFile(@"../../images/~~~");
             backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
+            backBtnHelp.Image = Image.FromFile(@"../../images/backToHome.png");
 
             SqlConnection db = new SqlConnection();
             db.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
@@ -108,6 +113,7 @@ namespace Demo
             joggingPanel.Visible = false;
             HomePanel.Visible = true;
             HomePanel.BringToFront();
+            textBox2.Text = "";
         }
 
         private void backBtnDiet_Click(object sender, EventArgs e)
@@ -115,6 +121,11 @@ namespace Demo
             dietPanel.Visible = false;
             HomePanel.Visible = true;
             HomePanel.BringToFront();
+            vegTxt.Text = "";
+            fruitTxt.Text = "";
+            proteinTxt.Text = "";
+            oilTxt.Text = "";
+            grainTxt.Text = "";
         }
 
         private void backBtnBmi_Click(object sender, EventArgs e)
@@ -122,8 +133,24 @@ namespace Demo
             bmiPanel.Visible = false;
             HomePanel.Visible = true;
             HomePanel.BringToFront();
+            bmiHeight.Text = "";
+            bmiWeight.Text = "";
+            bmiResult.Text = "";
+            idealWeight.Text = "";
         }
 
+        private void backBtnHelp_Click(object sender, EventArgs e)
+        {
+            helpPanel.Visible = false;
+            HomePanel.Visible = true;
+            HomePanel.BringToFront();
+            recover(selected);
+            selected = 1;
+            help1.Text = help1.Text.Insert(0, "> ");
+            help1.Font = new Font("新細明體", 14);
+            help1.ForeColor = Color.Black;
+            introduction1.Visible = true;
+        }
 
         private void bmiBtn_Click(object sender, EventArgs e)
         {
@@ -131,9 +158,11 @@ namespace Demo
             bmiPanel.Visible = true;
             bmiPanel.BringToFront();
         }
-
-        private void calorieBtn_Click(object sender, EventArgs e)
+        private void helpBtn_Click(object sender, EventArgs e)
         {
+            HomePanel.Visible = false;
+            helpPanel.Visible = true;
+            helpPanel.BringToFront();
         }
 
         private void vegBtn_Click(object sender, EventArgs e)
@@ -188,7 +217,7 @@ namespace Demo
         {
             int record = 0; //紀錄是否達營養值
             string warningMessage = null;
-            if(vegTxt.Text == "" || fruitTxt.Text == "" || oilTxt.Text == "" || proteinTxt.Text == "" || grainTxt.Text == "")
+            if (vegTxt.Text == "" || fruitTxt.Text == "" || oilTxt.Text == "" || proteinTxt.Text == "" || grainTxt.Text == "")
             {
                 warningMessage += "請正確輸入攝取量";
                 DialogResult result = MessageBox.Show(warningMessage, "當餐狀況", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -226,7 +255,7 @@ namespace Demo
                 {
                     result = MessageBox.Show(warningMessage, "當餐狀況", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                if(result == DialogResult.OK)
+                if (result == DialogResult.OK)
                 {
                     record = 0;
                     warningMessage = null;
@@ -270,22 +299,27 @@ namespace Demo
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox2.Text == "") MessageBox.Show("請輸入數值", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
             {
-                string dateTime = dateTimePicker1.Value.ToString("yyyy-MM-dd"), distance = textBox2.Text;
+                try
+                {
+                    string dateTime = dateTimePicker1.Value.ToString("yyyy-MM-dd"), distance = textBox2.Text;
 
-                SqlConnection cn = new SqlConnection();
-                cn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
-                    "AttachDbFilename=|DataDirectory|Database1.mdf;" +
-                    "Integrated Security=True";
-                Edit("INSERT INTO SportRecord(date,distance)VALUES('" +
-                    dateTime.Replace("'", "''") + "'," +
-                    distance +
-                     ")");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                    SqlConnection cn = new SqlConnection();
+                    cn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
+                        "AttachDbFilename=|DataDirectory|Database1.mdf;" +
+                        "Integrated Security=True";
+                    Edit("INSERT INTO SportRecord(date,distance)VALUES('" +
+                        dateTime.Replace("'", "''") + "'," +
+                        distance +
+                         ")");
+                    textBox2.Text = "";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("當天已有紀錄", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                 
+                }
             }
         }
 
@@ -293,49 +327,56 @@ namespace Demo
         {
             //判断按键是不是要输入的类型。
             if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8)
-                e.Handled = true;           
+                e.Handled = true;
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            if (textBox2.Text == "") textBox2.Text = 0.ToString();
-            int number = int.Parse(textBox2.Text);
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("確定要刪除?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if (r == DialogResult.OK)
             {
-                string date;
-                date = dataGridView1.CurrentRow.Cells[0].Value.ToString().Replace('/', '-');
-                Edit("DELETE FROM SportRecord WHERE date='" + date.Split(' ')[0].Replace("'", "''") + "'");
+                try
+                {
+                    string date;
+                    date = dataGridView1.CurrentRow.Cells[0].Value.ToString().Replace('/', '-');
+                    Edit("DELETE FROM SportRecord WHERE date='" + date.Split(' ')[0].Replace("'", "''") + "'");
 
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            try
+            if (textBox2.Text == "") MessageBox.Show("請輸入數值", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
             {
-                string dateTime = dateTimePicker1.Value.ToString("yyyy-MM-dd"), distance = textBox2.Text;
+                DialogResult r = MessageBox.Show("確定要修改?", "", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                if (r == DialogResult.OK)
+                {
+                    try
+                    {
+                        string dateTime = dateTimePicker1.Value.ToString("yyyy-MM-dd"), distance = textBox2.Text;
 
-                SqlConnection cn = new SqlConnection();
-                cn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
-                    "AttachDbFilename=|DataDirectory|Database1.mdf;" +
-                    "Integrated Security=True";
+                        SqlConnection cn = new SqlConnection();
+                        cn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
+                            "AttachDbFilename=|DataDirectory|Database1.mdf;" +
+                            "Integrated Security=True";
 
-                Edit("UPDATE SportRecord SET distance=" + distance + " WHERE date='"
-                    + dateTime.Replace("'", "''") + "'");
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                        Edit("UPDATE SportRecord SET distance=" + distance + " WHERE date='"
+                            + dateTime.Replace("'", "''") + "'");
+                        textBox2.Text = "";
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
             }
         }
 
@@ -351,13 +392,13 @@ namespace Demo
                     if (cn.State == ConnectionState.Closed) cn.Open();
                     using (DataSet ds = new DataSet())
                     {
-                        using(SqlCommand cmd = new SqlCommand("SELECT * FROM SportRecord WHERE date BETWEEN @fromdate AND @todate", cn))
+                        using (SqlCommand cmd = new SqlCommand("SELECT * FROM SportRecord WHERE date BETWEEN @fromdate AND @todate", cn))
                         {
                             // adding values
                             DayOfWeek currentDay = DateTime.Now.DayOfWeek;
-                            int daysTillCurrentDay = currentDay - DayOfWeek.Sunday;
+                            int daysTillCurrentDay = currentDay - DayOfWeek.Sunday + 1;
                             cmd.Parameters.AddWithValue("@fromdate", DateTime.Now.AddDays(-daysTillCurrentDay));
-                            cmd.Parameters.AddWithValue("@todate",DateTime.Now);
+                            cmd.Parameters.AddWithValue("@todate", DateTime.Now);
                             // fill data to database
                             SqlDataAdapter da = new SqlDataAdapter(cmd);
                             da.Fill(ds, "SportRecord");
@@ -395,8 +436,8 @@ namespace Demo
                         {
                             // adding values
                             DayOfWeek currentDay = DateTime.Now.DayOfWeek;
-                            int daysTillCurrentDay = currentDay - DayOfWeek.Sunday;
-                            cmd.Parameters.AddWithValue("@fromdate", dateTimePicker2.Value);
+                            // int daysTillCurrentDay = currentDay - DayOfWeek.Sunday;
+                            cmd.Parameters.AddWithValue("@fromdate", dateTimePicker2.Value.AddDays(-1));
                             cmd.Parameters.AddWithValue("@todate", dateTimePicker3.Value);
                             // fill data to database
                             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -416,21 +457,31 @@ namespace Demo
 
         private void bmiHeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int checkLength = bmiHeight.Text.IndexOf('.');
-            int maxLength;
-            if (checkLength == -1) maxLength = 3;
-            else maxLength = checkLength + 3;
-
-            if (bmiHeight.Text.Length >= maxLength)
+            int pointIdx = bmiHeight.Text.IndexOf('.');
+            int oldSelectionStart = bmiHeight.SelectionStart;
+            if (pointIdx == -1)
             {
-                if (checkLength == -1)
+                if (bmiHeight.Text.Length >= 3)
                 {
-                    if ((int)e.KeyChar != 46 && (int)e.KeyChar != 8) e.Handled = true;
+                    if ((int)e.KeyChar != 8 && (int)e.KeyChar != 46) e.Handled = true;
+                    else if (bmiHeight.SelectionStart > 3 && (int)e.KeyChar == 46)
+                    {
+                        e.Handled = true;
+                    }
                 }
-                else
+                if ((int)e.KeyChar == 46 && bmiHeight.SelectionStart + 2 < bmiHeight.Text.Length)
                 {
-                    if ((int)e.KeyChar != 8) e.Handled = true;
+                    bmiHeight.Text = bmiHeight.Text.Remove(bmiHeight.SelectionStart + 2);
+                    bmiHeight.SelectionStart = oldSelectionStart;
                 }
+            }
+            else
+            {
+                if (bmiHeight.SelectionStart <= pointIdx)
+                {
+                    if (pointIdx >= 3 && (int)e.KeyChar != 8) e.Handled = true;
+                }
+                else if (bmiHeight.Text.Length - pointIdx >= 3 && (int)e.KeyChar != 8) e.Handled = true;
             }
 
             if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8 && (int)e.KeyChar != 46)
@@ -459,23 +510,33 @@ namespace Demo
 
         private void bmiWeight_KeyPress(object sender, KeyPressEventArgs e)
         {
-            int checkLength = bmiWeight.Text.IndexOf('.');
-            int maxLength;
-            if(checkLength == -1) maxLength = 3;                          
-            else maxLength = checkLength + 3;
-
-            if(bmiWeight.Text.Length >= maxLength)
+            int pointIdx = bmiWeight.Text.IndexOf('.');
+            int oldSelectionStart = bmiWeight.SelectionStart;
+            if (pointIdx == -1)
             {
-                if(checkLength == -1)
+                if (bmiWeight.Text.Length >= 3)
                 {
-                    if ((int)e.KeyChar != 46 && (int)e.KeyChar != 8) e.Handled = true;
+                    if ((int)e.KeyChar != 8 && (int)e.KeyChar != 46) e.Handled = true;
+                    else if (bmiWeight.SelectionStart > 3 && (int)e.KeyChar == 46)
+                    {
+                        e.Handled = true;
+                    }
                 }
-                else
+                if ((int)e.KeyChar == 46 && bmiWeight.SelectionStart + 2 < bmiWeight.Text.Length)
                 {
-                    if ((int)e.KeyChar != 8) e.Handled = true;
+                    bmiWeight.Text = bmiWeight.Text.Remove(bmiWeight.SelectionStart + 2);
+                    bmiWeight.SelectionStart = oldSelectionStart;
                 }
             }
-           
+            else
+            {
+                if (bmiWeight.SelectionStart <= pointIdx)
+                {
+                    if (pointIdx >= 3 && (int)e.KeyChar != 8) e.Handled = true;
+                }
+                else if (bmiWeight.Text.Length - pointIdx >= 3 && (int)e.KeyChar != 8) e.Handled = true;
+            }
+
             if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8 && (int)e.KeyChar != 46)
                 e.Handled = true;
             if ((int)e.KeyChar == 46)
@@ -516,11 +577,116 @@ namespace Demo
                 else if (weight < 0.2 || weight > 415) MessageBox.Show("請確認體重", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
+                    if (weight < 1) bmiWeight.Text = bmiWeight.Text.Insert(0, "0");
                     height /= 100;
                     bmiResult.Text = Math.Round(weight / height / height, 2) + "";
+                    if (Math.Round(weight / height / height, 2) < 18.5) bmiResult.Text += "  （過輕）";
+                    else if (Math.Round(weight / height / height, 2) < 24)
+                    {
+                        if (Math.Round(weight / height / height, 2) == 22) bmiResult.Text += "     完美 ヾ (o ° ω ° O ) ノ゙";
+                        else bmiResult.Text += "  （正常 ｏｕｏ）";
+                    }
+                    else if (Math.Round(weight / height / height, 2) < 27) bmiResult.Text += "  （過重）";
+                    else if (Math.Round(weight / height / height, 2) < 30) bmiResult.Text += "  （輕度肥胖）";
+                    else if (Math.Round(weight / height / height, 2) < 35) bmiResult.Text += "  （中度肥胖）";
+                    else bmiResult.Text += "  （重度肥胖）";
+
+                    double lowerBound = Math.Round(18.51 * height * height, 2);
+                    double uperBound = Math.Round(24 * height * height, 2);
+                    idealWeight.Text = "  " + Math.Round(22 * height * height, 2) + " kg\n\n";
+                    idealWeight.Text += "（" + lowerBound + " ～ " + uperBound + " kg 都是理想的）";
                 }
-            }          
+            }
         }
+
+
+        int selected = 1;
+        public void recover(int selected)
+        {
+            if (selected == 1)
+            {
+                help1.Text = help1.Text.Remove(0, help1.Text.Length - 4);
+                help1.Font = new Font("新細明體", 9);
+                help1.ForeColor = Color.Gray;
+                introduction1.Visible = false;
+            }
+            else if (selected == 2)
+            {
+                help2.Text = help2.Text.Remove(0, help2.Text.Length - 4);
+                help2.Font = new Font("新細明體", 9);
+                help2.ForeColor = Color.Gray;
+                introduction2.Visible = false;
+            }
+            else if (selected == 3)
+            {
+                help3.Text = help3.Text.Remove(0, help3.Text.Length - 4);
+                help3.Font = new Font("新細明體", 9);
+                help3.ForeColor = Color.Gray;
+                introduction3.Visible = false;
+            }
+            else if (selected == 4)
+            {
+                help4.Text = help4.Text.Remove(0, help4.Text.Length - 4);
+                help4.Font = new Font("新細明體", 9);
+                help4.ForeColor = Color.Gray;
+                introduction4.Visible = false;
+            }
+            else if (selected == 5)
+            {
+                help5.Text = help5.Text.Remove(0, help5.Text.Length - 4);
+                help5.Font = new Font("新細明體", 9);
+                help5.ForeColor = Color.Gray;
+                introduction5.Visible = false;
+            }
+            else if (selected == 6)
+            {
+                help6.Text = help6.Text.Remove(0, help6.Text.Length - 4);
+                help6.Font = new Font("新細明體", 9);
+                help6.ForeColor = Color.Gray;
+                introduction6.Visible = false;
+            }
+        }
+
+        private void help_Click(object sender, EventArgs e)
+        {
+            recover(selected);
+            Label help = sender as Label;
+            if (help.Text == "設計理念")
+            {
+                selected = 1;
+                introduction1.Visible = true;
+            }
+            else if (help.Text == "運動紀錄")
+            {
+                selected = 2;
+                introduction2.Visible = true;
+            }
+            else if (help.Text == "當天天氣")
+            {
+                selected = 3;
+                introduction3.Visible = true;
+            }
+            else if (help.Text == "飲食紀錄")
+            {
+                selected = 4;
+                introduction4.Visible = true;
+            }
+            else if (help.Text == "檢視成果")
+            {
+                selected = 5;
+                introduction5.Visible = true;
+            }
+            else if (help.Text == "客服資訊")
+            {
+                selected = 6;
+                introduction6.Visible = true;
+            }
+            help.Text = help.Text.Insert(0, "> ");
+            help.Font = new Font("新細明體", 14);
+            help.ForeColor = Color.Black;
+        }
+
+
 
         private void getWeatherBtn_Click(object sender, EventArgs e)
         {
