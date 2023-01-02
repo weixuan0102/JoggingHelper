@@ -61,6 +61,7 @@ namespace Demo
             backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnHelp.Image = Image.FromFile(@"../../images/backToHome.png");
+            chatRobot.Image = Image.FromFile(@"../../images/chatRobot.png");
 
             SqlConnection db = new SqlConnection();
             db.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
@@ -686,7 +687,15 @@ namespace Demo
             help.ForeColor = Color.Black;
         }
 
+        private void chatRobot_Click(object sender, EventArgs e)
+        {
+            List<string> chatList = new List<string>();
+            foreach (string line in System.IO.File.ReadLines(@"../../chat.txt")) chatList.Add(line);
 
+            Random random = new Random();
+            int ranNum = random.Next(0, chatList.Count);
+            chatLabel.Text = chatList[ranNum];
+        }
 
         private void getWeatherBtn_Click(object sender, EventArgs e)
         {
