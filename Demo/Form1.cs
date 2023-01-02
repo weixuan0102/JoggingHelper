@@ -667,7 +667,7 @@ namespace Demo
                 selected = 3;
                 introduction3.Visible = true;
             }
-            else if (help.Text == "飲食紀錄")
+            else if (help.Text == "當餐飲食")
             {
                 selected = 4;
                 introduction4.Visible = true;
