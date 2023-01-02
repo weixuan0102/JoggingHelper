@@ -149,7 +149,7 @@ namespace Demo
             recover(selected);
             selected = 1;
             help1.Text = help1.Text.Insert(0, "> ");
-            help1.Font = new Font("新細明體", 14);
+            help1.Font = new Font("新細明體", 15);
             help1.ForeColor = Color.Black;
             introduction1.Visible = true;
         }
@@ -608,42 +608,42 @@ namespace Demo
             if (selected == 1)
             {
                 help1.Text = help1.Text.Remove(0, help1.Text.Length - 4);
-                help1.Font = new Font("新細明體", 9);
+                help1.Font = new Font("新細明體", 13);
                 help1.ForeColor = Color.Gray;
                 introduction1.Visible = false;
             }
             else if (selected == 2)
             {
                 help2.Text = help2.Text.Remove(0, help2.Text.Length - 4);
-                help2.Font = new Font("新細明體", 9);
+                help2.Font = new Font("新細明體", 13);
                 help2.ForeColor = Color.Gray;
                 introduction2.Visible = false;
             }
             else if (selected == 3)
             {
                 help3.Text = help3.Text.Remove(0, help3.Text.Length - 4);
-                help3.Font = new Font("新細明體", 9);
+                help3.Font = new Font("新細明體", 13);
                 help3.ForeColor = Color.Gray;
                 introduction3.Visible = false;
             }
             else if (selected == 4)
             {
                 help4.Text = help4.Text.Remove(0, help4.Text.Length - 4);
-                help4.Font = new Font("新細明體", 9);
+                help4.Font = new Font("新細明體", 13);
                 help4.ForeColor = Color.Gray;
                 introduction4.Visible = false;
             }
             else if (selected == 5)
             {
                 help5.Text = help5.Text.Remove(0, help5.Text.Length - 4);
-                help5.Font = new Font("新細明體", 9);
+                help5.Font = new Font("新細明體", 13);
                 help5.ForeColor = Color.Gray;
                 introduction5.Visible = false;
             }
             else if (selected == 6)
             {
                 help6.Text = help6.Text.Remove(0, help6.Text.Length - 4);
-                help6.Font = new Font("新細明體", 9);
+                help6.Font = new Font("新細明體", 13);
                 help6.ForeColor = Color.Gray;
                 introduction6.Visible = false;
             }
@@ -684,7 +684,7 @@ namespace Demo
                 introduction6.Visible = true;
             }
             help.Text = help.Text.Insert(0, "> ");
-            help.Font = new Font("新細明體", 14);
+            help.Font = new Font("新細明體", 15);
             help.ForeColor = Color.Black;
         }
 
