@@ -424,7 +424,7 @@
             this.joggingPanel.Controls.Add(this.backBtnJogging);
             this.joggingPanel.Location = new System.Drawing.Point(0, 0);
             this.joggingPanel.Name = "joggingPanel";
-            this.joggingPanel.Size = new System.Drawing.Size(724, 535);
+            this.joggingPanel.Size = new System.Drawing.Size(724, 660);
             this.joggingPanel.TabIndex = 7;
             this.joggingPanel.Visible = false;
             // 
@@ -437,7 +437,7 @@
             this.joggingInfo.Margin = new System.Windows.Forms.Padding(2);
             this.joggingInfo.Name = "joggingInfo";
             this.joggingInfo.SelectedIndex = 0;
-            this.joggingInfo.Size = new System.Drawing.Size(614, 484);
+            this.joggingInfo.Size = new System.Drawing.Size(614, 583);
             this.joggingInfo.TabIndex = 2;
             // 
             // addRecord
@@ -451,7 +451,7 @@
             this.addRecord.Controls.Add(this.dataGridView1);
             this.addRecord.Location = new System.Drawing.Point(4, 22);
             this.addRecord.Name = "addRecord";
-            this.addRecord.Size = new System.Drawing.Size(606, 458);
+            this.addRecord.Size = new System.Drawing.Size(606, 557);
             this.addRecord.TabIndex = 3;
             this.addRecord.Text = "編輯紀錄";
             this.addRecord.UseVisualStyleBackColor = true;
@@ -459,7 +459,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(445, 296);
+            this.label8.Location = new System.Drawing.Point(445, 379);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 12);
             this.label8.TabIndex = 6;
@@ -467,7 +467,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(328, 289);
+            this.textBox2.Location = new System.Drawing.Point(328, 372);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 5;
@@ -475,7 +475,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(99, 289);
+            this.dateTimePicker1.Location = new System.Drawing.Point(99, 372);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 4;
@@ -484,7 +484,7 @@
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button4.Location = new System.Drawing.Point(409, 353);
+            this.button4.Location = new System.Drawing.Point(409, 436);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 3;
@@ -496,7 +496,7 @@
             // 
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(250, 353);
+            this.button3.Location = new System.Drawing.Point(250, 436);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
@@ -508,7 +508,7 @@
             // 
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(99, 353);
+            this.button2.Location = new System.Drawing.Point(99, 436);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -523,7 +523,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(485, 197);
+            this.dataGridView1.Size = new System.Drawing.Size(485, 287);
             this.dataGridView1.TabIndex = 0;
             // 
             // jogWeekRecordPage
@@ -535,7 +535,7 @@
             this.jogWeekRecordPage.Margin = new System.Windows.Forms.Padding(2);
             this.jogWeekRecordPage.Name = "jogWeekRecordPage";
             this.jogWeekRecordPage.Padding = new System.Windows.Forms.Padding(2);
-            this.jogWeekRecordPage.Size = new System.Drawing.Size(606, 458);
+            this.jogWeekRecordPage.Size = new System.Drawing.Size(606, 557);
             this.jogWeekRecordPage.TabIndex = 0;
             this.jogWeekRecordPage.Text = "本周紀錄";
             this.jogWeekRecordPage.UseVisualStyleBackColor = true;
@@ -544,7 +544,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(150, 298);
+            this.label9.Location = new System.Drawing.Point(138, 427);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(298, 24);
             this.label9.TabIndex = 2;
@@ -552,7 +552,7 @@
             // 
             // weekRecord
             // 
-            this.weekRecord.Location = new System.Drawing.Point(263, 356);
+            this.weekRecord.Location = new System.Drawing.Point(251, 485);
             this.weekRecord.Name = "weekRecord";
             this.weekRecord.Size = new System.Drawing.Size(75, 23);
             this.weekRecord.TabIndex = 1;
@@ -567,7 +567,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(442, 199);
+            this.dataGridView2.Size = new System.Drawing.Size(442, 327);
             this.dataGridView2.TabIndex = 0;
             // 
             // jogRecordPage
@@ -580,7 +580,7 @@
             this.jogRecordPage.Location = new System.Drawing.Point(4, 22);
             this.jogRecordPage.Margin = new System.Windows.Forms.Padding(2);
             this.jogRecordPage.Name = "jogRecordPage";
-            this.jogRecordPage.Size = new System.Drawing.Size(606, 458);
+            this.jogRecordPage.Size = new System.Drawing.Size(606, 557);
             this.jogRecordPage.TabIndex = 2;
             this.jogRecordPage.Text = "查詢紀錄";
             this.jogRecordPage.UseVisualStyleBackColor = true;
@@ -588,7 +588,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(288, 330);
+            this.label7.Location = new System.Drawing.Point(291, 437);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(11, 12);
             this.label7.TabIndex = 4;
@@ -596,7 +596,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(251, 386);
+            this.button5.Location = new System.Drawing.Point(254, 493);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 3;
@@ -606,7 +606,7 @@
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(325, 323);
+            this.dateTimePicker3.Location = new System.Drawing.Point(328, 430);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker3.TabIndex = 2;
@@ -614,7 +614,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(70, 323);
+            this.dateTimePicker2.Location = new System.Drawing.Point(73, 430);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 1;
@@ -626,7 +626,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(401, 214);
+            this.dataGridView3.Size = new System.Drawing.Size(401, 318);
             this.dataGridView3.TabIndex = 0;
             // 
             // backBtnJogging
@@ -1121,12 +1121,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(728, 690);
+            this.Controls.Add(this.joggingPanel);
             this.Controls.Add(this.helpPanel);
             this.Controls.Add(this.dietPanel);
             this.Controls.Add(this.bmiPanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.weatherPanel);
-            this.Controls.Add(this.joggingPanel);
             this.Name = "Form1";
             this.Text = "健康管理";
             this.Load += new System.EventHandler(this.Form1_Load);
