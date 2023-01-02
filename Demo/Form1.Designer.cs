@@ -219,11 +219,11 @@
             // 
             // chatRobot
             // 
-            this.chatRobot.BackColor = System.Drawing.Color.Transparent;
+            this.chatRobot.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.chatRobot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chatRobot.Location = new System.Drawing.Point(31, 46);
             this.chatRobot.Name = "chatRobot";
-            this.chatRobot.Size = new System.Drawing.Size(152, 156);
+            this.chatRobot.Size = new System.Drawing.Size(144, 154);
             this.chatRobot.TabIndex = 6;
             this.chatRobot.UseVisualStyleBackColor = false;
             this.chatRobot.Click += new System.EventHandler(this.chatRobot_Click);
@@ -665,7 +665,7 @@
             // introduction6
             // 
             this.introduction6.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction6.Location = new System.Drawing.Point(180, 457);
+            this.introduction6.Location = new System.Drawing.Point(180, 460);
             this.introduction6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction6.Name = "introduction6";
             this.introduction6.Size = new System.Drawing.Size(248, 34);
@@ -676,7 +676,7 @@
             // introduction5
             // 
             this.introduction5.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction5.Location = new System.Drawing.Point(180, 388);
+            this.introduction5.Location = new System.Drawing.Point(180, 392);
             this.introduction5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction5.Name = "introduction5";
             this.introduction5.Size = new System.Drawing.Size(256, 48);
@@ -687,7 +687,7 @@
             // introduction4
             // 
             this.introduction4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction4.Location = new System.Drawing.Point(180, 320);
+            this.introduction4.Location = new System.Drawing.Point(180, 324);
             this.introduction4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction4.Name = "introduction4";
             this.introduction4.Size = new System.Drawing.Size(378, 26);
@@ -698,7 +698,7 @@
             // introduction3
             // 
             this.introduction3.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction3.Location = new System.Drawing.Point(180, 249);
+            this.introduction3.Location = new System.Drawing.Point(180, 256);
             this.introduction3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction3.Name = "introduction3";
             this.introduction3.Size = new System.Drawing.Size(348, 43);
@@ -709,7 +709,7 @@
             // introduction2
             // 
             this.introduction2.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction2.Location = new System.Drawing.Point(180, 180);
+            this.introduction2.Location = new System.Drawing.Point(188, 188);
             this.introduction2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction2.Name = "introduction2";
             this.introduction2.Size = new System.Drawing.Size(193, 42);
@@ -1121,8 +1121,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(728, 690);
-            this.Controls.Add(this.helpPanel);
             this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.helpPanel);
             this.Controls.Add(this.bmiPanel);
             this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.joggingPanel);

@@ -62,6 +62,7 @@ namespace Demo
             backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnHelp.Image = Image.FromFile(@"../../images/backToHome.png");
             chatRobot.Image = Image.FromFile(@"../../images/chatRobot.png");
+            chatRobot.FlatAppearance.BorderSize = 0;
 
             SqlConnection db = new SqlConnection();
             db.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
