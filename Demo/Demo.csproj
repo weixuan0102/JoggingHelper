@@ -96,6 +96,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database2DataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DesktopPet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DesktopPet.Designer.cs">
+      <DependentUpon>DesktopPet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DesktopPet.resx">
+      <DependentUpon>DesktopPet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -115,6 +124,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Database2DataSet.xsc">
       <DependentUpon>Database2DataSet.xsd</DependentUpon>
@@ -167,6 +177,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
+    <None Include="images\homeBackround.jpg" />
+    <None Include="Resources\1.gif" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
