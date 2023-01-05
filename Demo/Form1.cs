@@ -61,8 +61,8 @@ namespace Demo
             backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnHelp.Image = Image.FromFile(@"../../images/backToHome.png");
-            chatRobot.Image = Image.FromFile(@"../../images/chatRobot.png");
-            chatRobot.FlatAppearance.BorderSize = 0;
+           // chatRobot.Image = Image.FromFile(@"../../images/chatRobot.png");
+           // chatRobot.FlatAppearance.BorderSize = 0;
 
             SqlConnection db = new SqlConnection();
             db.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
@@ -327,7 +327,6 @@ namespace Demo
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //判断按键是不是要输入的类型。
             if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8)
                 e.Handled = true;
         }
@@ -695,7 +694,7 @@ namespace Demo
 
             Random random = new Random();
             int ranNum = random.Next(0, chatList.Count);
-            chatLabel.Text = chatList[ranNum];
+           // chatLabel.Text = chatList[ranNum];
         }
 
         private void getWeatherBtn_Click(object sender, EventArgs e)

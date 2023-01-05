@@ -16,7 +16,9 @@ namespace Demo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            DesktopPet desktopForm = new DesktopPet();
+            desktopForm.TopMost = true;
+            Application.Run(desktopForm);
         }
     }
 }
