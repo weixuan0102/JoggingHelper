@@ -33,6 +33,7 @@ namespace Demo
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             textBox2.ImeMode = ImeMode.Disable;
             bmiHeight.ImeMode = ImeMode.Disable;
             bmiWeight.ImeMode = ImeMode.Disable;
@@ -45,24 +46,31 @@ namespace Demo
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
 
+            HomePanel.BackgroundImage = Image.FromFile(@"../../images/homeBackround.jpg");
+            weatherPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            joggingPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            dietPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            bmiPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            helpPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            jogRecordPage.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            jogWeekRecordPage.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            addRecord.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+
+
             nutrientLableTxt();
             joggingBtn.FlatAppearance.BorderSize = 0;
-            joggingBtn.Image = Image.FromFile(@"../../images/sport.png");
+            joggingBtn.Image = Image.FromFile(@"../../images/jogging.png");
             weatherBtn.FlatAppearance.BorderSize = 0;
             weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
             dietBtn.FlatAppearance.BorderSize = 0;
             dietBtn.Image = Image.FromFile(@"../../images/diet.png");
-            bmiBtn.FlatAppearance.BorderSize = 0;
-            //bmiBtn.Image = Image.FromFile(@"../../images/~~~");           
+            bmiBtn.FlatAppearance.BorderSize = 0;           
             helpBtn.FlatAppearance.BorderSize = 0;
-            //helpBtn.Image = Image.FromFile(@"../../images/~~~");
             backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnHelp.Image = Image.FromFile(@"../../images/backToHome.png");
-           // chatRobot.Image = Image.FromFile(@"../../images/chatRobot.png");
-           // chatRobot.FlatAppearance.BorderSize = 0;
 
             SqlConnection db = new SqlConnection();
             db.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
