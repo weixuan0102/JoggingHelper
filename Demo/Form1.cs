@@ -11,6 +11,7 @@ using System.Text.Json;
 using System.Data.SqlClient;
 using System.Threading;
 using System.Web;
+using System.Media;
 
 namespace Demo
 {
@@ -25,6 +26,8 @@ namespace Demo
         const string location = "%E8%87%BA%E5%8D%97%E5%B8%82"; // Tainan
         const string offset = "0", limit = "100", format = "JSON";
         string api_url_setting = $"?offset={offset}&limit={limit}&api_key={air_api_key}&format={format}";
+        SoundPlayer player = new SoundPlayer();  //backgroundSound
+        bool sound = true; //判斷音樂是否播放中
         public Form1()
         {
             InitializeComponent();
@@ -32,8 +35,9 @@ namespace Demo
 
 
         private void Form1_Load(object sender, EventArgs e)
-        {
-            
+        {   
+            player.SoundLocation = @"../../sound/backroundSound.wav";
+            player.PlayLooping();
             textBox2.ImeMode = ImeMode.Disable;
             bmiHeight.ImeMode = ImeMode.Disable;
             bmiWeight.ImeMode = ImeMode.Disable;
@@ -46,6 +50,7 @@ namespace Demo
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
 
+            
             HomePanel.BackgroundImage = Image.FromFile(@"../../images/homeBackround.jpg");
             weatherPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
             joggingPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
@@ -64,6 +69,8 @@ namespace Demo
             weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
             dietBtn.FlatAppearance.BorderSize = 0;
             dietBtn.Image = Image.FromFile(@"../../images/diet.png");
+            soundBtn.Image = Image.FromFile(@"../../images/soundIcon.png");
+            soundBtn.FlatAppearance.BorderSize = 0;
             bmiBtn.FlatAppearance.BorderSize = 0;           
             helpBtn.FlatAppearance.BorderSize = 0;
             backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
@@ -703,6 +710,22 @@ namespace Demo
             Random random = new Random();
             int ranNum = random.Next(0, chatList.Count);
            // chatLabel.Text = chatList[ranNum];
+        }
+
+        private void soundBtn_Click(object sender, EventArgs e)
+        {
+            if (sound == true)
+            {
+                soundBtn.Image = Image.FromFile(@"../../images/soundMute.png");
+                player.Stop();
+                sound = false;
+            }
+            else
+            {
+                soundBtn.Image = Image.FromFile(@"../../images/soundIcon.png");
+                player.PlayLooping();
+                sound = true;
+            }
         }
 
         private void getWeatherBtn_Click(object sender, EventArgs e)

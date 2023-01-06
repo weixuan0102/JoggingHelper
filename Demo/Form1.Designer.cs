@@ -36,6 +36,7 @@
             this.weatherPanel = new System.Windows.Forms.Panel();
             this.backBtnWeather = new System.Windows.Forms.Button();
             this.HomePanel = new System.Windows.Forms.Panel();
+            this.soundBtn = new System.Windows.Forms.Button();
             this.helpBtn = new System.Windows.Forms.Button();
             this.bmiBtn = new System.Windows.Forms.Button();
             this.bmiPanel = new System.Windows.Forms.Panel();
@@ -131,7 +132,7 @@
             // weatherInfo
             // 
             this.weatherInfo.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.weatherInfo.Location = new System.Drawing.Point(52, 46);
+            this.weatherInfo.Location = new System.Drawing.Point(49, 113);
             this.weatherInfo.Name = "weatherInfo";
             this.weatherInfo.Size = new System.Drawing.Size(604, 462);
             this.weatherInfo.TabIndex = 0;
@@ -195,6 +196,7 @@
             // HomePanel
             // 
             this.HomePanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.HomePanel.Controls.Add(this.soundBtn);
             this.HomePanel.Controls.Add(this.helpBtn);
             this.HomePanel.Controls.Add(this.bmiBtn);
             this.HomePanel.Controls.Add(this.joggingBtn);
@@ -204,6 +206,18 @@
             this.HomePanel.Name = "HomePanel";
             this.HomePanel.Size = new System.Drawing.Size(656, 680);
             this.HomePanel.TabIndex = 5;
+            // 
+            // soundBtn
+            // 
+            this.soundBtn.BackColor = System.Drawing.Color.Transparent;
+            this.soundBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.soundBtn.Location = new System.Drawing.Point(584, 5);
+            this.soundBtn.Margin = new System.Windows.Forms.Padding(2);
+            this.soundBtn.Name = "soundBtn";
+            this.soundBtn.Size = new System.Drawing.Size(48, 51);
+            this.soundBtn.TabIndex = 23;
+            this.soundBtn.UseVisualStyleBackColor = false;
+            this.soundBtn.Click += new System.EventHandler(this.soundBtn_Click);
             // 
             // helpBtn
             // 
@@ -876,7 +890,7 @@
             this.labelCloseBtn.Enabled = false;
             this.labelCloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelCloseBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelCloseBtn.Location = new System.Drawing.Point(475, 420);
+            this.labelCloseBtn.Location = new System.Drawing.Point(481, 503);
             this.labelCloseBtn.Margin = new System.Windows.Forms.Padding(2);
             this.labelCloseBtn.Name = "labelCloseBtn";
             this.labelCloseBtn.Size = new System.Drawing.Size(73, 37);
@@ -902,7 +916,7 @@
             // 
             this.fruitLabel.BackColor = System.Drawing.Color.Transparent;
             this.fruitLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fruitLabel.Location = new System.Drawing.Point(246, 89);
+            this.fruitLabel.Location = new System.Drawing.Point(252, 172);
             this.fruitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fruitLabel.Name = "fruitLabel";
             this.fruitLabel.Size = new System.Drawing.Size(302, 312);
@@ -913,7 +927,7 @@
             // 
             this.oilLabel.BackColor = System.Drawing.Color.Transparent;
             this.oilLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.oilLabel.Location = new System.Drawing.Point(246, 89);
+            this.oilLabel.Location = new System.Drawing.Point(252, 172);
             this.oilLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.oilLabel.Name = "oilLabel";
             this.oilLabel.Size = new System.Drawing.Size(302, 312);
@@ -924,7 +938,7 @@
             // 
             this.grainLabel.BackColor = System.Drawing.Color.Transparent;
             this.grainLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.grainLabel.Location = new System.Drawing.Point(246, 89);
+            this.grainLabel.Location = new System.Drawing.Point(252, 172);
             this.grainLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.grainLabel.Name = "grainLabel";
             this.grainLabel.Size = new System.Drawing.Size(297, 312);
@@ -935,7 +949,7 @@
             // 
             this.vegLabel.BackColor = System.Drawing.Color.Transparent;
             this.vegLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.vegLabel.Location = new System.Drawing.Point(246, 89);
+            this.vegLabel.Location = new System.Drawing.Point(252, 172);
             this.vegLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.vegLabel.Name = "vegLabel";
             this.vegLabel.Size = new System.Drawing.Size(302, 312);
@@ -946,7 +960,7 @@
             // 
             this.proteinLabel.BackColor = System.Drawing.Color.Transparent;
             this.proteinLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.proteinLabel.Location = new System.Drawing.Point(246, 89);
+            this.proteinLabel.Location = new System.Drawing.Point(252, 172);
             this.proteinLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.proteinLabel.Name = "proteinLabel";
             this.proteinLabel.Size = new System.Drawing.Size(297, 312);
@@ -958,7 +972,7 @@
             this.dietEnterBtn.BackColor = System.Drawing.Color.Transparent;
             this.dietEnterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dietEnterBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dietEnterBtn.Location = new System.Drawing.Point(116, 420);
+            this.dietEnterBtn.Location = new System.Drawing.Point(122, 503);
             this.dietEnterBtn.Margin = new System.Windows.Forms.Padding(2);
             this.dietEnterBtn.Name = "dietEnterBtn";
             this.dietEnterBtn.Size = new System.Drawing.Size(58, 37);
@@ -972,7 +986,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(158, 367);
+            this.label6.Location = new System.Drawing.Point(164, 450);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 24);
@@ -984,7 +998,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(158, 295);
+            this.label5.Location = new System.Drawing.Point(164, 378);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 24);
@@ -996,7 +1010,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(161, 225);
+            this.label4.Location = new System.Drawing.Point(167, 308);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 24);
@@ -1008,7 +1022,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(161, 162);
+            this.label3.Location = new System.Drawing.Point(167, 245);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 24);
@@ -1020,7 +1034,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label2.Location = new System.Drawing.Point(161, 100);
+            this.label2.Location = new System.Drawing.Point(167, 183);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(29, 24);
@@ -1029,7 +1043,7 @@
             // 
             // grainTxt
             // 
-            this.grainTxt.Location = new System.Drawing.Point(116, 367);
+            this.grainTxt.Location = new System.Drawing.Point(122, 450);
             this.grainTxt.Margin = new System.Windows.Forms.Padding(2);
             this.grainTxt.Name = "grainTxt";
             this.grainTxt.Size = new System.Drawing.Size(38, 22);
@@ -1038,7 +1052,7 @@
             // 
             // oilTxt
             // 
-            this.oilTxt.Location = new System.Drawing.Point(116, 295);
+            this.oilTxt.Location = new System.Drawing.Point(122, 378);
             this.oilTxt.Margin = new System.Windows.Forms.Padding(2);
             this.oilTxt.Name = "oilTxt";
             this.oilTxt.Size = new System.Drawing.Size(38, 22);
@@ -1047,7 +1061,7 @@
             // 
             // proteinTxt
             // 
-            this.proteinTxt.Location = new System.Drawing.Point(116, 225);
+            this.proteinTxt.Location = new System.Drawing.Point(122, 308);
             this.proteinTxt.Margin = new System.Windows.Forms.Padding(2);
             this.proteinTxt.Name = "proteinTxt";
             this.proteinTxt.Size = new System.Drawing.Size(38, 22);
@@ -1056,7 +1070,7 @@
             // 
             // fruitTxt
             // 
-            this.fruitTxt.Location = new System.Drawing.Point(116, 162);
+            this.fruitTxt.Location = new System.Drawing.Point(122, 245);
             this.fruitTxt.Margin = new System.Windows.Forms.Padding(2);
             this.fruitTxt.Name = "fruitTxt";
             this.fruitTxt.Size = new System.Drawing.Size(38, 22);
@@ -1065,7 +1079,7 @@
             // 
             // vegTxt
             // 
-            this.vegTxt.Location = new System.Drawing.Point(116, 100);
+            this.vegTxt.Location = new System.Drawing.Point(122, 183);
             this.vegTxt.Margin = new System.Windows.Forms.Padding(2);
             this.vegTxt.Name = "vegTxt";
             this.vegTxt.Size = new System.Drawing.Size(38, 22);
@@ -1077,7 +1091,7 @@
             this.fruitBtn.BackColor = System.Drawing.Color.Transparent;
             this.fruitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fruitBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fruitBtn.Location = new System.Drawing.Point(33, 149);
+            this.fruitBtn.Location = new System.Drawing.Point(39, 232);
             this.fruitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.fruitBtn.Name = "fruitBtn";
             this.fruitBtn.Size = new System.Drawing.Size(79, 33);
@@ -1090,7 +1104,7 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(112, 22);
+            this.label1.Location = new System.Drawing.Point(115, 78);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(356, 55);
@@ -1102,7 +1116,7 @@
             this.grainsBtn.BackColor = System.Drawing.Color.Transparent;
             this.grainsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grainsBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.grainsBtn.Location = new System.Drawing.Point(24, 356);
+            this.grainsBtn.Location = new System.Drawing.Point(30, 439);
             this.grainsBtn.Margin = new System.Windows.Forms.Padding(2);
             this.grainsBtn.Name = "grainsBtn";
             this.grainsBtn.Size = new System.Drawing.Size(88, 35);
@@ -1116,7 +1130,7 @@
             this.oilBtn.BackColor = System.Drawing.Color.Transparent;
             this.oilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.oilBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.oilBtn.Location = new System.Drawing.Point(33, 284);
+            this.oilBtn.Location = new System.Drawing.Point(39, 367);
             this.oilBtn.Margin = new System.Windows.Forms.Padding(2);
             this.oilBtn.Name = "oilBtn";
             this.oilBtn.Size = new System.Drawing.Size(79, 33);
@@ -1130,7 +1144,7 @@
             this.proteinBtn.BackColor = System.Drawing.Color.Transparent;
             this.proteinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.proteinBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.proteinBtn.Location = new System.Drawing.Point(33, 214);
+            this.proteinBtn.Location = new System.Drawing.Point(39, 297);
             this.proteinBtn.Margin = new System.Windows.Forms.Padding(2);
             this.proteinBtn.Name = "proteinBtn";
             this.proteinBtn.Size = new System.Drawing.Size(79, 33);
@@ -1144,7 +1158,7 @@
             this.vegBtn.BackColor = System.Drawing.Color.Transparent;
             this.vegBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vegBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.vegBtn.Location = new System.Drawing.Point(33, 89);
+            this.vegBtn.Location = new System.Drawing.Point(39, 172);
             this.vegBtn.Margin = new System.Windows.Forms.Padding(2);
             this.vegBtn.Name = "vegBtn";
             this.vegBtn.Size = new System.Drawing.Size(79, 33);
@@ -1159,12 +1173,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(643, 644);
+            this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.dietPanel);
+            this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.joggingPanel);
             this.Controls.Add(this.bmiPanel);
             this.Controls.Add(this.helpPanel);
-            this.Controls.Add(this.HomePanel);
-            this.Controls.Add(this.weatherPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "健康管理";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1278,6 +1295,7 @@
         private System.Windows.Forms.Label introduction4;
         private System.Windows.Forms.Label introduction3;
         private System.Windows.Forms.Label introduction2;
+        private System.Windows.Forms.Button soundBtn;
     }
 }
 
