@@ -29,33 +29,17 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.joggingHelperToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.petTimer = new System.Windows.Forms.Timer(this.components);
+            this.dialogTimer = new System.Windows.Forms.Timer(this.components);
+            this.dialog = new System.Windows.Forms.PictureBox();
+            this.pet = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dialog)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ContextMenuStrip = this.contextMenuStrip1;
-            this.pictureBox1.Image = global::Demo.Properties.Resources._1;
-            this.pictureBox1.Location = new System.Drawing.Point(55, 35);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(131, 131);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDown);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUp);
-            // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // contextMenuStrip1
             // 
@@ -69,39 +53,80 @@
             // joggingHelperToolStripMenuItem
             // 
             this.joggingHelperToolStripMenuItem.Name = "joggingHelperToolStripMenuItem";
-            this.joggingHelperToolStripMenuItem.Size = new System.Drawing.Size(250, 28);
+            this.joggingHelperToolStripMenuItem.Size = new System.Drawing.Size(217, 28);
             this.joggingHelperToolStripMenuItem.Text = "Jogging Helper";
             this.joggingHelperToolStripMenuItem.Click += new System.EventHandler(this.joggingHelperToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(250, 28);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(217, 28);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // petTimer
+            // 
+            this.petTimer.Enabled = true;
+            this.petTimer.Interval = 5000;
+            this.petTimer.Tick += new System.EventHandler(this.petTimer_Tick);
+            // 
+            // dialogTimer
+            // 
+            this.dialogTimer.Interval = 300;
+            this.dialogTimer.Tick += new System.EventHandler(this.dialogTimer_Tick);
+            // 
+            // dialog
+            // 
+            this.dialog.Image = global::Demo.Properties.Resources.chatDialog1;
+            this.dialog.Location = new System.Drawing.Point(71, -6);
+            this.dialog.Name = "dialog";
+            this.dialog.Size = new System.Drawing.Size(297, 294);
+            this.dialog.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dialog.TabIndex = 1;
+            this.dialog.TabStop = false;
+            this.dialog.Visible = false;
+            // 
+            // pet
+            // 
+            this.pet.ContextMenuStrip = this.contextMenuStrip1;
+            this.pet.Image = global::Demo.Properties.Resources._3;
+            this.pet.Location = new System.Drawing.Point(12, 203);
+            this.pet.Name = "pet";
+            this.pet.Size = new System.Drawing.Size(131, 131);
+            this.pet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pet.TabIndex = 0;
+            this.pet.TabStop = false;
+            this.pet.Click += new System.EventHandler(this.pet_Click);
+            this.pet.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pet_MouseDown);
+            this.pet.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pet_MouseMove);
+            this.pet.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pet_MouseUp);
             // 
             // DesktopPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(243, 202);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(366, 336);
+            this.Controls.Add(this.pet);
+            this.Controls.Add(this.dialog);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DesktopPet";
             this.Text = "DesktopPet";
             this.Load += new System.EventHandler(this.DesktopPet_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dialog)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pet)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.PictureBox pet;
+        private System.Windows.Forms.Timer petTimer;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem joggingHelperToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.PictureBox dialog;
+        private System.Windows.Forms.Timer dialogTimer;
     }
 }

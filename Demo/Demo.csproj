@@ -177,6 +177,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database2.mdf</DependentUpon>
     </Content>
+    <None Include="images\3.gif" />
+    <None Include="images\2.gif" />
+    <None Include="images\dialog\chatDialog1.png" />
+    <None Include="images\dialog\chatDialog0.png" />
     <None Include="images\homeBackround.jpg" />
     <None Include="Resources\1.gif" />
   </ItemGroup>
