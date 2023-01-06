@@ -184,7 +184,7 @@
             // 
             // backBtnWeather
             // 
-            this.backBtnWeather.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtnWeather.BackColor = System.Drawing.Color.Transparent;
             this.backBtnWeather.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtnWeather.Location = new System.Drawing.Point(3, 3);
             this.backBtnWeather.Name = "backBtnWeather";
@@ -313,7 +313,7 @@
             // 
             // backBtnBmi
             // 
-            this.backBtnBmi.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtnBmi.BackColor = System.Drawing.Color.Transparent;
             this.backBtnBmi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtnBmi.Location = new System.Drawing.Point(2, 2);
             this.backBtnBmi.Margin = new System.Windows.Forms.Padding(2);
@@ -652,7 +652,7 @@
             // 
             // backBtnJogging
             // 
-            this.backBtnJogging.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtnJogging.BackColor = System.Drawing.Color.Transparent;
             this.backBtnJogging.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtnJogging.Location = new System.Drawing.Point(3, 3);
             this.backBtnJogging.Name = "backBtnJogging";
@@ -685,7 +685,7 @@
             // 
             // backBtnHelp
             // 
-            this.backBtnHelp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtnHelp.BackColor = System.Drawing.Color.Transparent;
             this.backBtnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtnHelp.Location = new System.Drawing.Point(3, 3);
             this.backBtnHelp.Name = "backBtnHelp";
@@ -902,7 +902,7 @@
             // 
             // backBtnDiet
             // 
-            this.backBtnDiet.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.backBtnDiet.BackColor = System.Drawing.Color.Transparent;
             this.backBtnDiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backBtnDiet.Location = new System.Drawing.Point(5, 3);
             this.backBtnDiet.Margin = new System.Windows.Forms.Padding(2);
@@ -1173,8 +1173,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(643, 644);
-            this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.dietPanel);
+            this.Controls.Add(this.weatherPanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.joggingPanel);
             this.Controls.Add(this.bmiPanel);

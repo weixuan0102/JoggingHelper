@@ -33,25 +33,19 @@ namespace Demo
             InitializeComponent();
         }
 
-
         private void Form1_Load(object sender, EventArgs e)
         {   
             player.SoundLocation = @"../../sound/backroundSound.wav";
             player.PlayLooping();
-            textBox2.ImeMode = ImeMode.Disable;
-            bmiHeight.ImeMode = ImeMode.Disable;
-            bmiWeight.ImeMode = ImeMode.Disable;
-            vegTxt.ImeMode = ImeMode.Disable;
-            fruitTxt.ImeMode = ImeMode.Disable;
-            oilTxt.ImeMode = ImeMode.Disable;
-            proteinTxt.ImeMode = ImeMode.Disable;
-            grainTxt.ImeMode = ImeMode.Disable;
+
+            textboxMode();
             weatherInfo.Text = "WAITING...";
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
 
             backGroundImage();
             btnImage();
+            nutrientLableTxt();
 
             SqlConnection db = new SqlConnection();
             db.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
@@ -67,6 +61,18 @@ namespace Demo
             dateTimePicker1.MaxDate = DateTime.Now;
             dateTimePicker2.MaxDate = dateTimePicker3.Value.AddDays(-1);
         }
+
+        private void textboxMode()  //textbox ImeMode
+        {
+            textBox2.ImeMode = ImeMode.Disable;
+            bmiHeight.ImeMode = ImeMode.Disable;
+            bmiWeight.ImeMode = ImeMode.Disable;
+            vegTxt.ImeMode = ImeMode.Disable;
+            fruitTxt.ImeMode = ImeMode.Disable;
+            oilTxt.ImeMode = ImeMode.Disable;
+            proteinTxt.ImeMode = ImeMode.Disable;
+            grainTxt.ImeMode = ImeMode.Disable;
+        }
         private void backGroundImage()  //backGround Image
         {
             HomePanel.BackgroundImage = Image.FromFile(@"../../images/homeBackround.jpg");
@@ -81,22 +87,28 @@ namespace Demo
         }
 
         private void btnImage()  //button Image
-        {
-            joggingBtn.FlatAppearance.BorderSize = 0;
+        {     
             joggingBtn.Image = Image.FromFile(@"../../images/jogging.png");
-            weatherBtn.FlatAppearance.BorderSize = 0;
-            weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
-            dietBtn.FlatAppearance.BorderSize = 0;
+            weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");          
             dietBtn.Image = Image.FromFile(@"../../images/diet.png");
             soundBtn.Image = Image.FromFile(@"../../images/soundIcon.png");
-            soundBtn.FlatAppearance.BorderSize = 0;
-            bmiBtn.FlatAppearance.BorderSize = 0;
-            helpBtn.FlatAppearance.BorderSize = 0;
             backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnHelp.Image = Image.FromFile(@"../../images/backToHome.png");
+
+            joggingBtn.FlatAppearance.BorderSize = 0;
+            weatherBtn.FlatAppearance.BorderSize = 0;
+            dietBtn.FlatAppearance.BorderSize = 0;
+            soundBtn.FlatAppearance.BorderSize = 0;
+            bmiBtn.FlatAppearance.BorderSize = 0;
+            helpBtn.FlatAppearance.BorderSize = 0;
+            backBtnJogging.FlatAppearance.BorderSize = 0;
+            backBtnWeather.FlatAppearance.BorderSize = 0;
+            backBtnDiet.FlatAppearance.BorderSize = 0;
+            backBtnBmi.FlatAppearance.BorderSize = 0;
+            backBtnHelp.FlatAppearance.BorderSize = 0;
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
