@@ -50,34 +50,8 @@ namespace Demo
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
 
-            
-            HomePanel.BackgroundImage = Image.FromFile(@"../../images/homeBackround.jpg");
-            weatherPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
-            joggingPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
-            dietPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
-            bmiPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
-            helpPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
-            jogRecordPage.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
-            jogWeekRecordPage.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
-            addRecord.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
-
-
-            nutrientLableTxt();
-            joggingBtn.FlatAppearance.BorderSize = 0;
-            joggingBtn.Image = Image.FromFile(@"../../images/jogging.png");
-            weatherBtn.FlatAppearance.BorderSize = 0;
-            weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
-            dietBtn.FlatAppearance.BorderSize = 0;
-            dietBtn.Image = Image.FromFile(@"../../images/diet.png");
-            soundBtn.Image = Image.FromFile(@"../../images/soundIcon.png");
-            soundBtn.FlatAppearance.BorderSize = 0;
-            bmiBtn.FlatAppearance.BorderSize = 0;           
-            helpBtn.FlatAppearance.BorderSize = 0;
-            backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
-            backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
-            backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
-            backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
-            backBtnHelp.Image = Image.FromFile(@"../../images/backToHome.png");
+            backGroundImage();
+            btnImage();
 
             SqlConnection db = new SqlConnection();
             db.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
@@ -92,6 +66,37 @@ namespace Demo
 
             dateTimePicker1.MaxDate = DateTime.Now;
             dateTimePicker2.MaxDate = dateTimePicker3.Value.AddDays(-1);
+        }
+        private void backGroundImage()  //backGround Image
+        {
+            HomePanel.BackgroundImage = Image.FromFile(@"../../images/homeBackround.jpg");
+            weatherPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            joggingPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            dietPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            bmiPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            helpPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            jogRecordPage.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            jogWeekRecordPage.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+            addRecord.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
+        }
+
+        private void btnImage()  //button Image
+        {
+            joggingBtn.FlatAppearance.BorderSize = 0;
+            joggingBtn.Image = Image.FromFile(@"../../images/jogging.png");
+            weatherBtn.FlatAppearance.BorderSize = 0;
+            weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
+            dietBtn.FlatAppearance.BorderSize = 0;
+            dietBtn.Image = Image.FromFile(@"../../images/diet.png");
+            soundBtn.Image = Image.FromFile(@"../../images/soundIcon.png");
+            soundBtn.FlatAppearance.BorderSize = 0;
+            bmiBtn.FlatAppearance.BorderSize = 0;
+            helpBtn.FlatAppearance.BorderSize = 0;
+            backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
+            backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
+            backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
+            backBtnBmi.Image = Image.FromFile(@"../../images/backToHome.png");
+            backBtnHelp.Image = Image.FromFile(@"../../images/backToHome.png");
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
