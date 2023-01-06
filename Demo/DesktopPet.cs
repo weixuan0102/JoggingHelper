@@ -22,38 +22,37 @@ namespace Demo
         {
             this.BackColor = Color.White;
             this.TransparencyKey = this.BackColor;
+            pet.Image = Image.FromFile(@"../../images/1.gif");
+        }
+        Random rnd = new Random();
+        int pet_index = 1;
+        int dialog_index = 0;
+        bool showed = false;
+        private void petTimer_Tick(object sender, EventArgs e)
+        {
+            pet_index = rnd.Next(1, 3);
+            pet.Image = Image.FromFile(@"../../images/" + pet_index + ".gif");
         }
 
-        int i = 1;
-        //int j = 4;
-        int j = 6;
-        int k = 0;
-        private void timer1_Tick(object sender, EventArgs e)
+        private void pet_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(@"../../image/" + i + ".gif");
-            i++;
-            if (i == 4) i = 1;
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            //pictureBox2.Image = Image.FromFile(@"../../image/" + j + ".jpg");
-            //pictureBox2.Visible = true;
-            //j++;
-            //if (j == 6) j = 4;
-            //timer2.Enabled = true;
+            dialog_index = rnd.Next(0, 10);
+            dialog.Image = Image.FromFile(@"../../images/dialog/chatDialog" + dialog_index + ".png");
+            dialog.Visible = true;
+            showed = false;
+            dialogTimer.Enabled = true;
         }
 
         
         bool drag = false;   // 記錄是否可拖曳，預設為不可
         int sX, sY;
 
-        private void MouseUp(object sender, MouseEventArgs e)
+        private void pet_MouseUp(object sender, MouseEventArgs e)
         {
             drag = false;
         }
 
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        private void pet_MouseMove(object sender, MouseEventArgs e)
         {
             if (drag)
             {
@@ -81,7 +80,17 @@ namespace Demo
             }
         }
 
-        private void MouseDown(object sender, MouseEventArgs e)
+        private void dialogTimer_Tick(object sender, EventArgs e)
+        {
+            if (!showed) showed = true;
+            else
+            {
+                dialog.Visible = false;
+                dialogTimer.Enabled = false;
+            }
+        }
+
+        private void pet_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)    // 若按左鍵時
             {
