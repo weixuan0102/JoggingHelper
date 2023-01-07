@@ -17,6 +17,7 @@ namespace Demo
 {
     public partial class Form1 : Form
     {
+        public static Form1 form1;
         const string air_api_key = "78027a78-cebc-4832-8025-ac732908f298";
         const string weather_api_key = "CWB-131BB899-463A-4D5B-B30E-7FD3F0040531";
         const string air_api_url_prefix = "https://data.epa.gov.tw/api/v2";
@@ -26,18 +27,19 @@ namespace Demo
         const string location = "%E8%87%BA%E5%8D%97%E5%B8%82"; // Tainan
         const string offset = "0", limit = "100", format = "JSON";
         string api_url_setting = $"?offset={offset}&limit={limit}&api_key={air_api_key}&format={format}";
-        SoundPlayer player = new SoundPlayer();  //backgroundSound
-        bool sound = true; //判斷音樂是否播放中
+        public static SoundPlayer soundplayer = new SoundPlayer(); // backgroundSound        
+        int helpSelected = 1;
+        bool sound = true; // 判斷音樂是否播放中
         public Form1()
         {
             InitializeComponent();
         }
 
-
         private void Form1_Load(object sender, EventArgs e)
-        {   
-            player.SoundLocation = @"../../sound/backroundSound.wav";
-            player.PlayLooping();
+        {
+            //DesktopPet pet = (DesktopPet)this.Owner;
+            //Controls["form1"].windo;
+
             textBox2.ImeMode = ImeMode.Disable;
             bmiHeight.ImeMode = ImeMode.Disable;
             bmiWeight.ImeMode = ImeMode.Disable;
@@ -49,8 +51,10 @@ namespace Demo
             weatherInfo.Text = "WAITING...";
             weatherInfo.BackColor = Color.Transparent;
             weatherInfo.Font = new Font(weatherInfo.Font.FontFamily, 16);
-
-            
+            introduction6.Text = "如果對我們的專案感興趣\n\n    歡迎搜尋以下資源:\n\n";
+            linkLabel();
+            introduction6.Text += "\n\n\n\n\n\n\n如果想要提供改善建議\n\n    也歡迎寄信到 hank92129@gmail.com";
+                 
             HomePanel.BackgroundImage = Image.FromFile(@"../../images/homeBackround.jpg");
             weatherPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
             joggingPanel.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
@@ -61,18 +65,19 @@ namespace Demo
             jogWeekRecordPage.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
             addRecord.BackgroundImage = Image.FromFile(@"../../images/insidePic.png");
 
-
             nutrientLableTxt();
             joggingBtn.FlatAppearance.BorderSize = 0;
             joggingBtn.Image = Image.FromFile(@"../../images/jogging.png");
             weatherBtn.FlatAppearance.BorderSize = 0;
             weatherBtn.Image = Image.FromFile(@"../../images/weatherBtn.png");
             dietBtn.FlatAppearance.BorderSize = 0;
-            dietBtn.Image = Image.FromFile(@"../../images/diet.png");
+            dietBtn.Image = Image.FromFile(@"../../images/btn_diet(2).png");
             soundBtn.Image = Image.FromFile(@"../../images/soundIcon.png");
             soundBtn.FlatAppearance.BorderSize = 0;
-            bmiBtn.FlatAppearance.BorderSize = 0;           
+            bmiBtn.FlatAppearance.BorderSize = 0;
+            bmiBtn.Image = Image.FromFile(@"../../images/btn_check(1).png");
             helpBtn.FlatAppearance.BorderSize = 0;
+            helpBtn.Image = Image.FromFile(@"../../images/btn_help(2).png");
             backBtnJogging.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnWeather.Image = Image.FromFile(@"../../images/backToHome.png");
             backBtnDiet.Image = Image.FromFile(@"../../images/backToHome.png");
@@ -92,6 +97,26 @@ namespace Demo
 
             dateTimePicker1.MaxDate = DateTime.Now;
             dateTimePicker2.MaxDate = dateTimePicker3.Value.AddDays(-1);
+        }
+        private void linkLabel()
+        {
+            Dictionary<string, string> links = new Dictionary<string, string>();
+            links.Add("HackMD", "https://hackmd.io/@NngxmOLDQr26_AAHTCuKOw/SkZn1qs8j");
+            links.Add("GitHub", "https://github.com/weixuan0102/JoggingHelper");
+            links.Add("YouTube", "https://www.youtube.com/channel/UC6OjzUeQOleGAIN5KHtq6gA");
+            int i = 0;
+            link1.Text = "";
+            foreach (KeyValuePair<string, string> link in links)
+            {
+                link1.Text += link.Key + "\n\n";
+                link1.Links.Add(new LinkLabel.Link(i, link.Key.Length, link.Value));
+                i = link1.Text.Length;
+            }
+            link1.LinkBehavior = LinkBehavior.HoverUnderline;
+            link1.LinkClicked += (s, e) => {
+                System.Diagnostics.Process.Start(e.Link.LinkData.ToString());
+            };
+
         }
 
         private void weatherButton_Click(object sender, EventArgs e)
@@ -124,7 +149,6 @@ namespace Demo
             HomePanel.BringToFront();
         }
 
-
         private void backBtnJogging_Click(object sender, EventArgs e)
         {
             joggingPanel.Visible = false;
@@ -143,6 +167,11 @@ namespace Demo
             proteinTxt.Text = "";
             oilTxt.Text = "";
             grainTxt.Text = "";
+            vegLabel.Visible = false;
+            fruitLabel.Visible = false;
+            proteinLabel.Visible = false;
+            oilLabel.Visible = false;
+            grainLabel.Visible = false;
         }
 
         private void backBtnBmi_Click(object sender, EventArgs e)
@@ -161,8 +190,8 @@ namespace Demo
             helpPanel.Visible = false;
             HomePanel.Visible = true;
             HomePanel.BringToFront();
-            recover(selected);
-            selected = 1;
+            recover(helpSelected);
+            helpSelected = 1;
             help1.Text = help1.Text.Insert(0, "> ");
             help1.Font = new Font("新細明體", 15);
             help1.ForeColor = Color.Black;
@@ -175,6 +204,7 @@ namespace Demo
             bmiPanel.Visible = true;
             bmiPanel.BringToFront();
         }
+
         private void helpBtn_Click(object sender, EventArgs e)
         {
             HomePanel.Visible = false;
@@ -221,6 +251,61 @@ namespace Demo
             labelCloseBtn.Enabled = true;
             grainLabel.BringToFront();
         }
+
+        private void dietTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox dietTextBox = sender as TextBox;
+            int pointIdx = dietTextBox.Text.IndexOf('.');
+            int oldSelectionStart = dietTextBox.SelectionStart;
+            if (pointIdx == -1)
+            {
+                if (dietTextBox.Text.Length >= 2)
+                {
+                    if ((int)e.KeyChar != 8 && (int)e.KeyChar != 46) e.Handled = true;
+                    else if (dietTextBox.SelectionStart > 2 && (int)e.KeyChar == 46)
+                    {
+                        e.Handled = true;
+                    }
+                }
+                if ((int)e.KeyChar == 46 && dietTextBox.SelectionStart + 2 < dietTextBox.Text.Length)
+                {
+                    dietTextBox.Text = dietTextBox.Text.Remove(dietTextBox.SelectionStart + 2);
+                    dietTextBox.SelectionStart = oldSelectionStart;
+                }
+            }
+            else
+            {
+                if (dietTextBox.SelectionStart <= pointIdx)
+                {
+                    if (pointIdx >= 2 && (int)e.KeyChar != 8) e.Handled = true;
+                }
+                else if (dietTextBox.Text.Length - pointIdx >= 3 && (int)e.KeyChar != 8) e.Handled = true;
+            }
+
+            if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8 && (int)e.KeyChar != 46)
+                e.Handled = true;
+            if ((int)e.KeyChar == 46)
+            {
+                if (dietTextBox.Text.Length <= 0)
+                    e.Handled = true;
+                else
+                {
+                    float f;
+                    float oldf;
+                    bool b1 = false, b2 = false;
+                    b1 = float.TryParse(dietTextBox.Text, out oldf);
+                    b2 = float.TryParse(dietTextBox.Text + e.KeyChar.ToString(), out f);
+                    if (b2 == false)
+                    {
+                        if (b1 == true)
+                            e.Handled = true;
+                        else
+                            e.Handled = false;
+                    }
+                }
+            }
+        }
+
         private void nutrientLableTxt()
         {
             foreach (string line in System.IO.File.ReadLines(@"../../veg.txt")) vegLabel.Text += line + "\r\n";
@@ -232,7 +317,9 @@ namespace Demo
 
         private void dietEnterBtn_Click(object sender, EventArgs e)
         {
+            label1.Focus();
             int record = 0; //紀錄是否達營養值
+            int showNutrientLable = 0;
             string warningMessage = null;
             if (vegTxt.Text == "" || fruitTxt.Text == "" || oilTxt.Text == "" || proteinTxt.Text == "" || grainTxt.Text == "")
             {
@@ -242,39 +329,103 @@ namespace Demo
             }
             else
             {
-                if (int.Parse(vegTxt.Text) > 3) warningMessage += "蔬菜攝取過量\n";
-                else if (int.Parse(vegTxt.Text) < 1) warningMessage += "缺少脂溶性纖維及維生素\n";
+                double value; // store number one by one
+
+                value = double.Parse(vegTxt.Text);
+                if (value > 3 || value < 1)
+                {
+                    if (showNutrientLable == 0) showNutrientLable = 1;
+                    if (value > 3) warningMessage += "蔬菜攝取過量\n";
+                    else if (value < 1) warningMessage += "缺少脂溶性纖維及維生素\n";
+                }
                 else record++;
 
-                if (int.Parse(fruitTxt.Text) > 3) warningMessage += "水果攝取過量\n";
-                else if (int.Parse(fruitTxt.Text) < 1) warningMessage += "缺少水溶性纖維及礦物質\n";
+                value = double.Parse(fruitTxt.Text);
+                if (value > 3 || value < 1)
+                {
+                    if (showNutrientLable == 0) showNutrientLable = 2;
+                    if (value > 3) warningMessage += "水果攝取過量\n";
+                    else if (value < 1) warningMessage += "缺少水溶性纖維及礦物質\n";
+                }
                 else record++;
 
-                if (Convert.ToDouble(oilTxt.Text) > 0.6) warningMessage += "油脂攝取過量\n";
-                else if (Convert.ToDouble(oilTxt.Text) < 0.3) warningMessage += "缺少脂肪酸\n";
+                value = double.Parse(proteinTxt.Text);
+                if (value > 3 || value < 1)
+                {
+                    if (showNutrientLable == 0) showNutrientLable = 3;
+                    if (value > 3) warningMessage += "蛋白質攝取過量\n";
+                    else if (value < 1) warningMessage += "缺少蛋白質\n";
+                }
                 else record++;
 
-                if (int.Parse(proteinTxt.Text) > 3) warningMessage += "蛋白質攝取過量\n";
-                else if (int.Parse(proteinTxt.Text) < 1) warningMessage += "缺少蛋白質\n";
+                value = double.Parse(oilTxt.Text);
+                if (value > 0.6 || value < 0.3)
+                {
+                    if (showNutrientLable == 0) showNutrientLable = 4;
+                    if (value > 0.6) warningMessage += "油脂攝取過量\n";
+                    else if (value < 0.3) warningMessage += "缺少脂肪酸\n";
+                }
                 else record++;
 
-                if (int.Parse(grainTxt.Text) > 3) warningMessage += "穀物攝取過量\n";
-                else if (int.Parse(grainTxt.Text) < 1 || grainTxt.Text == "") warningMessage += "缺少碳水化合物\n";
+                value = double.Parse(grainTxt.Text);
+                if (value > 3 || value < 1)
+                {
+                    if (showNutrientLable == 0) showNutrientLable = 5;
+                    if (value > 3) warningMessage += "穀物攝取過量\n";
+                    else if (value < 1) warningMessage += "缺少碳水化合物\n";
+                }
                 else record++;
 
                 DialogResult result;
                 if (record == 5)
                 {
-                    warningMessage += "營養皆均衡~~";
+                    warningMessage += "營養皆均衡 OuO";
                     result = MessageBox.Show(warningMessage, "當餐狀況", MessageBoxButtons.OK);
                 }
                 else
                 {
+                    if (showNutrientLable == 1)
+                    {
+                        vegLabel.Visible = true;
+                        labelCloseBtn.Visible = true;
+                        labelCloseBtn.Enabled = true;
+                        vegLabel.BringToFront();
+                    }
+                    else if (showNutrientLable == 2)
+                    {
+                        fruitLabel.Visible = true;
+                        labelCloseBtn.Visible = true;
+                        labelCloseBtn.Enabled = true;
+                        fruitLabel.BringToFront();
+                    }
+                    else if (showNutrientLable == 3)
+                    {
+                        proteinLabel.Visible = true;
+                        labelCloseBtn.Visible = true;
+                        labelCloseBtn.Enabled = true;
+                        proteinLabel.BringToFront();
+                    }
+                    else if (showNutrientLable == 4)
+                    {
+                        oilLabel.Visible = true;
+                        labelCloseBtn.Visible = true;
+                        labelCloseBtn.Enabled = true;
+                        oilLabel.BringToFront();
+                    }
+                    else if (showNutrientLable == 5)
+                    {
+                        grainLabel.Visible = true;
+                        labelCloseBtn.Visible = true;
+                        labelCloseBtn.Enabled = true;
+                        grainLabel.BringToFront();
+                    }
+
                     result = MessageBox.Show(warningMessage, "當餐狀況", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 if (result == DialogResult.OK)
                 {
                     record = 0;
+                    showNutrientLable = 0;
                     warningMessage = null;
                     vegTxt.Text = "";
                     fruitTxt.Text = "";
@@ -287,6 +438,7 @@ namespace Demo
 
         private void labelCloseBtn_Click(object sender, EventArgs e)
         {
+            label1.Focus();
             vegLabel.Visible = false;
             fruitLabel.Visible = false;
             oilLabel.Visible = false;
@@ -296,7 +448,7 @@ namespace Demo
             labelCloseBtn.Enabled = false;
         }
 
-        void Edit(string sqlstr)
+        private void Edit(string sqlstr)
         {
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;" +
@@ -335,7 +487,7 @@ namespace Demo
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("當天已有紀錄", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                 
+                    MessageBox.Show("當天已有紀錄", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -345,7 +497,6 @@ namespace Demo
             if (((int)e.KeyChar < 48 || (int)e.KeyChar > 57) && (int)e.KeyChar != 8)
                 e.Handled = true;
         }
-
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -357,12 +508,10 @@ namespace Demo
                     string date;
                     date = dataGridView1.CurrentRow.Cells[0].Value.ToString().Replace('/', '-');
                     Edit("DELETE FROM SportRecord WHERE date='" + date.Split(' ')[0].Replace("'", "''") + "'");
-
-
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("請選取要刪除的紀錄", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
@@ -395,7 +544,6 @@ namespace Demo
                 }
             }
         }
-
 
         private void weekRecord_Click(object sender, EventArgs e)
         {
@@ -589,8 +737,8 @@ namespace Demo
             {
                 weight = float.Parse(bmiWeight.Text);
                 height = float.Parse(bmiHeight.Text);
-                if (height < 30 || height > 275) MessageBox.Show("請確認身高", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                else if (weight < 0.2 || weight > 415) MessageBox.Show("請確認體重", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (height < 100 || height > 275) MessageBox.Show("請確認身高", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else if (weight < 30 || weight > 415) MessageBox.Show("請確認體重", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 else
                 {
                     if (weight < 1) bmiWeight.Text = bmiWeight.Text.Insert(0, "0");
@@ -609,14 +757,12 @@ namespace Demo
 
                     double lowerBound = Math.Round(18.51 * height * height, 2);
                     double uperBound = Math.Round(24 * height * height, 2);
-                    idealWeight.Text = "  " + Math.Round(22 * height * height, 2) + " kg\n\n";
-                    idealWeight.Text += "（" + lowerBound + " ～ " + uperBound + " kg 都是理想的）";
+                    idealWeight.Text = "  " + Math.Round(22 * height * height, 2) + " kg";
+                    idealWeight.Text += "     （" + lowerBound + " ～ " + uperBound + " kg 都是理想的）";
                 }
             }
         }
 
-
-        int selected = 1;
         public void recover(int selected)
         {
             if (selected == 1)
@@ -660,70 +806,62 @@ namespace Demo
                 help6.Font = new Font("新細明體", 13);
                 help6.ForeColor = Color.Gray;
                 introduction6.Visible = false;
+                link1.Visible = false;
             }
         }
 
         private void help_Click(object sender, EventArgs e)
         {
-            recover(selected);
+            recover(helpSelected);
             Label help = sender as Label;
             if (help.Text == "設計理念")
             {
-                selected = 1;
+                helpSelected = 1;
                 introduction1.Visible = true;
             }
             else if (help.Text == "運動紀錄")
             {
-                selected = 2;
+                helpSelected = 2;
                 introduction2.Visible = true;
             }
             else if (help.Text == "當天天氣")
             {
-                selected = 3;
+                helpSelected = 3;
                 introduction3.Visible = true;
             }
             else if (help.Text == "當餐飲食")
             {
-                selected = 4;
+                helpSelected = 4;
                 introduction4.Visible = true;
             }
             else if (help.Text == "檢視成果")
             {
-                selected = 5;
+                helpSelected = 5;
                 introduction5.Visible = true;
             }
             else if (help.Text == "客服資訊")
             {
-                selected = 6;
+                helpSelected = 6;
                 introduction6.Visible = true;
+                link1.Visible = true;
             }
             help.Text = help.Text.Insert(0, "> ");
             help.Font = new Font("新細明體", 15);
             help.ForeColor = Color.Black;
-        }
-
-        private void chatRobot_Click(object sender, EventArgs e)
-        {
-            List<string> chatList = new List<string>();
-            foreach (string line in System.IO.File.ReadLines(@"../../chat.txt")) chatList.Add(line);
-
-            Random random = new Random();
-            int ranNum = random.Next(0, chatList.Count);
-           // chatLabel.Text = chatList[ranNum];
-        }
+        }     
 
         private void soundBtn_Click(object sender, EventArgs e)
         {
             if (sound == true)
             {
                 soundBtn.Image = Image.FromFile(@"../../images/soundMute.png");
-                player.Stop();
+                soundplayer.Stop();
                 sound = false;
             }
             else
             {
                 soundBtn.Image = Image.FromFile(@"../../images/soundIcon.png");
-                player.PlayLooping();
+                soundplayer.PlayLooping();
                 sound = true;
             }
         }
@@ -733,6 +871,7 @@ namespace Demo
             var w = Task<Output>.Run(async () => await GetRequestApi());
             weatherInfo.Text = w.Result.GetInfo();
         }
+
         private async Task<Output> GetRequestApi()
         {
             Output w = new Output();
@@ -785,8 +924,8 @@ namespace Demo
                     var maxTemperature = json.GetProperty("records").GetProperty("location")[0].GetProperty("weatherElement")[4].GetProperty("time")[0].GetProperty("parameter").GetProperty("parameterName").ToString();
                     var minTemperature = json.GetProperty("records").GetProperty("location")[0].GetProperty("weatherElement")[2].GetProperty("time")[0].GetProperty("parameter").GetProperty("parameterName").ToString();
                     var PoP = json.GetProperty("records").GetProperty("location")[0].GetProperty("weatherElement")[1].GetProperty("time")[0].GetProperty("parameter").GetProperty("parameterName").ToString();
-                    w.SetInfo(5, maxTemperature + "C");
-                    w.SetInfo(6, minTemperature + "C");
+                    w.SetInfo(5, maxTemperature + "°C");
+                    w.SetInfo(6, minTemperature + "°C");
                     w.SetInfo(7, PoP + " %\r\n" + startTime + "~" + endTime);
 
                 }
@@ -801,6 +940,7 @@ namespace Demo
             }
             return w;
         }
+
     }
     public class Output
     {
@@ -827,4 +967,5 @@ namespace Demo
             return output;
         }
     }
+
 }

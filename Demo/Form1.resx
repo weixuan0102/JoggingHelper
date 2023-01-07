@@ -118,19 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="bmiStandard.Text" xml:space="preserve">
-    <value>    BMI &lt; 18.5                    過輕
+    <value>    BMI &lt; 18.5                        過輕
 
-18.5 ≦ BMI &lt; 24           正常範圍
+18.5 ≦ BMI &lt; 24               正常範圍
 
-      BMI = 22                 理想數值
+      BMI = 22                     理想數值
 
-  24 ≦ BMI &lt; 27                過重
+  24 ≦ BMI &lt; 27                    過重
 
-  27 ≦ BMI &lt; 30            輕度肥胖
+  27 ≦ BMI &lt; 30                輕度肥胖
 
-  30 ≦ BMI &lt; 35            中度肥胖
+  30 ≦ BMI &lt; 35                中度肥胖
 
-      BMI &gt; 35                 過度肥胖</value>
+      BMI &gt; 35                     過度肥胖</value>
   </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>52</value>
