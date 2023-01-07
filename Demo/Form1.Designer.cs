@@ -40,6 +40,7 @@
             this.helpBtn = new System.Windows.Forms.Button();
             this.bmiBtn = new System.Windows.Forms.Button();
             this.bmiPanel = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.idealWeight = new System.Windows.Forms.Label();
             this.bmiStandard = new System.Windows.Forms.Label();
             this.idealWeightLabel = new System.Windows.Forms.Label();
@@ -76,6 +77,7 @@
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.backBtnJogging = new System.Windows.Forms.Button();
             this.helpPanel = new System.Windows.Forms.Panel();
+            this.link1 = new System.Windows.Forms.LinkLabel();
             this.backBtnHelp = new System.Windows.Forms.Button();
             this.introduction6 = new System.Windows.Forms.Label();
             this.introduction5 = new System.Windows.Forms.Label();
@@ -142,7 +144,7 @@
             // 
             this.joggingBtn.BackColor = System.Drawing.Color.Transparent;
             this.joggingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.joggingBtn.Location = new System.Drawing.Point(122, 65);
+            this.joggingBtn.Location = new System.Drawing.Point(119, -8);
             this.joggingBtn.Name = "joggingBtn";
             this.joggingBtn.Size = new System.Drawing.Size(399, 179);
             this.joggingBtn.TabIndex = 0;
@@ -153,7 +155,7 @@
             // 
             this.weatherBtn.BackColor = System.Drawing.Color.Transparent;
             this.weatherBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.weatherBtn.Location = new System.Drawing.Point(122, 261);
+            this.weatherBtn.Location = new System.Drawing.Point(119, 173);
             this.weatherBtn.Name = "weatherBtn";
             this.weatherBtn.Size = new System.Drawing.Size(191, 218);
             this.weatherBtn.TabIndex = 2;
@@ -164,7 +166,7 @@
             // 
             this.dietBtn.BackColor = System.Drawing.Color.Transparent;
             this.dietBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dietBtn.Location = new System.Drawing.Point(329, 261);
+            this.dietBtn.Location = new System.Drawing.Point(326, 173);
             this.dietBtn.Name = "dietBtn";
             this.dietBtn.Size = new System.Drawing.Size(191, 218);
             this.dietBtn.TabIndex = 3;
@@ -224,11 +226,10 @@
             this.helpBtn.BackColor = System.Drawing.Color.Transparent;
             this.helpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.helpBtn.Font = new System.Drawing.Font("微軟正黑體", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.helpBtn.Location = new System.Drawing.Point(329, 502);
+            this.helpBtn.Location = new System.Drawing.Point(326, 408);
             this.helpBtn.Name = "helpBtn";
-            this.helpBtn.Size = new System.Drawing.Size(191, 94);
+            this.helpBtn.Size = new System.Drawing.Size(191, 218);
             this.helpBtn.TabIndex = 5;
-            this.helpBtn.Text = "Help";
             this.helpBtn.UseVisualStyleBackColor = false;
             this.helpBtn.Click += new System.EventHandler(this.helpBtn_Click);
             // 
@@ -237,16 +238,16 @@
             this.bmiBtn.BackColor = System.Drawing.Color.Transparent;
             this.bmiBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bmiBtn.Font = new System.Drawing.Font("微軟正黑體", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bmiBtn.Location = new System.Drawing.Point(122, 502);
+            this.bmiBtn.Location = new System.Drawing.Point(119, 408);
             this.bmiBtn.Name = "bmiBtn";
-            this.bmiBtn.Size = new System.Drawing.Size(191, 94);
+            this.bmiBtn.Size = new System.Drawing.Size(191, 218);
             this.bmiBtn.TabIndex = 4;
-            this.bmiBtn.Text = "檢視成果";
             this.bmiBtn.UseVisualStyleBackColor = false;
             this.bmiBtn.Click += new System.EventHandler(this.bmiBtn_Click);
             // 
             // bmiPanel
             // 
+            this.bmiPanel.Controls.Add(this.label10);
             this.bmiPanel.Controls.Add(this.idealWeight);
             this.bmiPanel.Controls.Add(this.bmiStandard);
             this.bmiPanel.Controls.Add(this.idealWeightLabel);
@@ -267,25 +268,37 @@
             this.bmiPanel.TabIndex = 3;
             this.bmiPanel.Visible = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label10.Location = new System.Drawing.Point(57, 349);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 24);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "參考標準  :";
+            // 
             // idealWeight
             // 
             this.idealWeight.AutoSize = true;
             this.idealWeight.BackColor = System.Drawing.Color.Transparent;
-            this.idealWeight.Location = new System.Drawing.Point(248, 206);
+            this.idealWeight.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.idealWeight.Location = new System.Drawing.Point(186, 283);
             this.idealWeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.idealWeight.Name = "idealWeight";
-            this.idealWeight.Size = new System.Drawing.Size(0, 12);
+            this.idealWeight.Size = new System.Drawing.Size(0, 24);
             this.idealWeight.TabIndex = 27;
             // 
             // bmiStandard
             // 
             this.bmiStandard.AutoSize = true;
             this.bmiStandard.BackColor = System.Drawing.Color.Transparent;
-            this.bmiStandard.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bmiStandard.Location = new System.Drawing.Point(175, 280);
+            this.bmiStandard.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiStandard.Location = new System.Drawing.Point(188, 349);
             this.bmiStandard.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bmiStandard.Name = "bmiStandard";
-            this.bmiStandard.Size = new System.Drawing.Size(225, 247);
+            this.bmiStandard.Size = new System.Drawing.Size(249, 260);
             this.bmiStandard.TabIndex = 26;
             this.bmiStandard.Text = resources.GetString("bmiStandard.Text");
             // 
@@ -293,11 +306,11 @@
             // 
             this.idealWeightLabel.AutoSize = true;
             this.idealWeightLabel.BackColor = System.Drawing.Color.Transparent;
-            this.idealWeightLabel.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.idealWeightLabel.Location = new System.Drawing.Point(178, 206);
+            this.idealWeightLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.idealWeightLabel.Location = new System.Drawing.Point(57, 283);
             this.idealWeightLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.idealWeightLabel.Name = "idealWeightLabel";
-            this.idealWeightLabel.Size = new System.Drawing.Size(74, 16);
+            this.idealWeightLabel.Size = new System.Drawing.Size(114, 24);
             this.idealWeightLabel.TabIndex = 25;
             this.idealWeightLabel.Text = "理想體重為 :";
             // 
@@ -305,10 +318,11 @@
             // 
             this.bmiResult.AutoSize = true;
             this.bmiResult.BackColor = System.Drawing.Color.Transparent;
-            this.bmiResult.Location = new System.Drawing.Point(256, 172);
+            this.bmiResult.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiResult.Location = new System.Drawing.Point(196, 235);
             this.bmiResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bmiResult.Name = "bmiResult";
-            this.bmiResult.Size = new System.Drawing.Size(0, 12);
+            this.bmiResult.Size = new System.Drawing.Size(0, 24);
             this.bmiResult.TabIndex = 24;
             // 
             // backBtnBmi
@@ -327,11 +341,11 @@
             // 
             this.bmiResultLabel.AutoSize = true;
             this.bmiResultLabel.BackColor = System.Drawing.Color.Transparent;
-            this.bmiResultLabel.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bmiResultLabel.Location = new System.Drawing.Point(178, 172);
+            this.bmiResultLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiResultLabel.Location = new System.Drawing.Point(57, 235);
             this.bmiResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bmiResultLabel.Name = "bmiResultLabel";
-            this.bmiResultLabel.Size = new System.Drawing.Size(78, 16);
+            this.bmiResultLabel.Size = new System.Drawing.Size(121, 24);
             this.bmiResultLabel.TabIndex = 10;
             this.bmiResultLabel.Text = "你的 BMI 為 :";
             // 
@@ -339,11 +353,11 @@
             // 
             this.bmiCalculateBtn.BackColor = System.Drawing.Color.Transparent;
             this.bmiCalculateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bmiCalculateBtn.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bmiCalculateBtn.Location = new System.Drawing.Point(391, 123);
+            this.bmiCalculateBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiCalculateBtn.Location = new System.Drawing.Point(335, 168);
             this.bmiCalculateBtn.Margin = new System.Windows.Forms.Padding(2);
             this.bmiCalculateBtn.Name = "bmiCalculateBtn";
-            this.bmiCalculateBtn.Size = new System.Drawing.Size(74, 28);
+            this.bmiCalculateBtn.Size = new System.Drawing.Size(104, 39);
             this.bmiCalculateBtn.TabIndex = 8;
             this.bmiCalculateBtn.Text = "開始計算";
             this.bmiCalculateBtn.UseVisualStyleBackColor = false;
@@ -353,29 +367,29 @@
             // 
             this.bmiTitle.AutoSize = true;
             this.bmiTitle.BackColor = System.Drawing.Color.Transparent;
-            this.bmiTitle.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bmiTitle.Location = new System.Drawing.Point(175, 46);
+            this.bmiTitle.Font = new System.Drawing.Font("微軟正黑體", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiTitle.Location = new System.Drawing.Point(103, 73);
             this.bmiTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bmiTitle.Name = "bmiTitle";
-            this.bmiTitle.Size = new System.Drawing.Size(292, 24);
+            this.bmiTitle.Size = new System.Drawing.Size(304, 40);
             this.bmiTitle.TabIndex = 7;
-            this.bmiTitle.Text = "看看自己的BMI是否在理想範圍吧";
+            this.bmiTitle.Text = "看看自己的BMI吧 ~";
             // 
             // bmiWeight
             // 
-            this.bmiWeight.Location = new System.Drawing.Point(259, 135);
+            this.bmiWeight.Location = new System.Drawing.Point(131, 185);
             this.bmiWeight.Margin = new System.Windows.Forms.Padding(2);
             this.bmiWeight.Name = "bmiWeight";
-            this.bmiWeight.Size = new System.Drawing.Size(62, 22);
+            this.bmiWeight.Size = new System.Drawing.Size(79, 22);
             this.bmiWeight.TabIndex = 5;
             this.bmiWeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bmiWeight_KeyPress);
             // 
             // bmiHeight
             // 
-            this.bmiHeight.Location = new System.Drawing.Point(259, 100);
+            this.bmiHeight.Location = new System.Drawing.Point(131, 144);
             this.bmiHeight.Margin = new System.Windows.Forms.Padding(2);
             this.bmiHeight.Name = "bmiHeight";
-            this.bmiHeight.Size = new System.Drawing.Size(62, 22);
+            this.bmiHeight.Size = new System.Drawing.Size(79, 22);
             this.bmiHeight.TabIndex = 4;
             this.bmiHeight.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.bmiHeight_KeyPress);
             // 
@@ -383,10 +397,11 @@
             // 
             this.bmiWeightUnit.AutoSize = true;
             this.bmiWeightUnit.BackColor = System.Drawing.Color.Transparent;
-            this.bmiWeightUnit.Location = new System.Drawing.Point(326, 139);
+            this.bmiWeightUnit.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiWeightUnit.Location = new System.Drawing.Point(234, 182);
             this.bmiWeightUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bmiWeightUnit.Name = "bmiWeightUnit";
-            this.bmiWeightUnit.Size = new System.Drawing.Size(17, 12);
+            this.bmiWeightUnit.Size = new System.Drawing.Size(32, 24);
             this.bmiWeightUnit.TabIndex = 3;
             this.bmiWeightUnit.Text = "kg";
             // 
@@ -394,10 +409,11 @@
             // 
             this.bmiHeightUnit.AutoSize = true;
             this.bmiHeightUnit.BackColor = System.Drawing.Color.Transparent;
-            this.bmiHeightUnit.Location = new System.Drawing.Point(325, 104);
+            this.bmiHeightUnit.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiHeightUnit.Location = new System.Drawing.Point(232, 142);
             this.bmiHeightUnit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bmiHeightUnit.Name = "bmiHeightUnit";
-            this.bmiHeightUnit.Size = new System.Drawing.Size(19, 12);
+            this.bmiHeightUnit.Size = new System.Drawing.Size(37, 24);
             this.bmiHeightUnit.TabIndex = 2;
             this.bmiHeightUnit.Text = "cm";
             // 
@@ -405,11 +421,11 @@
             // 
             this.bmiWeightLabel.AutoSize = true;
             this.bmiWeightLabel.BackColor = System.Drawing.Color.Transparent;
-            this.bmiWeightLabel.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bmiWeightLabel.Location = new System.Drawing.Point(176, 138);
+            this.bmiWeightLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiWeightLabel.Location = new System.Drawing.Point(55, 182);
             this.bmiWeightLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bmiWeightLabel.Name = "bmiWeightLabel";
-            this.bmiWeightLabel.Size = new System.Drawing.Size(38, 16);
+            this.bmiWeightLabel.Size = new System.Drawing.Size(57, 24);
             this.bmiWeightLabel.TabIndex = 1;
             this.bmiWeightLabel.Text = "體重 :";
             // 
@@ -417,11 +433,11 @@
             // 
             this.bmiHeightLabel.AutoSize = true;
             this.bmiHeightLabel.BackColor = System.Drawing.Color.Transparent;
-            this.bmiHeightLabel.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.bmiHeightLabel.Location = new System.Drawing.Point(176, 103);
+            this.bmiHeightLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.bmiHeightLabel.Location = new System.Drawing.Point(55, 142);
             this.bmiHeightLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bmiHeightLabel.Name = "bmiHeightLabel";
-            this.bmiHeightLabel.Size = new System.Drawing.Size(38, 16);
+            this.bmiHeightLabel.Size = new System.Drawing.Size(57, 24);
             this.bmiHeightLabel.TabIndex = 0;
             this.bmiHeightLabel.Text = "身高 :";
             // 
@@ -445,7 +461,7 @@
             this.joggingInfo.Margin = new System.Windows.Forms.Padding(2);
             this.joggingInfo.Name = "joggingInfo";
             this.joggingInfo.SelectedIndex = 0;
-            this.joggingInfo.Size = new System.Drawing.Size(614, 559);
+            this.joggingInfo.Size = new System.Drawing.Size(614, 575);
             this.joggingInfo.TabIndex = 2;
             // 
             // addRecord
@@ -459,7 +475,7 @@
             this.addRecord.Controls.Add(this.dataGridView1);
             this.addRecord.Location = new System.Drawing.Point(4, 22);
             this.addRecord.Name = "addRecord";
-            this.addRecord.Size = new System.Drawing.Size(606, 533);
+            this.addRecord.Size = new System.Drawing.Size(606, 549);
             this.addRecord.TabIndex = 3;
             this.addRecord.Text = "編輯紀錄";
             this.addRecord.UseVisualStyleBackColor = true;
@@ -467,7 +483,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(445, 379);
+            this.label8.Location = new System.Drawing.Point(472, 437);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 12);
             this.label8.TabIndex = 6;
@@ -475,15 +491,15 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(328, 372);
+            this.textBox2.Location = new System.Drawing.Point(339, 430);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.Size = new System.Drawing.Size(111, 22);
             this.textBox2.TabIndex = 5;
             this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(99, 372);
+            this.dateTimePicker1.Location = new System.Drawing.Point(109, 430);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 4;
@@ -493,9 +509,9 @@
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button4.Location = new System.Drawing.Point(409, 436);
+            this.button4.Location = new System.Drawing.Point(420, 483);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 28);
+            this.button4.Size = new System.Drawing.Size(75, 30);
             this.button4.TabIndex = 3;
             this.button4.Text = "修改";
             this.button4.UseVisualStyleBackColor = false;
@@ -506,9 +522,9 @@
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button3.Location = new System.Drawing.Point(250, 436);
+            this.button3.Location = new System.Drawing.Point(267, 483);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 28);
+            this.button3.Size = new System.Drawing.Size(75, 30);
             this.button3.TabIndex = 2;
             this.button3.Text = "刪除";
             this.button3.UseVisualStyleBackColor = false;
@@ -519,9 +535,9 @@
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button2.Location = new System.Drawing.Point(99, 436);
+            this.button2.Location = new System.Drawing.Point(113, 483);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 28);
+            this.button2.Size = new System.Drawing.Size(75, 30);
             this.button2.TabIndex = 1;
             this.button2.Text = "新增";
             this.button2.UseVisualStyleBackColor = false;
@@ -531,11 +547,11 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(55, 42);
+            this.dataGridView1.Location = new System.Drawing.Point(83, 60);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(485, 287);
+            this.dataGridView1.Size = new System.Drawing.Size(442, 327);
             this.dataGridView1.TabIndex = 0;
             // 
             // jogWeekRecordPage
@@ -547,7 +563,7 @@
             this.jogWeekRecordPage.Margin = new System.Windows.Forms.Padding(2);
             this.jogWeekRecordPage.Name = "jogWeekRecordPage";
             this.jogWeekRecordPage.Padding = new System.Windows.Forms.Padding(2);
-            this.jogWeekRecordPage.Size = new System.Drawing.Size(606, 533);
+            this.jogWeekRecordPage.Size = new System.Drawing.Size(606, 549);
             this.jogWeekRecordPage.TabIndex = 0;
             this.jogWeekRecordPage.Text = "本周紀錄";
             this.jogWeekRecordPage.UseVisualStyleBackColor = true;
@@ -556,7 +572,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(138, 427);
+            this.label9.Location = new System.Drawing.Point(155, 430);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(301, 30);
             this.label9.TabIndex = 2;
@@ -567,7 +583,7 @@
             this.weekRecord.BackColor = System.Drawing.Color.White;
             this.weekRecord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.weekRecord.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.weekRecord.Location = new System.Drawing.Point(251, 485);
+            this.weekRecord.Location = new System.Drawing.Point(267, 482);
             this.weekRecord.Name = "weekRecord";
             this.weekRecord.Size = new System.Drawing.Size(75, 32);
             this.weekRecord.TabIndex = 1;
@@ -596,7 +612,7 @@
             this.jogRecordPage.Location = new System.Drawing.Point(4, 22);
             this.jogRecordPage.Margin = new System.Windows.Forms.Padding(2);
             this.jogRecordPage.Name = "jogRecordPage";
-            this.jogRecordPage.Size = new System.Drawing.Size(606, 533);
+            this.jogRecordPage.Size = new System.Drawing.Size(606, 549);
             this.jogRecordPage.TabIndex = 2;
             this.jogRecordPage.Text = "查詢紀錄";
             this.jogRecordPage.UseVisualStyleBackColor = true;
@@ -604,7 +620,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(291, 437);
+            this.label7.Location = new System.Drawing.Point(298, 437);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(11, 12);
             this.label7.TabIndex = 4;
@@ -615,9 +631,9 @@
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("微軟正黑體", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.button5.Location = new System.Drawing.Point(254, 487);
+            this.button5.Location = new System.Drawing.Point(267, 482);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 29);
+            this.button5.Size = new System.Drawing.Size(75, 32);
             this.button5.TabIndex = 3;
             this.button5.Text = "查詢";
             this.button5.UseVisualStyleBackColor = false;
@@ -625,7 +641,7 @@
             // 
             // dateTimePicker3
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(328, 430);
+            this.dateTimePicker3.Location = new System.Drawing.Point(332, 430);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker3.TabIndex = 2;
@@ -633,7 +649,7 @@
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(73, 430);
+            this.dateTimePicker2.Location = new System.Drawing.Point(76, 430);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 1;
@@ -643,11 +659,11 @@
             this.dataGridView3.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.GridColor = System.Drawing.Color.LightCyan;
-            this.dataGridView3.Location = new System.Drawing.Point(96, 59);
+            this.dataGridView3.Location = new System.Drawing.Point(83, 60);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(401, 318);
+            this.dataGridView3.Size = new System.Drawing.Size(442, 327);
             this.dataGridView3.TabIndex = 0;
             // 
             // backBtnJogging
@@ -664,6 +680,7 @@
             // helpPanel
             // 
             this.helpPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.helpPanel.Controls.Add(this.link1);
             this.helpPanel.Controls.Add(this.backBtnHelp);
             this.helpPanel.Controls.Add(this.introduction6);
             this.helpPanel.Controls.Add(this.introduction5);
@@ -683,6 +700,19 @@
             this.helpPanel.TabIndex = 8;
             this.helpPanel.Visible = false;
             // 
+            // link1
+            // 
+            this.link1.AutoSize = true;
+            this.link1.BackColor = System.Drawing.Color.Transparent;
+            this.link1.Font = new System.Drawing.Font("微軟正黑體", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.link1.Location = new System.Drawing.Point(186, 206);
+            this.link1.Name = "link1";
+            this.link1.Size = new System.Drawing.Size(80, 19);
+            this.link1.TabIndex = 14;
+            this.link1.TabStop = true;
+            this.link1.Text = "linkLabel1";
+            this.link1.Visible = false;
+            // 
             // backBtnHelp
             // 
             this.backBtnHelp.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -697,61 +727,67 @@
             // introduction6
             // 
             this.introduction6.BackColor = System.Drawing.Color.Transparent;
-            this.introduction6.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction6.Location = new System.Drawing.Point(180, 460);
+            this.introduction6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.introduction6.Location = new System.Drawing.Point(163, 111);
             this.introduction6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction6.Name = "introduction6";
-            this.introduction6.Size = new System.Drawing.Size(321, 27);
+            this.introduction6.Size = new System.Drawing.Size(486, 515);
             this.introduction6.TabIndex = 13;
-            this.introduction6.Text = "FB搜尋: 劉彥誠   IG搜尋: hankliu";
             this.introduction6.Visible = false;
             // 
             // introduction5
             // 
             this.introduction5.BackColor = System.Drawing.Color.Transparent;
-            this.introduction5.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction5.Location = new System.Drawing.Point(180, 392);
+            this.introduction5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.introduction5.Location = new System.Drawing.Point(167, 111);
             this.introduction5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction5.Name = "introduction5";
-            this.introduction5.Size = new System.Drawing.Size(350, 55);
+            this.introduction5.Size = new System.Drawing.Size(350, 515);
             this.introduction5.TabIndex = 12;
-            this.introduction5.Text = "輸入最多三位整數、最多兩位小數，計算結果將取到小數後兩位";
+            this.introduction5.Text = "運動過後，\r\n\r\n    有沒有離目標更近了 ?\r\n\r\n\r\n功能 :\r\n\r\n        - 計算 BMI  (結果取到兩位小數)\r\n        - 給出理" +
+    "想的體重及範圍\r\n\r\n\r\n注意事項 :\r\n\r\n        - 輸入格式為  xx.xx\r\n        - 輸入不可為空\r\n        - 整數最多三" +
+    "位 / 小數最多兩位\r\n        - 數值須在合理範圍\r\n";
             this.introduction5.Visible = false;
             // 
             // introduction4
             // 
             this.introduction4.BackColor = System.Drawing.Color.Transparent;
-            this.introduction4.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction4.Location = new System.Drawing.Point(180, 324);
+            this.introduction4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.introduction4.Location = new System.Drawing.Point(167, 111);
             this.introduction4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction4.Name = "introduction4";
-            this.introduction4.Size = new System.Drawing.Size(400, 65);
+            this.introduction4.Size = new System.Drawing.Size(400, 515);
             this.introduction4.TabIndex = 11;
-            this.introduction4.Text = "可以記錄當餐缺少何種營養，以及何種食物攝取過多";
+            this.introduction4.Text = "除了運動，\r\n\r\n    也要注意健康飲食呦 ~\r\n\r\n\r\n功能 :\r\n\r\n        - 衡量當餐攝取的營養\r\n        - 給出調整飲食的建議\r\n\r" +
+    "\n\r\n注意事項 :\r\n\r\n        - 輸入格式為  xx.xx\r\n        - 輸入不可為空\r\n        - 整數和小數 皆是最多兩位";
             this.introduction4.Visible = false;
             // 
             // introduction3
             // 
             this.introduction3.BackColor = System.Drawing.Color.Transparent;
-            this.introduction3.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction3.Location = new System.Drawing.Point(180, 256);
+            this.introduction3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.introduction3.Location = new System.Drawing.Point(167, 111);
             this.introduction3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction3.Name = "introduction3";
-            this.introduction3.Size = new System.Drawing.Size(435, 61);
+            this.introduction3.Size = new System.Drawing.Size(435, 515);
             this.introduction3.TabIndex = 10;
-            this.introduction3.Text = "點擊當天天氣可取得6小時內的天氣資訊，若顯示有問題可能是氣象局API 出錯，請聯絡客服";
+            this.introduction3.Text = "運動之前，\r\n\r\n    挑個合適的天氣吧 ~\r\n\r\n\r\n功能 :\r\n\r\n        - 取得6小時內的天氣資訊\r\n        - 作為是否出門的參考依據" +
+    "\r\n\r\n\r\n注意事項 :  \r\n\r\n        若顯示不完全，\r\n        表示氣象局資料尚待更新，\r\n        請稍等片刻再重試，或者聯繫我們" +
+    "\r\n";
             this.introduction3.Visible = false;
             // 
             // introduction2
             // 
             this.introduction2.BackColor = System.Drawing.Color.Transparent;
-            this.introduction2.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction2.Location = new System.Drawing.Point(188, 188);
+            this.introduction2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.introduction2.Location = new System.Drawing.Point(167, 111);
             this.introduction2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction2.Name = "introduction2";
-            this.introduction2.Size = new System.Drawing.Size(370, 59);
+            this.introduction2.Size = new System.Drawing.Size(370, 515);
             this.introduction2.TabIndex = 9;
-            this.introduction2.Text = "日期(不能重複)距離請輸入整數，刪除記錄請點選要刪除的資料再按下刪除按鈕";
+            this.introduction2.Text = "運動完後，\r\n\r\n    記得紀錄今天的成果呦 ~\r\n\r\n\r\n功能 :\r\n\r\n        - 儲存今日運動成果\r\n        - 顯示當週運動里程\r\n  " +
+    "      - 查詢過去運動紀錄\r\n\r\n\r\n注意事項 :  \r\n\r\n        - 日期不能重複\r\n        - 距離輸入須為整數\r\n        " +
+    "- 刪改資料須謹慎 \r\n           (點選後操作，並再次確認)";
             this.introduction2.Visible = false;
             // 
             // help6
@@ -760,7 +796,7 @@
             this.help6.BackColor = System.Drawing.Color.Transparent;
             this.help6.Font = new System.Drawing.Font("新細明體", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.help6.ForeColor = System.Drawing.Color.Gray;
-            this.help6.Location = new System.Drawing.Point(55, 460);
+            this.help6.Location = new System.Drawing.Point(32, 505);
             this.help6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.help6.Name = "help6";
             this.help6.Size = new System.Drawing.Size(76, 17);
@@ -774,7 +810,7 @@
             this.help5.BackColor = System.Drawing.Color.Transparent;
             this.help5.Font = new System.Drawing.Font("新細明體", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.help5.ForeColor = System.Drawing.Color.Gray;
-            this.help5.Location = new System.Drawing.Point(55, 392);
+            this.help5.Location = new System.Drawing.Point(32, 428);
             this.help5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.help5.Name = "help5";
             this.help5.Size = new System.Drawing.Size(76, 17);
@@ -788,7 +824,7 @@
             this.help4.BackColor = System.Drawing.Color.Transparent;
             this.help4.Font = new System.Drawing.Font("新細明體", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.help4.ForeColor = System.Drawing.Color.Gray;
-            this.help4.Location = new System.Drawing.Point(55, 324);
+            this.help4.Location = new System.Drawing.Point(32, 351);
             this.help4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.help4.Name = "help4";
             this.help4.Size = new System.Drawing.Size(76, 17);
@@ -802,7 +838,7 @@
             this.help3.BackColor = System.Drawing.Color.Transparent;
             this.help3.Font = new System.Drawing.Font("新細明體", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.help3.ForeColor = System.Drawing.Color.Gray;
-            this.help3.Location = new System.Drawing.Point(55, 256);
+            this.help3.Location = new System.Drawing.Point(32, 274);
             this.help3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.help3.Name = "help3";
             this.help3.Size = new System.Drawing.Size(76, 17);
@@ -816,7 +852,7 @@
             this.help2.BackColor = System.Drawing.Color.Transparent;
             this.help2.Font = new System.Drawing.Font("新細明體", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.help2.ForeColor = System.Drawing.Color.Gray;
-            this.help2.Location = new System.Drawing.Point(55, 188);
+            this.help2.Location = new System.Drawing.Point(32, 197);
             this.help2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.help2.Name = "help2";
             this.help2.Size = new System.Drawing.Size(76, 17);
@@ -830,7 +866,7 @@
             this.help1.BackColor = System.Drawing.Color.Transparent;
             this.help1.Font = new System.Drawing.Font("新細明體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.help1.ForeColor = System.Drawing.Color.Black;
-            this.help1.Location = new System.Drawing.Point(54, 113);
+            this.help1.Location = new System.Drawing.Point(31, 113);
             this.help1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.help1.Name = "help1";
             this.help1.Size = new System.Drawing.Size(105, 20);
@@ -841,15 +877,15 @@
             // introduction1
             // 
             this.introduction1.BackColor = System.Drawing.Color.Transparent;
-            this.introduction1.Font = new System.Drawing.Font("微軟正黑體", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.introduction1.Location = new System.Drawing.Point(180, 77);
+            this.introduction1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.introduction1.Location = new System.Drawing.Point(167, 111);
             this.introduction1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.introduction1.Name = "introduction1";
-            this.introduction1.Size = new System.Drawing.Size(422, 447);
+            this.introduction1.Size = new System.Drawing.Size(422, 515);
             this.introduction1.TabIndex = 2;
-            this.introduction1.Text = "可愛の桌面寵物\r\n簡潔の使用介面\r\n容易の操作方式\r\n\r\n平時只保留小寵物在桌面上（可移動）\r\nJogging Helper 可在小寵物上按右鍵打開\r\n\r\n桌面寵" +
-    "物 :\r\n\r\n        提醒使用著起身運動\r\n        療癒心情，可以跟牠簡單互動\r\n\r\nJogging Helper :\r\n\r\n        養" +
-    "成習慣紀錄運動\r\n        幫助維持健康體態";
+            this.introduction1.Text = " ◎ 可愛の桌面寵物\r\n\r\n ◎ 簡潔の使用介面\r\n\r\n ◎ 容易の操作方式\r\n\r\n\r\n 小寵物隨時陪伴 :\r\n\r\n       - 療癒心情\r\n       -" +
+    " 提醒起身運動\r\n       - 跟你簡單互動\r\n\r\n\r\n Jogging Helper :\r\n\r\n       - 挑選合適天氣\r\n       - 建立運" +
+    "動習慣\r\n       - 維持良好體態";
             // 
             // dietPanel
             // 
@@ -890,7 +926,7 @@
             this.labelCloseBtn.Enabled = false;
             this.labelCloseBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelCloseBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.labelCloseBtn.Location = new System.Drawing.Point(481, 503);
+            this.labelCloseBtn.Location = new System.Drawing.Point(481, 558);
             this.labelCloseBtn.Margin = new System.Windows.Forms.Padding(2);
             this.labelCloseBtn.Name = "labelCloseBtn";
             this.labelCloseBtn.Size = new System.Drawing.Size(73, 37);
@@ -916,7 +952,7 @@
             // 
             this.fruitLabel.BackColor = System.Drawing.Color.Transparent;
             this.fruitLabel.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fruitLabel.Location = new System.Drawing.Point(252, 172);
+            this.fruitLabel.Location = new System.Drawing.Point(255, 188);
             this.fruitLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.fruitLabel.Name = "fruitLabel";
             this.fruitLabel.Size = new System.Drawing.Size(302, 312);
@@ -972,7 +1008,7 @@
             this.dietEnterBtn.BackColor = System.Drawing.Color.Transparent;
             this.dietEnterBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.dietEnterBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.dietEnterBtn.Location = new System.Drawing.Point(122, 503);
+            this.dietEnterBtn.Location = new System.Drawing.Point(122, 558);
             this.dietEnterBtn.Margin = new System.Windows.Forms.Padding(2);
             this.dietEnterBtn.Name = "dietEnterBtn";
             this.dietEnterBtn.Size = new System.Drawing.Size(58, 37);
@@ -986,7 +1022,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label6.Location = new System.Drawing.Point(164, 450);
+            this.label6.Location = new System.Drawing.Point(167, 483);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(29, 24);
@@ -998,7 +1034,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label5.Location = new System.Drawing.Point(164, 378);
+            this.label5.Location = new System.Drawing.Point(167, 408);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 24);
@@ -1010,7 +1046,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.Location = new System.Drawing.Point(167, 308);
+            this.label4.Location = new System.Drawing.Point(167, 333);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 24);
@@ -1022,7 +1058,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.Location = new System.Drawing.Point(167, 245);
+            this.label3.Location = new System.Drawing.Point(167, 260);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(29, 24);
@@ -1043,39 +1079,39 @@
             // 
             // grainTxt
             // 
-            this.grainTxt.Location = new System.Drawing.Point(122, 450);
+            this.grainTxt.Location = new System.Drawing.Point(122, 483);
             this.grainTxt.Margin = new System.Windows.Forms.Padding(2);
             this.grainTxt.Name = "grainTxt";
             this.grainTxt.Size = new System.Drawing.Size(38, 22);
             this.grainTxt.TabIndex = 10;
-            this.grainTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.grainTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dietTextBox_KeyPress);
             // 
             // oilTxt
             // 
-            this.oilTxt.Location = new System.Drawing.Point(122, 378);
+            this.oilTxt.Location = new System.Drawing.Point(122, 408);
             this.oilTxt.Margin = new System.Windows.Forms.Padding(2);
             this.oilTxt.Name = "oilTxt";
             this.oilTxt.Size = new System.Drawing.Size(38, 22);
             this.oilTxt.TabIndex = 9;
-            this.oilTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.oilTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dietTextBox_KeyPress);
             // 
             // proteinTxt
             // 
-            this.proteinTxt.Location = new System.Drawing.Point(122, 308);
+            this.proteinTxt.Location = new System.Drawing.Point(122, 333);
             this.proteinTxt.Margin = new System.Windows.Forms.Padding(2);
             this.proteinTxt.Name = "proteinTxt";
             this.proteinTxt.Size = new System.Drawing.Size(38, 22);
             this.proteinTxt.TabIndex = 8;
-            this.proteinTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.proteinTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dietTextBox_KeyPress);
             // 
             // fruitTxt
             // 
-            this.fruitTxt.Location = new System.Drawing.Point(122, 245);
+            this.fruitTxt.Location = new System.Drawing.Point(122, 258);
             this.fruitTxt.Margin = new System.Windows.Forms.Padding(2);
             this.fruitTxt.Name = "fruitTxt";
             this.fruitTxt.Size = new System.Drawing.Size(38, 22);
             this.fruitTxt.TabIndex = 7;
-            this.fruitTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.fruitTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dietTextBox_KeyPress);
             // 
             // vegTxt
             // 
@@ -1084,14 +1120,14 @@
             this.vegTxt.Name = "vegTxt";
             this.vegTxt.Size = new System.Drawing.Size(38, 22);
             this.vegTxt.TabIndex = 6;
-            this.vegTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
+            this.vegTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dietTextBox_KeyPress);
             // 
             // fruitBtn
             // 
             this.fruitBtn.BackColor = System.Drawing.Color.Transparent;
             this.fruitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fruitBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.fruitBtn.Location = new System.Drawing.Point(39, 232);
+            this.fruitBtn.Location = new System.Drawing.Point(33, 251);
             this.fruitBtn.Margin = new System.Windows.Forms.Padding(2);
             this.fruitBtn.Name = "fruitBtn";
             this.fruitBtn.Size = new System.Drawing.Size(79, 33);
@@ -1116,7 +1152,7 @@
             this.grainsBtn.BackColor = System.Drawing.Color.Transparent;
             this.grainsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grainsBtn.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.grainsBtn.Location = new System.Drawing.Point(30, 439);
+            this.grainsBtn.Location = new System.Drawing.Point(24, 476);
             this.grainsBtn.Margin = new System.Windows.Forms.Padding(2);
             this.grainsBtn.Name = "grainsBtn";
             this.grainsBtn.Size = new System.Drawing.Size(88, 35);
@@ -1130,7 +1166,7 @@
             this.oilBtn.BackColor = System.Drawing.Color.Transparent;
             this.oilBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.oilBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.oilBtn.Location = new System.Drawing.Point(39, 367);
+            this.oilBtn.Location = new System.Drawing.Point(33, 401);
             this.oilBtn.Margin = new System.Windows.Forms.Padding(2);
             this.oilBtn.Name = "oilBtn";
             this.oilBtn.Size = new System.Drawing.Size(79, 33);
@@ -1144,7 +1180,7 @@
             this.proteinBtn.BackColor = System.Drawing.Color.Transparent;
             this.proteinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.proteinBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.proteinBtn.Location = new System.Drawing.Point(39, 297);
+            this.proteinBtn.Location = new System.Drawing.Point(33, 326);
             this.proteinBtn.Margin = new System.Windows.Forms.Padding(2);
             this.proteinBtn.Name = "proteinBtn";
             this.proteinBtn.Size = new System.Drawing.Size(79, 33);
@@ -1158,7 +1194,7 @@
             this.vegBtn.BackColor = System.Drawing.Color.Transparent;
             this.vegBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vegBtn.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.vegBtn.Location = new System.Drawing.Point(39, 172);
+            this.vegBtn.Location = new System.Drawing.Point(33, 176);
             this.vegBtn.Margin = new System.Windows.Forms.Padding(2);
             this.vegBtn.Name = "vegBtn";
             this.vegBtn.Size = new System.Drawing.Size(79, 33);
@@ -1172,16 +1208,15 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(643, 644);
-            this.Controls.Add(this.weatherPanel);
-            this.Controls.Add(this.dietPanel);
-            this.Controls.Add(this.HomePanel);
-            this.Controls.Add(this.joggingPanel);
-            this.Controls.Add(this.bmiPanel);
+            this.ClientSize = new System.Drawing.Size(643, 598);
             this.Controls.Add(this.helpPanel);
+            this.Controls.Add(this.bmiPanel);
+            this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.dietPanel);
+            this.Controls.Add(this.joggingPanel);
+            this.Controls.Add(this.weatherPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
             this.Text = "健康管理";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -1296,6 +1331,8 @@
         private System.Windows.Forms.Label introduction3;
         private System.Windows.Forms.Label introduction2;
         private System.Windows.Forms.Button soundBtn;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.LinkLabel link1;
     }
 }
 
